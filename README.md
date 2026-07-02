@@ -1,0 +1,174 @@
+---
+name: html-css-tailwind
+description: >
+  Workflow và quy tắc code cho project HTML/CSS/JS dùng Tailwind v4, bao gồm
+  setup cấu trúc thư mục, quy tắc viết Tailwind class, tổ chức CSS component,
+  định nghĩa token trong @theme, và refactor checklist cho cả HTML/CSS lẫn JS.
+  Dùng skill này khi người dùng: bắt đầu project mới với Tailwind v4, hỏi về
+  quy tắc viết class Tailwind, hỏi khi nào dùng @layer components vs inline
+  class, muốn review hoặc refactor code HTML/CSS/JS, hỏi về cách đặt tên BEM,
+  setup font-size/line-height trong @theme, hoặc tổ chức file CSS component.
+---
+
+# HTML/CSS/JS + Tailwind v4 Workflow
+
+## Cấu trúc thư mục chuẩn
+
+```
+project/
+├── src/
+│   ├── input.css                 ← CSS nguồn, Tailwind đọc và build từ đây
+│   └── components/
+│       ├── _buttons.css
+│       ├── _cards.css
+│       └── _nav.css
+├── assets/
+│   ├── css/
+│   │   └── style.css             ← OUTPUT (do Tailwind build ra, không chỉnh tay)
+│   └── js/
+│       ├── vendor/               ← thư viện ngoài, không chỉnh tay
+│       │   ├── fancybox.umd.js
+│       │   └── swiper.min.js
+│       └── main.js               ← code tự viết, gọi init từ đây
+├── index.html
+└── package.json
+```
+
+**Nguyên tắc:**
+- `src/` chỉ chứa CSS — JS không có build step nên để thẳng trong `assets/js/`
+- `assets/css/style.css` là file output — không bao giờ chỉnh tay
+- `vendor/` là vùng cấm — không trộn code tự viết với code thư viện
+
+---
+
+## Setup Tailwind v4
+
+```bash
+npm install tailwindcss @tailwindcss/cli
+```
+
+**`src/input.css`:**
+```css
+@import "tailwindcss";
+@import "./components/_buttons.css";
+@import "./components/_cards.css";
+
+@theme {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --font-heading: "Inter", sans-serif;
+}
+```
+
+**`package.json` scripts:**
+```json
+"scripts": {
+  "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./assets/css/style.css --watch",
+  "build": "npx @tailwindcss/cli -i ./src/input.css -o ./assets/css/style.css --minify"
+}
+```
+
+---
+
+## Quy tắc viết Tailwind class
+
+### Thứ tự nhóm class
+
+```
+Layout → Spacing → Visual → Typography → State
+```
+
+```html
+<button class="flex items-center gap-2   px-5 py-2.5   bg-primary rounded-lg   text-white font-medium   hover:bg-primary-dark transition-colors">
+```
+
+| Nhóm | Gồm những gì |
+|---|---|
+| Layout | `flex`, `grid`, `items-center`, `gap-2`, `w-full`, `overflow-hidden` |
+| Spacing | `p-4`, `px-5`, `py-2.5`, `m-4`, `mt-2`, `mx-auto` |
+| Visual | `bg-primary`, `border`, `rounded-lg`, `shadow-md`, `opacity-50` |
+| Typography | `text-white`, `text-lg`, `font-medium`, `leading-6`, `uppercase` |
+| State | `hover:bg-primary-dark`, `focus:ring`, `transition-colors`, `cursor-pointer` |
+
+### Khi nào tách component
+
+```
+Dùng 1–2 lần         → giữ inline
+Dùng 3+ lần          → tách vào @layer components trong src/input.css
+Dùng nhiều file      → tách ra file _component.css riêng
+```
+
+**Ví dụ tách component:**
+```css
+/* src/components/_buttons.css */
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium transition-colors;
+  }
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-dark;
+  }
+}
+```
+
+### Không làm
+
+```html
+<!-- ❌ Arbitrary value tùy tiện -->
+<div class="mt-[13px] w-[347px] text-[15px]">
+
+<!-- ❌ CSS thuần cho thứ Tailwind đã có -->
+<style>.card { padding: 1rem; }</style>
+
+<!-- ❌ Inline style -->
+<div style="color: #2563eb">
+```
+
+---
+
+## @theme tokens
+
+```css
+@theme {
+  /* Màu */
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+
+  /* Font size + line-height theo cặp */
+  --text-3xl: 1.75rem;                      /* 28px */
+  --text-3xl--line-height: calc(40 / 28);
+
+  --text-4xl: 2rem;                         /* 32px */
+  --text-4xl--line-height: calc(48 / 32);
+
+  --text-5xl: 2.5rem;                       /* 40px */
+  --text-5xl--line-height: calc(56 / 40);
+}
+```
+
+**Nguyên tắc đặt tên:**
+- Đặt tên theo **vai trò**, không theo số pixel: `--text-display` thay vì `--text-40`
+- Khi có 2 line-height khác nhau cho cùng font-size → dùng `leading-[value]` inline cho exception, token cho giá trị phổ biến hơn
+
+---
+
+## Refactor checklist — đọc file references/refactor-checklist.md
+---
+
+## Load thư viện JS
+
+**Thứ tự trong HTML:**
+```html
+<head>
+  <link rel="stylesheet" href="assets/css/vendor/swiper.min.css" />
+  <link rel="stylesheet" href="assets/css/vendor/fancybox.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />  <!-- Tailwind output cuối cùng -->
+</head>
+<body>
+  <script src="assets/js/vendor/swiper.min.js"></script>
+  <script src="assets/js/vendor/fancybox.umd.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+```
+
+Tailwind output load **sau** vendor CSS để có thể override nếu cần.

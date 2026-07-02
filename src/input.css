@@ -1,0 +1,450 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+/* Khai báo phông chữ Averta Std CY với các kiểu khác nhau */
+@font-face {
+  font-family: "Averta Std CY";
+  src:
+    url("../fonts/AvertaStd-Regular.woff2") format("woff2"),
+    url("../fonts/AvertaStd-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Averta Std CY";
+  src:
+    url("../fonts/AvertaStd-Semibold.woff2") format("woff2"),
+    url("../fonts/AvertaStd-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Averta Std CY";
+  src:
+    url("../fonts/AvertaStd-Bold.woff2") format("woff2"),
+    url("../fonts/AvertaStd-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* break point */
+  --breakpoint-3xl: 120rem;
+
+  /* Color */
+  --color-primary: #f26e1d;
+  --color-primary-blue: #183a8e;
+  --color-primary-xanh: #0053ff;
+  --color-dark-blue: #100249;
+  --color-heading: #313131;
+  --color-text: #262626;
+  --color-gray-100: #fafafa;
+  --color-gray-200: #a9a9a9;
+  --color-gray-300: #828282;
+  --color-gray-400: #6a6a6a;
+  --color-gray-500: #ebebeb;
+  --color-gray-600: #dbdbdb;
+  --color-gray-700: #3f3f3f;
+  --color-gray-800: #dde6f5;
+  --color-footer-bg: #262d35;
+
+  /* Font Family */
+  --font-sans: "Averta Std CY";
+  --font-montserrat: "Montserrat", sans-serif;
+
+  /* Font size */
+  --text-sm--line-height: calc(20 / 14);
+
+  --text-lg--line-height: calc(28 / 18);
+  --text-xl--line-height: calc(32 / 20);
+  --leading-tight-2xl: calc(28 / 24);
+
+  --text-3xl: 1.75rem;
+  --text-3xl--line-height: calc(40 / 28);
+
+  --text-4xl: 2rem;
+  --text-4xl--line-height: calc(48 / 32);
+
+  --text-4.5xl: 2.25rem;
+  --text-4.5xl--line-height: calc(52 / 36);
+
+  --text-5xl: 2.5rem;
+  --text-5xl--line-height: calc(56 / 40);
+  --leading-tight-5xl: calc(52 / 40);
+
+  --text-6xl: 3rem;
+  --text-6xl--line-height: calc(68 / 48);
+
+  --text-7xl: 3.5rem;
+  --text-7xl--line-height: calc(68 / 56);
+}
+
+/* Config utility */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @media (width >= theme(--breakpoint-sm)) {
+    padding-inline: 1.5rem;
+  }
+
+  @media (width >= theme(--breakpoint-lg)) {
+    padding-inline: 2rem;
+  }
+
+  @media (width >= theme(--breakpoint-xl)) {
+    max-width: 1280px;
+    padding-inline: 40px;
+  }
+
+  @media (width >= theme(--breakpoint-2xl)) {
+    max-width: 1536px;
+    padding-inline: 100px;
+  }
+  @media (width >= theme(--breakpoint-3xl)) {
+    max-width: 1920px;
+    padding-inline: 230px;
+  }
+}
+
+@layer components {
+  /* Desktop — tab layout */
+  .tabs__nav {
+    @apply flex border-b border-gray-200;
+  }
+
+  .tabs__panel {
+    @apply hidden;
+  }
+
+  .tabs__panel.is-active {
+    @apply block;
+  }
+
+  /* Mobile — accordion layout */
+  @media (max-width: 767px) {
+    .tabs__nav {
+      @apply flex-col border-b-0;
+    }
+
+    .tabs__btn {
+      @apply border border-gray-200 mb-1;
+    }
+
+    .tabs__btn.is-active + .tabs__panel {
+      @apply block;
+    }
+  }
+
+  .btn {
+    @apply inline-flex items-center gap-[6px] px-4 py-2 border border-gray-500 bg-gray-100 rounded-full;
+  }
+
+  /* Header Navigation Component */
+  .nav-list {
+    @apply flex flex-col xl:flex-row justify-center items-center gap-4 2xl:gap-8 h-full;
+  }
+
+  .nav-list li {
+    @apply h-full;
+  }
+
+  .nav-link {
+    @apply flex items-center justify-center gap-1.5 xl:gap-8 h-full text-white text-base lg:text-lg font-bold hover:text-primary transition-colors duration-300;
+  }
+
+  .nav-link--active {
+    @apply text-primary;
+  }
+
+  /* Dropdown Menu Component */
+  .dropdown-menu {
+    @apply hidden group-hover:block absolute top-full left-0 z-50 bg-white p-2 rounded-xl min-w-[310px] transition-all duration-300;
+  }
+
+  .dropdown-link {
+    @apply block px-4 py-2.5 rounded-lg text-gray-700 text-sm font-semibold hover:bg-gray-50 hover:text-primary transition-colors duration-200;
+  }
+
+  .dropdown-link--active {
+    @apply bg-gray-800 text-white hover:bg-gray-900;
+  }
+
+  /* Search Tag Button */
+  .btn {
+    @apply inline-flex items-center gap-1.5 px-4 py-2 bg-gray-50 border border-gray-500 rounded-full text-gray-700 hover:bg-gray-100 hover:text-primary hover:border-primary/30 transition-all duration-200 cursor-pointer;
+  }
+
+  .pagination {
+    @apply w-2.5 h-2.5 bg-[#808080] rounded-full;
+  }
+
+  .pagination--active {
+    @apply w-4 h-4 bg-primary-xanh rounded-full;
+  }
+
+  .hero-section {
+    @apply relative overflow-hidden;
+    height: 30rem; /* mobile height fallback */
+
+    @media (min-width: 768px) {
+      height: 35rem;
+    }
+    @media (min-width: 1024px) {
+      height: auto;
+      aspect-ratio: 1920/959;
+    }
+  }
+
+  .swiper.hero {
+    @apply w-full h-full;
+  }
+
+  .swiper.hero .swiper-slide {
+    @apply h-full bg-cover bg-center bg-no-repeat;
+  }
+
+  .swiper.hero .swiper-pagination {
+    @apply !static flex gap-2 items-center z-10;
+  }
+
+  .swiper.hero .swiper-pagination-bullet {
+    @apply m-0 w-2.5 h-2.5 bg-[#808080] opacity-100 rounded-full transition-all duration-300 cursor-pointer;
+  }
+
+  .swiper.hero .swiper-pagination-bullet-active {
+    @apply w-4 h-4 bg-primary-xanh rounded-full;
+  }
+
+  /* Section Header Component (BEM) */
+  .section-header {
+    @apply flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 md:gap-6 mb-6;
+  }
+
+  .section-header__left {
+    @apply flex flex-wrap items-center gap-4 md:gap-6;
+  }
+
+  .section-header__title {
+    @apply text-heading text-3xl md:text-4xl font-bold font-montserrat tracking-tight m-0;
+  }
+
+  .section-header__divider {
+    @apply h-8 w-[1px] bg-gray-600 hidden sm:block;
+  }
+
+  .section-header__dropdown {
+    @apply relative;
+  }
+
+  .section-header__dropdown-btn {
+    @apply flex items-center gap-2 text-heading text-base font-semibold hover:text-primary transition-colors cursor-pointer py-2 focus:outline-none;
+  }
+
+  .section-header__dropdown-list {
+    @apply absolute left-0 mt-2 w-48 bg-white border border-gray-100 rounded-lg shadow-lg py-2 hidden flex-col z-50 list-none p-0 m-0;
+  }
+
+  .section-header__dropdown-list--first {
+    @apply right-0 left-auto sm:left-0 sm:right-auto;
+  }
+
+  .section-header__dropdown-item {
+    @apply block px-4 py-2 text-sm text-heading hover:bg-gray-50 hover:text-primary transition-colors;
+  }
+
+  .section-header__more-btn {
+    @apply flex items-center text-[#40356D] text-base font-bold transition-colors cursor-pointer;
+  }
+
+  .section-header__more-btn:hover {
+    color: var(--color-primary-xanh);
+    opacity: 0.8;
+  }
+
+  .section-header__more-btn svg {
+    @apply transition-transform duration-300;
+  }
+
+  .section-header__more-btn:hover svg {
+    transform: translateX(4px);
+  }
+
+  .section-header__more-btn--muted {
+    @apply text-heading/50 text-lg;
+  }
+
+  /* Product Card Component (BEM) */
+  .product-card {
+    @apply flex flex-col flex-1;
+  }
+
+  .product-card__image-wrapper {
+    @apply flex justify-center items-center w-full aspect-[3/4] overflow-hidden mb-4;
+  }
+
+  .product-card__image {
+    @apply w-full h-full object-cover transition-transform duration-500;
+  }
+
+  .product-card:hover .product-card__image {
+    transform: scale(1.05);
+  }
+
+  .product-card__content {
+    @apply flex flex-col flex-1 justify-between;
+  }
+
+  .product-card__category {
+    @apply text-base md:text-lg text-gray-300;
+  }
+
+  .product-card__title {
+    @apply m-0 text-xl md:text-2xl font-bold text-text mb-2  transition-colors duration-300 cursor-pointer;
+  }
+
+  .product-card:hover .product-card__title {
+    color: var(--color-primary);
+  }
+
+  .product-card__price {
+    @apply text-sm md:text-base font-bold text-primary;
+  }
+
+  /* Outline Pill Button (Reused component) */
+  .btn-outline-pill {
+    @apply inline-flex items-center gap-2 pl-8 pr-6 py-4 border border-dark-blue/53 rounded-full text-dark-blue text-sm md:text-base font-bold hover:bg-primary-blue hover:text-white transition-all duration-300 cursor-pointer;
+  }
+
+  .btn-outline-pill svg {
+    @apply transition-transform duration-300;
+  }
+
+  .btn-outline-pill:hover svg {
+    @apply translate-x-1;
+  }
+
+  /* Ecosystem Card Components */
+  .ecosystem-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/60 rounded-[32px] shadow-xl shadow-primary-blue/5 overflow-hidden divide-y divide-gray-200/60;
+  }
+
+  .ecosystem-item {
+    @apply flex items-center justify-between p-6 sm:p-8 cursor-pointer transition-all duration-300 hover:bg-white/50;
+  }
+
+  /* Animate and transition the arrow SVG inside ecosystem item */
+  .ecosystem-item > svg,
+  .ecosystem-item__arrow {
+    @apply text-heading/70 transition-all duration-300;
+  }
+
+  .ecosystem-item:hover > svg,
+  .ecosystem-item:hover .ecosystem-item__arrow {
+    @apply text-primary-blue translate-x-2;
+  }
+
+  .ecosystem-item__icon-wrapper {
+    @apply flex items-center justify-center w-12 h-12 rounded-xl bg-primary-blue/10 text-primary-blue transition-colors duration-300;
+  }
+
+  /* When the item is hovered, the icon wrapper changes background and text color to white */
+  .ecosystem-item:hover .ecosystem-item__icon-wrapper {
+    @apply bg-primary-blue text-white;
+  }
+
+  /* Override inline fill="black" inside the book SVG to use currentColor, with smooth transition */
+  .ecosystem-item__icon-wrapper svg path {
+    fill: currentColor;
+    transition: fill 0.3s ease;
+  }
+
+  .ecosystem-item__title {
+    @apply text-heading text-lg sm:text-xl lg:text-2xl font-bold transition-colors duration-300;
+  }
+
+  /* When the item is hovered, the title color changes to primary blue */
+  .ecosystem-item:hover .ecosystem-item__title {
+    @apply text-primary-blue;
+  }
+
+  /* News Card Component */
+  .news-card {
+    @apply flex flex-col sm:flex-row gap-4 sm:gap-6 cursor-pointer;
+  }
+
+  .news-card__image-wrapper {
+    @apply w-full sm:w-[343px] aspect-[343/208] overflow-hidden shrink-0 bg-gray-100;
+  }
+
+  .news-card__image {
+    @apply w-full h-full object-cover transition-transform duration-500 group-hover:scale-105;
+  }
+
+  .news-card__content {
+    @apply flex flex-col justify-start text-left py-1;
+  }
+
+  .news-card__category {
+    @apply block mb-2 text-gray-200 text-base;
+  }
+
+  .news-card__title {
+    @apply m-0 mb-2 text-heading text-xl md:text-2xl font-bold leading-snug transition-colors duration-300 group-hover:text-primary-blue;
+  }
+
+  .news-card__desc {
+    @apply text-gray-400 text-base md:text-lg line-clamp-2 sm:line-clamp-3;
+  }
+
+  /* Footer Components */
+  .footer {
+    @apply bg-footer-bg py-16 lg:pt-20 lg:pb-12 text-white border-t border-gray-800;
+  }
+
+  .footer__title {
+    @apply text-sm font-semibold text-white/60;
+  }
+
+  .footer__list {
+    @apply flex flex-col gap-4 list-none p-0 m-0 text-left;
+  }
+
+  .footer__link {
+    @apply text-[#DCDBE6]/60 text-base hover:text-white hover:translate-x-1 transition-all duration-300 block;
+  }
+
+  .footer__social-link {
+    @apply transition-all duration-300 hover:opacity-80 hover:scale-105;
+  }
+}
+
+[data-thumbs-action="toggle"] svg {
+  display: none;
+}
+
+[data-thumbs-action="toggle"] {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+}
+
+[data-thumbs-action="toggle"]::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Crect x='3' y='3' width='7' height='7'/%3E%3Crect x='14' y='3' width='7' height='7'/%3E%3Crect x='3' y='14' width='7' height='7'/%3E%3Crect x='14' y='14' width='7' height='7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body {
+  font-family: var(--font-sans);
+}

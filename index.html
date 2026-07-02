@@ -1,0 +1,2401 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhà xuất bản hà nội</title>
+    <!-- Vendor -->
+    <link rel="stylesheet" href="assets/css/vendor/fancybox.css" />
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="bg-primary-blue bg-header h-16 sticky top-0 z-[999]">
+      <div class="container h-full">
+        <div class="flex justify-between items-center h-full">
+          <a href="/" class="flex items-center">
+            <img
+              src="assets/images/header/logo-header.png"
+              alt="Logo Nhà xuất bản Hà Nội"
+              class="h-12 w-auto object-contain"
+            />
+          </a>
+          <nav class="hidden xl:block h-full">
+            <ul class="nav-list h-full">
+              <li class="h-full flex items-center">
+                <a href="" class="nav-link nav-link--active">Trang chủ</a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Giới thiệu</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Sản phẩm</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="" class="dropdown-link">Sách giáo khoa</a>
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link">Sách tham khảo</a>
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link"
+                      >Tài liệu giáo dục địa phương</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link">Học liệu số</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Cổ đông</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Tin tức</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="h-full flex items-center">
+                <a href="" class="nav-link">Liên hệ</a>
+              </li>
+            </ul>
+          </nav>
+          <div
+            class="hidden xl:flex items-center justify-between py-1.5 border-b border-white/40 w-48 md:w-56 bg-transparent"
+          >
+            <input
+              id="search-trigger-input"
+              type="text"
+              placeholder="Tìm kiếm"
+              readonly
+              class="w-full bg-transparent text-white placeholder-white/60 text-sm outline-none cursor-pointer"
+            />
+            <button
+              id="search-trigger-btn"
+              class="flex items-center justify-center text-white/60 hover:text-white transition-colors duration-300 cursor-pointer"
+              aria-label="Tìm kiếm"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22 22L20 20"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <button
+            id="menu-toggle"
+            class="xl:hidden p-1 text-white hover:text-primary transition-colors cursor-pointer"
+            aria-label="Mở Menu"
+          >
+            <svg
+              width="32px"
+              height="32px"
+              viewBox="0 0 24 24"
+              fill="white"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M4 6H20M4 12H20M4 18H20"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Drawer (Slide-out from Left) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[1000] xl:hidden">
+      <!-- Backdrop overlay -->
+      <div
+        id="mobile-menu-backdrop"
+        class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-0"
+      ></div>
+
+      <!-- Drawer Content -->
+      <div
+        id="mobile-menu-content"
+        class="relative w-[300px] max-w-[85vw] h-full bg-primary-blue shadow-2xl flex flex-col p-6 transition-transform duration-300 -translate-x-full overflow-y-auto"
+      >
+        <!-- Close Button & Logo Row -->
+        <div class="flex justify-between items-center mb-8">
+          <a href="/" class="flex items-center">
+            <img
+              src="assets/images/header/logo-header.png"
+              alt="Logo Nhà xuất bản Hà Nội"
+              class="h-10 w-auto object-contain"
+            />
+          </a>
+          <button
+            id="mobile-menu-close"
+            class="text-white hover:text-primary transition-colors duration-200 cursor-pointer"
+            aria-label="Đóng Menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-6 h-6"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- 1. Search Box ("searh xong rồi mới nav") -->
+        <div
+          id="mobile-search-trigger"
+          class="relative flex items-center py-2 border-b border-white/30 mb-8 cursor-pointer"
+        >
+          <input
+            type="text"
+            placeholder="Tìm kiếm..."
+            readonly
+            class="w-full bg-transparent text-white placeholder-white/50 text-sm outline-none cursor-pointer"
+          />
+          <button
+            class="absolute right-0 text-white/50 hover:text-white transition-colors duration-200 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-5 h-5"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- 2. Nav links stacking vertically ("flex-col không nằm ngang nữa") -->
+        <nav class="flex-1">
+          <ul class="flex flex-col gap-6">
+            <li>
+              <a href="" class="block text-primary text-lg font-bold"
+                >Trang chủ</a
+              >
+            </li>
+
+            <!-- Giới thiệu -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Giới thiệu</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tầm nhìn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Sứ mệnh</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Sản phẩm -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Sản phẩm</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Sách giáo khoa</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Sách tham khảo</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tài liệu giáo dục địa phương</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Học liệu số</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Cổ đông -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Cổ đông</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Báo cáo tài chính</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Nghị quyết đại hội</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Tin tức -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Tin tức</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tin tức sự kiện</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Hoạt động công ty</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href=""
+                class="block text-white text-lg font-bold hover:text-primary transition-colors"
+                >Liên hệ</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Search Popup Modal -->
+    <div
+      id="search-popup"
+      class="hidden fixed inset-0 z-50 flex justify-center items-start p-4 pt-[20vh]"
+    >
+      <!-- Backdrop with blur and white overlay as requested -->
+      <div
+        id="search-popup-backdrop"
+        class="absolute inset-0 backdrop-blur-md bg-white/30 transition-opacity duration-300 opacity-0"
+      ></div>
+
+      <!-- Modal Content Box -->
+      <div
+        id="search-popup-content"
+        class="relative w-full max-w-[700px] rounded-2xl bg-white shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300"
+      >
+        <div class="flex justify-between items-center py-4 px-5">
+          <div class="flex items-center gap-3 flex-1 mr-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="#828282"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 21L16.7 16.7"
+                stroke="#828282"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <input
+              id="search-popup-input"
+              type="text"
+              class="w-full text-lg placeholder:text-gray-400 outline-none text-heading bg-transparent"
+              placeholder="Tìm kiếm sách, học liệu số, tin tức..."
+            />
+          </div>
+          <button
+            id="search-popup-close"
+            class="px-5 py-1.5 rounded-full border border-solid border-gray-500 hover:border-gray-500 text-sm text-gray-300 hover:text-gray-800 hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
+          >
+            Đóng
+          </button>
+        </div>
+
+        <hr class="border-t border-gray-100" />
+
+        <div class="py-5 px-5">
+          <p class="mb-4 text-sm font-bold text-gray-200">TÌM KIẾM PHỔ BIẾN</p>
+          <div class="flex flex-wrap gap-3">
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Ngữ văn 7</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Sách giáo khoa lớp 8</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Học liệu số toán</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Tài liệu giáo dục địa phương</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Ôn thi lớp 10</span>
+            </button>
+          </div>
+        </div>
+
+        <hr class="border-t border-gray-100" />
+
+        <div class="bg-gray-50 py-3 px-5">
+          <div class="flex items-center gap-6 text-gray-200">
+            <div class="flex items-center">
+              <span
+                class="mr-1.5 px-1.5 py-0.5 rounded bg-gray-500 font-sans text-xs font-semibold text-gray-200"
+                >ESC</span
+              >
+              <span class="text-xs">để đóng</span>
+            </div>
+            <div class="flex items-center">
+              <span
+                class="mr-1.5 px-1.5 py-0.5 rounded bg-gray-500 font-sans text-xs font-semibold text-gray-200"
+                >Enter</span
+              >
+              <span class="text-xs">để tìm kiếm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="hero-section">
+        <div class="swiper hero relative">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div
+              class="swiper-slide text-white select-none bg-[url('../images/hero/bg-hero.png')]"
+            >
+              <div class="container h-full flex flex-col justify-center">
+                <p
+                  class="text-primary text-xl md:text-3xl lg:text-[44px] font-bold mb-2 md:mb-4"
+                >
+                  Giới thiệu bộ sách
+                </p>
+                <h1
+                  class="text-white text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight leading-tight"
+                >
+                  ÔN THI VÀO LỚP 10
+                </h1>
+                <p
+                  class="text-white/90 text-sm md:text-lg lg:text-xl font-semibold max-w-3xl"
+                >
+                  Năm học 2025 - 2026 (Theo chương trình giáo dục phổ thông
+                  2018)
+                </p>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div
+              class="swiper-slide text-white select-none bg-[url('../images/hero/bg-hero.png')]"
+            >
+              <div class="container h-full flex flex-col justify-center">
+                <p
+                  class="text-primary text-xl md:text-3xl lg:text-[44px] font-bold mb-2 md:mb-4"
+                >
+                  Giới thiệu bộ sách
+                </p>
+                <h1
+                  class="text-white text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight leading-tight"
+                >
+                  ÔN THI VÀO LỚP 10
+                </h1>
+                <p
+                  class="text-white/90 text-sm md:text-lg lg:text-xl font-semibold max-w-3xl"
+                >
+                  Năm học 2025 - 2026 (Theo chương trình giáo dục phổ thông
+                  2018)
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Dynamic Swiper Pagination -->
+          <div
+            class="absolute bottom-8 left-0 right-0 z-10 pointer-events-none"
+          >
+            <div class="container">
+              <div class="swiper-pagination pointer-events-auto"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lịch sử hình thành Section -->
+      <section class="py-16 md:py-24 bg-white overflow-hidden">
+        <div class="container flex flex-col items-center text-center">
+          <!-- Book Icon -->
+          <div class="mb-3 md:mb-6">
+            <img
+              src="assets/images/history/spell-book.gif"
+              alt="Biểu tượng quyển sách"
+              class="w-[116px] aspect-square mx-auto"
+            />
+          </div>
+          <!-- Subtitle -->
+          <span
+            class="mb-2 md:mb-4 text-primary text-base md:text-lg font-bold"
+          >
+            GIỚI THIỆU VỀ CHÚNG TÔI
+          </span>
+          <!-- Title -->
+          <h2
+            class="mb-4 md:mb-8 font-montserrat text-heading text-3xl md:text-4xl lg:text-6xl font-bold"
+          >
+            Lịch sử hình thành
+          </h2>
+          <!-- Description -->
+          <p
+            class="max-w-[1150px] mb-5 md:mb-10 text-heading text-sm md:text-xl"
+          >
+            Nhà xuất bản Giáo dục tại Hà Nội được thành lập ngày 21 tháng 12 năm
+            2005 trên cơ sở tách ra từ Nhà xuất bản Giáo dục (nay là Nhà xuất
+            bản Giáo dục Việt Nam), là một trong bốn Nhà xuất bản Giáo dục Miền
+            trực thuộc Nhà xuất bản Giáo dục Việt Nam thực hiện chức năng, nhiệm
+            vụ theo phân cấp của Nhà xuất bản Giáo dục Việt Nam tại khu vực miền
+            Bắc.
+          </p>
+          <!-- Button -->
+          <a href="#" class="btn-outline-pill mb-6 md:mb-12">
+            <span>Xem thêm</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-6 h-6"
+            >
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+          <!-- Diagram Illustration -->
+          <div class="w-full overflow-x-auto">
+            <div class="min-w-[800px] lg:min-w-0">
+              <img
+                src="assets/images/history/bg-history.png"
+                alt="Sơ đồ lịch sử hình thành"
+                class="w-full h-auto object-contain mx-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chúng tôi làm gì Section -->
+      <section
+        class="py-16 md:pt-30 md:pb-20 overflow-hidden"
+        style="
+          background: linear-gradient(0deg, #fafafa 0%, #fafafa 100%), #1c59b6;
+        "
+      >
+        <div class="container">
+          <!-- Header -->
+          <header class="mb-10 md:mb-14 text-left">
+            <p class="mb-4 block text-primary text-base md:text-lg font-bold">
+              CHÚNG TÔI LÀM GÌ
+            </p>
+            <h2
+              class="text-heading text-3xl md:text-4xl lg:text-6xl font-semibold font-montserrat"
+            >
+              Thế mạnh của chúng tôi là sách giáo dục
+            </h2>
+          </header>
+
+          <!-- Strengths Grid -->
+          <ul
+            class="mb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 overflow-hidden list-none p-0 m-0"
+          >
+            <!-- Column 1 -->
+            <li class="flex flex-col group">
+              <!-- Text Box -->
+              <div
+                class="bg-primary-blue text-white flex flex-col justify-center p-4 sm:p-5 aspect-[4/3] relative cursor-pointer"
+              >
+                <h3
+                  class="m-0 text-xl md:text-2xl font-bold transition-all duration-300 group-hover:text-lg lg:group-hover:text-xl"
+                >
+                  Tổ chức bản thảo
+                </h3>
+                <p
+                  class="text-xs md:text-sm text-white/80 opacity-0 max-h-0 overflow-hidden transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:max-h-[120px] group-hover:mt-2"
+                >
+                  Trên chặng đường xây dựng và phát triển, Nhà xuất bản Giáo dục
+                  tại Hà Nội đã không ngừng đổi mới, sắp xếp, kiện toàn cơ cấu
+                  tổ chức ngày càng tinh gọn, hợp lý.
+                </p>
+                <!-- Arrow Down -->
+                <div
+                  class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full w-0 h-0 border-l-[8px] border-r-[8px] border-t-[8px] border-l-transparent border-r-transparent border-t-primary-blue z-10"
+                ></div>
+              </div>
+              <!-- Image Box -->
+              <div
+                class="bg-gray-800 flex justify-center items-center p-6 aspect-[4/3] overflow-hidden"
+              >
+                <img
+                  src="assets/images/strengths/organize.png"
+                  alt="Tổ chức bản thảo"
+                  class="w-full h-full object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            </li>
+
+            <!-- Column 2 -->
+            <li class="flex flex-col sm:flex-col-reverse group">
+              <!-- Text Box -->
+              <div
+                class="bg-primary-blue text-white flex flex-col justify-center p-4 sm:p-5 aspect-[4/3] relative cursor-pointer"
+              >
+                <h3
+                  class="m-0 text-xl md:text-2xl font-bold transition-all duration-300 group-hover:text-lg lg:group-hover:text-xl"
+                >
+                  Biên tập
+                </h3>
+                <p
+                  class="text-xs md:text-sm text-white/80 opacity-0 max-h-0 overflow-hidden transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:max-h-[120px] group-hover:mt-2"
+                >
+                  Đội ngũ biên tập viên giàu kinh nghiệm, chuyên môn cao, luôn
+                  đảm bảo nội dung chính xác, khoa học và đạt chất lượng sư phạm
+                  tốt nhất.
+                </p>
+                <!-- Arrow Down (Mobile) -->
+                <div
+                  class="sm:hidden absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full w-0 h-0 border-l-[8px] border-r-[8px] border-t-[8px] border-l-transparent border-r-transparent border-t-primary-blue z-10"
+                ></div>
+                <!-- Arrow Up (Desktop) -->
+                <div
+                  class="hidden sm:block absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full w-0 h-0 border-l-[8px] border-r-[8px] border-b-[8px] border-l-transparent border-r-transparent border-b-primary-blue z-10"
+                ></div>
+              </div>
+              <!-- Image Box -->
+              <div
+                class="bg-gray-800 flex justify-center items-center p-6 aspect-[4/3] overflow-hidden"
+              >
+                <img
+                  src="assets/images/strengths/edit.png"
+                  alt="Biên tập"
+                  class="w-full h-full object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            </li>
+
+            <!-- Column 3 -->
+            <li class="flex flex-col group">
+              <!-- Text Box -->
+              <div
+                class="bg-primary-blue text-white flex flex-col justify-center p-4 sm:p-5 aspect-[4/3] relative cursor-pointer"
+              >
+                <h3
+                  class="m-0 text-xl md:text-2xl font-bold transition-all duration-300 group-hover:text-lg lg:group-hover:text-xl"
+                >
+                  Thiết kế - Minh họa<br />- Bản đồ
+                </h3>
+                <p
+                  class="text-xs md:text-sm text-white/80 opacity-0 max-h-0 overflow-hidden transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:max-h-[120px] group-hover:mt-2"
+                >
+                  Sáng tạo hình ảnh minh họa sinh động, thiết kế layout hiện đại
+                  và vẽ bản đồ trực quan, giúp học sinh dễ dàng tiếp thu kiến
+                  thức.
+                </p>
+                <!-- Arrow Down -->
+                <div
+                  class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full w-0 h-0 border-l-[8px] border-r-[8px] border-t-[8px] border-l-transparent border-r-transparent border-t-primary-blue z-10"
+                ></div>
+              </div>
+              <!-- Image Box -->
+              <div
+                class="bg-gray-800 flex justify-center items-center p-6 aspect-[4/3] overflow-hidden"
+              >
+                <img
+                  src="assets/images/strengths/design.png"
+                  alt="Thiết kế - Minh họa - Bản đồ"
+                  class="w-full h-full object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            </li>
+
+            <!-- Column 4 -->
+            <li class="flex flex-col sm:flex-col-reverse group">
+              <!-- Text Box -->
+              <div
+                class="bg-primary-blue text-white flex flex-col justify-center p-4 sm:p-5 aspect-[4/3] relative cursor-pointer"
+              >
+                <h3
+                  class="m-0 text-xl md:text-2xl font-bold transition-all duration-300 group-hover:text-lg lg:group-hover:text-xl"
+                >
+                  In - Phát hành
+                </h3>
+                <p
+                  class="text-xs md:text-sm text-white/80 opacity-0 max-h-0 overflow-hidden transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:max-h-[120px] group-hover:mt-2"
+                >
+                  Hệ thống nhà in hiện đại, công suất lớn đảm bảo tiến độ in ấn
+                  nhanh chóng cùng mạng lưới phát hành rộng khắp cả nước.
+                </p>
+                <!-- Arrow Down (Mobile) -->
+                <div
+                  class="sm:hidden absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full w-0 h-0 border-l-[8px] border-r-[8px] border-t-[8px] border-l-transparent border-r-transparent border-t-primary-blue z-10"
+                ></div>
+                <!-- Arrow Up (Desktop) -->
+                <div
+                  class="hidden sm:block absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full w-0 h-0 border-l-[8px] border-r-[8px] border-b-[8px] border-l-transparent border-r-transparent border-b-primary-blue z-10"
+                ></div>
+              </div>
+              <!-- Image Box -->
+              <div
+                class="bg-gray-800 flex justify-center items-center p-6 aspect-[4/3] overflow-hidden"
+              >
+                <img
+                  src="assets/images/strengths/print.png"
+                  alt="In - Phát hành"
+                  class="w-full h-full object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            </li>
+
+            <!-- Column 5 -->
+            <li
+              class="flex flex-col sm:flex-row lg:flex-col sm:col-span-2 lg:col-span-1 group"
+            >
+              <!-- Text Box -->
+              <div
+                class="bg-primary-blue text-white flex flex-col justify-center p-4 sm:p-5 w-full sm:w-1/2 lg:w-full aspect-[4/3] sm:aspect-auto lg:aspect-[4/3] relative cursor-pointer"
+              >
+                <h3
+                  class="m-0 text-xl md:text-2xl font-bold transition-all duration-300 group-hover:text-lg lg:group-hover:text-xl"
+                >
+                  Hợp tác xuất bản
+                </h3>
+                <p
+                  class="text-xs md:text-sm text-white/80 opacity-0 max-h-0 overflow-hidden transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:max-h-[120px] group-hover:mt-2"
+                >
+                  Mở rộng hợp tác liên kết với các tác giả, tổ chức giáo dục
+                  trong và ngoài nước để xuất bản những bộ sách chất lượng cao.
+                </p>
+                <!-- Arrow Down (Mobile & Desktop) -->
+                <div
+                  class="sm:hidden lg:block absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full w-0 h-0 border-l-[8px] border-r-[8px] border-t-[8px] border-l-transparent border-r-transparent border-t-primary-blue z-10"
+                ></div>
+                <!-- Arrow Right (Tablet) -->
+                <div
+                  class="hidden sm:block lg:hidden absolute top-1/2 right-0 -translate-y-1/2 translate-x-full w-0 h-0 border-t-[8px] border-b-[8px] border-l-[8px] border-t-transparent border-b-transparent border-l-primary-blue z-10"
+                ></div>
+              </div>
+              <!-- Image Box -->
+              <div
+                class="bg-gray-800 flex justify-center items-center p-6 w-full sm:w-1/2 lg:w-full aspect-[4/3] sm:aspect-auto lg:aspect-[4/3] overflow-hidden"
+              >
+                <img
+                  src="assets/images/strengths/cooperate.png"
+                  alt="Hợp tác xuất bản"
+                  class="w-full h-full object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            </li>
+          </ul>
+
+          <!-- Footer -->
+          <footer class="mt-12 md:mt-16 lg:mt-20">
+            <ul
+              class="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 lg:gap-0 list-none p-0 m-0"
+            >
+              <li
+                class="flex flex-col justify-center items-center gap-4 lg:gap-6"
+              >
+                <img
+                  src="assets/images/strengths/icon1.png"
+                  alt="Biểu tượng thống kê số lượng ấn phẩm mới"
+                  class="w-10 lg:w-12 aspect-square"
+                />
+                <div class="text-center">
+                  <strong
+                    class="block text-3xl sm:text-4xl lg:text-5xl font-bold text-text"
+                    >150</strong
+                  >
+                  <p class="text-sm sm:text-base lg:text-lg text-heading">
+                    Xuất bản ấn phẩm mới mỗi năm
+                  </p>
+                </div>
+              </li>
+              <li
+                class="flex flex-col justify-center items-center gap-4 lg:gap-6"
+              >
+                <img
+                  src="assets/images/strengths/icon2.png"
+                  alt="Biểu tượng thống kê số lượng bản in phát hành"
+                  class="w-10 lg:w-12 aspect-square"
+                />
+                <div class="text-center">
+                  <strong
+                    class="block text-3xl sm:text-4xl lg:text-5xl font-bold text-text"
+                    >30.000+</strong
+                  >
+                  <p class="text-sm sm:text-base lg:text-lg text-heading">
+                    Bản in mỗi năm
+                  </p>
+                </div>
+              </li>
+              <li
+                class="flex flex-col justify-center items-center gap-4 lg:gap-6"
+              >
+                <img
+                  src="assets/images/strengths/icon3.png"
+                  alt="Biểu tượng thống kê đội ngũ tác giả cộng tác viên"
+                  class="w-10 lg:w-12 aspect-square"
+                />
+                <div class="text-center">
+                  <strong
+                    class="block text-3xl sm:text-4xl lg:text-5xl font-bold text-text"
+                    >600+</strong
+                  >
+                  <p class="text-sm sm:text-base lg:text-lg text-heading">
+                    Đội ngũ tác giả, CTV
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </footer>
+        </div>
+      </section>
+
+      <!-- Sản phẩm cốt lõi Section -->
+      <section
+        class="py-16 md:py-24 bg-white overflow-hidden border-t border-gray-100"
+      >
+        <div class="container">
+          <!-- Main Section Header -->
+          <header class="mb-12 md:mb-16 text-center">
+            <p
+              class="mb-4 text-base md:text-lg text-primary font-bold uppercase tracking-wider"
+            >
+              Hệ thống sản phẩm
+            </p>
+            <h2
+              class="text-heading text-3xl md:text-5xl lg:text-6xl font-bold font-montserrat"
+            >
+              Sản phẩm cốt lõi
+            </h2>
+          </header>
+
+          <!-- Subsection 1: Sách giáo khoa -->
+          <div class="mb-16 md:mb-24">
+            <!-- Section Header -->
+            <header class="section-header">
+              <!-- Left Side: Title & Filter Dropdown -->
+              <div class="section-header__left">
+                <h2 class="section-header__title">Sách giáo khoa</h2>
+                <div class="section-header__divider"></div>
+
+                <!-- Dropdown Filter -->
+                <div class="section-header__dropdown">
+                  <button type="button" class="section-header__dropdown-btn">
+                    Loại sách
+                    <svg
+                      class="transition-transform duration-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 14.75C11.808 14.75 11.616 14.6771 11.47 14.5301L7.46999 10.5301C7.17699 10.2371 7.17699 9.76202 7.46999 9.46902C7.76299 9.17602 8.23803 9.17602 8.53103 9.46902L12.001 12.939L15.471 9.46902C15.764 9.17602 16.239 9.17602 16.532 9.46902C16.825 9.76202 16.825 10.2371 16.532 10.5301L12.532 14.5301C12.384 14.6771 12.192 14.75 12 14.75Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                  <!-- Dropdown list -->
+                  <ul
+                    class="section-header__dropdown-list section-header__dropdown-list--first"
+                  >
+                    <li>
+                      <a href="#" class="section-header__dropdown-item">
+                        Tất cả sách giáo khoa
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item">
+                        Sách giáo khoa Cấp 1
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item">
+                        Sách giáo khoa Cấp 2
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item">
+                        Sách giáo khoa Cấp 3
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Right Side: See More Button -->
+              <a href="#" class="section-header__more-btn">
+                Xem thêm
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M10 16.75C9.80802 16.75 9.61599 16.6771 9.46999 16.5301C9.17699 16.2371 9.17699 15.762 9.46999 15.469L12.94 11.999L9.46999 8.52908C9.17699 8.23608 9.17699 7.76104 9.46999 7.46804C9.76299 7.17504 10.238 7.17504 10.531 7.46804L14.531 11.468C14.824 11.761 14.824 12.2361 14.531 12.5291L10.531 16.5291C10.384 16.6771 10.192 16.75 10 16.75Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </header>
+
+            <!-- Swiper Carousel -->
+            <div class="swiper products-swiper overflow-visible relative">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide h-full flex flex-col">
+                  <a href="#" class="product-card">
+                    <div class="product-card__image-wrapper">
+                      <img
+                        src="assets/images/products/literature_7_v1.png"
+                        alt="Ngữ Văn 7 Tập 1"
+                        class="product-card__image"
+                      />
+                    </div>
+                    <div class="product-card__content">
+                      <div>
+                        <span class="product-card__category">
+                          Sách giáo khoa
+                        </span>
+                        <h3 class="product-card__title">Ngữ Văn 7 Tập 1</h3>
+                      </div>
+                      <span class="product-card__price"> 10.000đ </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide h-full flex flex-col">
+                  <a href="#" class="product-card">
+                    <div class="product-card__image-wrapper">
+                      <img
+                        src="assets/images/products/physics_11.png"
+                        alt="Chuyên đề học tập Vật Lí 11"
+                        class="product-card__image"
+                      />
+                    </div>
+                    <div class="product-card__content">
+                      <div>
+                        <span class="product-card__category">
+                          Sách giáo khoa
+                        </span>
+                        <h3 class="product-card__title">
+                          Chuyên đề học tập Vật Lí 11
+                        </h3>
+                      </div>
+                      <span class="product-card__price"> 10.000đ </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide h-full flex flex-col">
+                  <a href="#" class="product-card">
+                    <div class="product-card__image-wrapper">
+                      <img
+                        src="assets/images/products/math_1.png"
+                        alt="Toán 1 Tập 2"
+                        class="product-card__image"
+                      />
+                    </div>
+                    <div class="product-card__content">
+                      <div>
+                        <span class="product-card__category">
+                          Sách giáo khoa
+                        </span>
+                        <h3 class="product-card__title">Toán 1 Tập Hai</h3>
+                      </div>
+                      <span class="product-card__price"> 10.000đ </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide h-full flex flex-col">
+                  <a href="#" class="product-card">
+                    <div class="product-card__image-wrapper">
+                      <img
+                        src="assets/images/products/science_4.png"
+                        alt="Khoa học 4"
+                        class="product-card__image"
+                      />
+                    </div>
+                    <div class="product-card__content">
+                      <div>
+                        <span class="product-card__category">
+                          Sách giáo khoa
+                        </span>
+                        <h3 class="product-card__title">Khoa học 4</h3>
+                      </div>
+                      <span class="product-card__price"> 10.000đ </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="swiper-slide h-full flex flex-col">
+                  <a href="#" class="product-card">
+                    <div class="product-card__image-wrapper">
+                      <img
+                        src="assets/images/products/literature_7_v1.png"
+                        alt="Ngữ Văn 7 Tập 2"
+                        class="product-card__image"
+                      />
+                    </div>
+                    <div class="product-card__content">
+                      <div>
+                        <span class="product-card__category">
+                          Sách giáo khoa
+                        </span>
+                        <h3 class="product-card__title">Ngữ Văn 7 Tập Hai</h3>
+                      </div>
+                      <span class="product-card__price"> 10.000đ </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Slide 6 (Extra slide to demonstrate Swiper sliding when > 5 products) -->
+                <div class="swiper-slide h-full flex flex-col">
+                  <a href="#" class="product-card">
+                    <div class="product-card__image-wrapper">
+                      <img
+                        src="assets/images/products/math_1.png"
+                        alt="Toán 1 Tập 1"
+                        class="product-card__image"
+                      />
+                    </div>
+                    <div class="product-card__content">
+                      <div>
+                        <span class="product-card__category">
+                          Sách giáo khoa
+                        </span>
+                        <h3 class="product-card__title">Toán 1 Tập Một</h3>
+                      </div>
+                      <span class="product-card__price"> 10.000đ </span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subsection 2: Sách tham khảo -->
+          <div class="mb-16 md:mb-24">
+            <header class="section-header">
+              <!-- Left Side: Title & Filter Dropdowns -->
+              <div class="section-header__left">
+                <h2 class="section-header__title">Sách tham khảo</h2>
+                <div class="section-header__divider"></div>
+
+                <!-- Dropdown Filter 1: Chọn cấp -->
+                <div class="section-header__dropdown">
+                  <button type="button" class="section-header__dropdown-btn">
+                    Chọn cấp
+                    <svg
+                      class="transition-transform duration-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 14.75C11.808 14.75 11.616 14.6771 11.47 14.5301L7.46999 10.5301C7.17699 10.2371 7.17699 9.76202 7.46999 9.46902C7.76299 9.17602 8.23803 9.17602 8.53103 9.46902L12.001 12.939L15.471 9.46902C15.764 9.17602 16.239 9.17602 16.532 9.46902C16.825 9.76202 16.825 10.2371 16.532 10.5301L12.532 14.5301C12.384 14.6771 12.192 14.75 12 14.75Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                  <!-- Dropdown list -->
+                  <ul class="section-header__dropdown-list">
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Tất cả cấp</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Tiểu học</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item">THCS</a>
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item">THPT</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Dropdown Filter 2: Chọn lớp -->
+                <div class="section-header__dropdown">
+                  <button type="button" class="section-header__dropdown-btn">
+                    Chọn lớp
+                    <svg
+                      class="transition-transform duration-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 14.75C11.808 14.75 11.616 14.6771 11.47 14.5301L7.46999 10.5301C7.17699 10.2371 7.17699 9.76202 7.46999 9.46902C7.76299 9.17602 8.23803 9.17602 8.53103 9.46902L12.001 12.939L15.471 9.46902C15.764 9.17602 16.239 9.17602 16.532 9.46902C16.825 9.76202 16.825 10.2371 16.532 10.5301L12.532 14.5301C12.384 14.6771 12.192 14.75 12 14.75Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                  <!-- Dropdown list -->
+                  <ul class="section-header__dropdown-list">
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 2</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 3</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 4</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 5</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 6</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 7</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 8</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 9</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 10</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 11</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 12</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Right Side: See More Button -->
+              <a href="#" class="section-header__more-btn">
+                Xem thêm
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M10 16.75C9.80802 16.75 9.61599 16.6771 9.46999 16.5301C9.17699 16.2371 9.17699 15.762 9.46999 15.469L12.94 11.999L9.46999 8.52908C9.17699 8.23608 9.17699 7.76104 9.46999 7.46804C9.76299 7.17504 10.238 7.17504 10.531 7.46804L14.531 11.468C14.824 11.761 14.824 12.2361 14.531 12.5291L10.531 16.5291C10.384 16.6771 10.192 16.75 10 16.75Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </header>
+
+            <!-- Swiper Carousel -->
+            <div class="swiper products-swiper overflow-visible relative">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide h-full flex flex-col">
+                  <a href="#" class="product-card">
+                    <div class="product-card__image-wrapper">
+                      <img
+                        src="assets/images/products/civic.png"
+                        alt="Giáo dục kĩ năng công dân số lớp 5"
+                        class="product-card__image"
+                      />
+                    </div>
+                    <div class="product-card__content">
+                      <div>
+                        <span class="product-card__category">
+                          Sách tham khảo
+                        </span>
+                        <h3 class="product-card__title">
+                          Giáo dục kĩ năng công dân số lớp 5
+                        </h3>
+                      </div>
+                      <span class="product-card__price"> 10.000đ </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide h-full flex flex-col">
+                  <a href="#" class="product-card">
+                    <div class="product-card__image-wrapper">
+                      <img
+                        src="assets/images/products/vietnamese.png"
+                        alt="Luyện tập Tiếng Việt lớp 3"
+                        class="product-card__image"
+                      />
+                    </div>
+                    <div class="product-card__content">
+                      <div>
+                        <span class="product-card__category">
+                          Sách tham khảo
+                        </span>
+                        <h3 class="product-card__title">
+                          Luyện tập Tiếng Việt lớp 3
+                        </h3>
+                      </div>
+                      <span class="product-card__price"> 10.000đ </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide h-full flex flex-col">
+                  <a href="#" class="product-card">
+                    <div class="product-card__image-wrapper">
+                      <img
+                        src="assets/images/products/science_8.png"
+                        alt="Nâng cao và phát triển Khoa học tự nhiên 8"
+                        class="product-card__image"
+                      />
+                    </div>
+                    <div class="product-card__content">
+                      <div>
+                        <span class="product-card__category">
+                          Sách tham khảo
+                        </span>
+                        <h3 class="product-card__title">
+                          Nâng cao và phát triển Khoa học tự nhiên 8
+                        </h3>
+                      </div>
+                      <span class="product-card__price"> 10.000đ </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide h-full flex flex-col">
+                  <a href="#" class="product-card">
+                    <div class="product-card__image-wrapper">
+                      <img
+                        src="assets/images/products/math_1.png"
+                        alt="Bài tập Nâng cao và một số chuyên đề Toán 8"
+                        class="product-card__image"
+                      />
+                    </div>
+                    <div class="product-card__content">
+                      <div>
+                        <span class="product-card__category">
+                          Sách tham khảo
+                        </span>
+                        <h3 class="product-card__title">
+                          Bài tập Nâng cao và một số chuyên đề Toán 8
+                        </h3>
+                      </div>
+                      <span class="product-card__price"> 10.000đ </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="swiper-slide h-full flex flex-col">
+                  <a href="#" class="product-card">
+                    <div class="product-card__image-wrapper">
+                      <img
+                        src="assets/images/products/civic.png"
+                        alt="Giáo dục kĩ năng công dân số lớp 5"
+                        class="product-card__image"
+                      />
+                    </div>
+                    <div class="product-card__content">
+                      <div>
+                        <span class="product-card__category">
+                          Sách tham khảo
+                        </span>
+                        <h3 class="product-card__title">
+                          Giáo dục kĩ năng công dân số lớp 5
+                        </h3>
+                      </div>
+                      <span class="product-card__price"> 10.000đ </span>
+                    </div>
+                  </a>
+                </div>
+                <!-- Slide 6 -->
+                <div class="swiper-slide h-full flex flex-col">
+                  <a href="#" class="product-card">
+                    <div class="product-card__image-wrapper">
+                      <img
+                        src="assets/images/products/civic.png"
+                        alt="Giáo dục kĩ năng công dân số lớp 5"
+                        class="product-card__image"
+                      />
+                    </div>
+                    <div class="product-card__content">
+                      <div>
+                        <span class="product-card__category">
+                          Sách tham khảo
+                        </span>
+                        <h3 class="product-card__title">
+                          Giáo dục kĩ năng công dân số lớp 5
+                        </h3>
+                      </div>
+                      <span class="product-card__price"> 10.000đ </span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subsection 3: Tài liệu giáo dục địa phương -->
+          <div>
+            <header class="section-header">
+              <!-- Left Side: Title & Filter Dropdowns -->
+              <div class="section-header__left">
+                <h2 class="section-header__title">
+                  Tài liệu giáo dục địa phương
+                </h2>
+                <div class="section-header__divider"></div>
+
+                <!-- Dropdown Filter 1: Chọn cấp -->
+                <div class="section-header__dropdown">
+                  <button type="button" class="section-header__dropdown-btn">
+                    Chọn cấp
+                    <svg
+                      class="transition-transform duration-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 14.75C11.808 14.75 11.616 14.6771 11.47 14.5301L7.46999 10.5301C7.17699 10.2371 7.17699 9.76202 7.46999 9.46902C7.76299 9.17602 8.23803 9.17602 8.53103 9.46902L12.001 12.939L15.471 9.46902C15.764 9.17602 16.239 9.17602 16.532 9.46902C16.825 9.76202 16.825 10.2371 16.532 10.5301L12.532 14.5301C12.384 14.6771 12.192 14.75 12 14.75Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                  <!-- Dropdown list -->
+                  <ul class="section-header__dropdown-list">
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Tất cả cấp</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Tiểu học</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item">THCS</a>
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item">THPT</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Dropdown Filter 2: Chọn lớp -->
+                <div class="section-header__dropdown">
+                  <button type="button" class="section-header__dropdown-btn">
+                    Chọn lớp
+                    <svg
+                      class="transition-transform duration-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 14.75C11.808 14.75 11.616 14.6771 11.47 14.5301L7.46999 10.5301C7.17699 10.2371 7.17699 9.76202 7.46999 9.46902C7.76299 9.17602 8.23803 9.17602 8.53103 9.46902L12.001 12.939L15.471 9.46902C15.764 9.17602 16.239 9.17602 16.532 9.46902C16.825 9.76202 16.825 10.2371 16.532 10.5301L12.532 14.5301C12.384 14.6771 12.192 14.75 12 14.75Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                  <!-- Dropdown list -->
+                  <ul class="section-header__dropdown-list">
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 2</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 3</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 4</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 5</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 6</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 7</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 8</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 9</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 10</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 11</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 12</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Right Side: See More Button -->
+              <a href="#" class="section-header__more-btn">
+                Xem thêm
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M10 16.75C9.80802 16.75 9.61599 16.6771 9.46999 16.5301C9.17699 16.2371 9.17699 15.762 9.46999 15.469L12.94 11.999L9.46999 8.52908C9.17699 8.23608 9.17699 7.76104 9.46999 7.46804C9.76299 7.17504 10.238 7.17504 10.531 7.46804L14.531 11.468C14.824 11.761 14.824 12.2361 14.531 12.5291L10.531 16.5291C10.384 16.6771 10.192 16.75 10 16.75Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </header>
+
+            <!-- Swiper Carousel -->
+            <div class="swiper products-swiper overflow-visible relative">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide h-full flex flex-col">
+                  <a href="#" class="product-card">
+                    <div class="product-card__image-wrapper">
+                      <img
+                        src="assets/images/products/local_binh_duong_1.png"
+                        alt="Tài liệu giáo dục địa phương tỉnh Bình Dương lớp 1"
+                        class="product-card__image"
+                      />
+                    </div>
+                    <div class="product-card__content">
+                      <div>
+                        <span class="product-card__category">
+                          Sách giáo khoa
+                        </span>
+                        <h3 class="product-card__title">
+                          Tài liệu giáo dục địa phương tỉnh Bình Dương lớp 1
+                        </h3>
+                      </div>
+                      <span class="product-card__price"> 10.000đ </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide h-full flex flex-col">
+                  <a href="#" class="product-card">
+                    <div class="product-card__image-wrapper">
+                      <img
+                        src="assets/images/products/local_cao_bang_10.png"
+                        alt="Tài liệu giáo dục địa phương tỉnh Cao Bằng lớp 10"
+                        class="product-card__image"
+                      />
+                    </div>
+                    <div class="product-card__content">
+                      <div>
+                        <span class="product-card__category">
+                          Sách giáo khoa
+                        </span>
+                        <h3 class="product-card__title">
+                          Tài liệu giáo dục địa phương tỉnh Cao Bằng lớp 10
+                        </h3>
+                      </div>
+                      <span class="product-card__price"> 10.000đ </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide h-full flex flex-col">
+                  <a href="#" class="product-card">
+                    <div class="product-card__image-wrapper">
+                      <img
+                        src="assets/images/products/local_binh_duong_1.png"
+                        alt="Tài liệu giáo dục địa phương tỉnh Bình Dương lớp 1"
+                        class="product-card__image"
+                      />
+                    </div>
+                    <div class="product-card__content">
+                      <div>
+                        <span class="product-card__category">
+                          Sách giáo khoa
+                        </span>
+                        <h3 class="product-card__title">
+                          Tài liệu giáo dục địa phương tỉnh Bình Dương lớp 1
+                        </h3>
+                      </div>
+                      <span class="product-card__price"> 10.000đ </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide h-full flex flex-col">
+                  <a href="#" class="product-card">
+                    <div class="product-card__image-wrapper">
+                      <img
+                        src="assets/images/products/local_bac_giang_1.png"
+                        alt="Tài liệu giáo dục địa phương tỉnh Bắc Giang lớp 1"
+                        class="product-card__image"
+                      />
+                    </div>
+                    <div class="product-card__content">
+                      <div>
+                        <span class="product-card__category">
+                          Sách giáo khoa
+                        </span>
+                        <h3 class="product-card__title">
+                          Tài liệu giáo dục địa phương tỉnh Bắc Giang lớp 1
+                        </h3>
+                      </div>
+                      <span class="product-card__price"> 10.000đ </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="swiper-slide h-full flex flex-col">
+                  <a href="#" class="product-card">
+                    <div class="product-card__image-wrapper">
+                      <img
+                        src="assets/images/products/local_bac_giang_1.png"
+                        alt="Tài liệu giáo dục địa phương tỉnh Bắc Giang lớp 1"
+                        class="product-card__image"
+                      />
+                    </div>
+                    <div class="product-card__content">
+                      <div>
+                        <span class="product-card__category">
+                          Sách giáo khoa
+                        </span>
+                        <h3 class="product-card__title">
+                          Tài liệu giáo dục địa phương tỉnh Bắc Giang lớp 1
+                        </h3>
+                      </div>
+                      <span class="product-card__price"> 10.000đ </span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative overflow-hidden py-20 lg:py-25">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+          <img
+            src="assets/images/digital-learning-ecosystem/bg-digital.png"
+            alt="Hệ sinh thái học liệu số"
+            class="w-full h-full object-cover object-center"
+          />
+        </div>
+        <div class="relative z-10 container">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 items-center gap-12 lg:gap-16"
+          >
+            <!-- Left Column: Content -->
+            <div class="lg:col-span-6 flex flex-col items-start text-left">
+              <h2
+                class="mb-6 font-montserrat text-heading text-3xl md:text-5xl lg:text-6xl font-bold"
+              >
+                Hệ sinh thái học liệu số
+              </h2>
+              <p class="mb-8 text-gray-400 text-base md:text-lg max-w-2xl">
+                Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo dục
+                hiện đại. Chúng tôi có các tài nguyên giáo dục ở dạng định dạng
+                số như ebook, slide, video bài giảng, ngân hàng câu hỏi, đề thi,
+                hệ thống kiểm tra đánh giá,... Những tài nguyên này giúp cá nhân
+                hóa việc học, tăng khả năng chia sẻ, hỗ trợ tương tác dạy và học
+                linh hoạt.
+              </p>
+              <a href="#" class="btn-outline-pill">
+                <span>Xem thêm</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-6 h-6"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Right Column: Interactive Ecosystem List -->
+            <div class="lg:col-span-6 w-full">
+              <div class="ecosystem-card">
+                <!-- Item 1: Học liệu sách giáo khoa -->
+                <a href="#" class="ecosystem-item group">
+                  <div class="flex items-center gap-4 sm:gap-6">
+                    <div class="ecosystem-item__icon-wrapper">
+                      <!-- Digital Book Icon -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <g clip-path="url(#clip0_1_2230)">
+                          <path
+                            d="M13.6432 11.3816C13.6769 11.4474 13.728 11.5026 13.791 11.5411C13.8541 11.5796 13.9265 11.6 14.0004 11.6C14.0634 11.6 14.1255 11.585 14.1816 11.5564C14.2052 11.5444 16.5596 10.3484 17.7208 9.98162C17.9312 9.91483 18.048 9.69002 17.9812 9.47964C17.9654 9.4295 17.9399 9.38297 17.9061 9.3427C17.8723 9.30242 17.831 9.26921 17.7843 9.24495C17.7377 9.22069 17.6868 9.20586 17.6344 9.20132C17.582 9.19677 17.5293 9.20259 17.4792 9.21846C16.256 9.60527 13.9176 10.7933 13.8184 10.8436C13.6216 10.9436 13.5432 11.1845 13.6432 11.3816ZM14.0004 6.8001C14.0634 6.80007 14.1255 6.78513 14.1816 6.75651C14.2052 6.74451 16.5596 5.5485 17.7208 5.18171C17.9312 5.11491 18.048 4.8901 17.9812 4.67973C17.9654 4.62959 17.9399 4.58305 17.9061 4.54278C17.8723 4.50251 17.831 4.46929 17.7843 4.44503C17.7377 4.42077 17.6868 4.40595 17.6344 4.4014C17.582 4.39685 17.5293 4.40268 17.4792 4.41854C16.256 4.80535 13.9176 5.99334 13.8184 6.04373C13.6216 6.14372 13.5432 6.38451 13.6432 6.58171C13.6769 6.64746 13.728 6.70264 13.791 6.74117C13.8541 6.7797 13.9265 6.8001 14.0004 6.8001Z"
+                            fill="black"
+                          />
+                          <path
+                            d="M23.6001 6.0002C23.5475 6.00018 23.4955 6.01051 23.447 6.03061C23.3985 6.0507 23.3544 6.08016 23.3172 6.11731C23.2801 6.15445 23.2506 6.19855 23.2305 6.24709C23.2104 6.29563 23.2001 6.34765 23.2001 6.40018V22.0001C23.2001 22.6616 22.6617 23.2 22.0001 23.2H12.4002V22.2797C12.9834 22.0757 14.5026 21.6001 16.0001 21.6001C19.4845 21.6001 21.8505 22.3717 21.8741 22.3796C21.9342 22.3994 21.9982 22.4047 22.0607 22.3951C22.1233 22.3855 22.1827 22.3613 22.2341 22.3244C22.2855 22.2874 22.3274 22.2386 22.3562 22.1822C22.3851 22.1258 22.4001 22.0634 22.4001 22V4.40022C22.4002 4.3092 22.3692 4.22086 22.3122 4.14986C22.2553 4.07886 22.1758 4.02944 22.0869 4.00981C22.0869 4.00981 21.7733 3.93982 21.2373 3.84139C21.0208 3.8014 20.8117 3.9454 20.7717 4.1622C20.7317 4.37979 20.8753 4.58819 21.0925 4.62818C21.2619 4.65926 21.4311 4.69166 21.6001 4.72539V21.4684C20.6937 21.2308 18.6809 20.8001 16.0001 20.8001C14.2573 20.8001 12.5453 21.3724 12.0157 21.5665C11.5449 21.3585 10.1217 20.8001 8.40013 20.8001C5.64493 20.8001 3.37536 21.2545 2.40018 21.4853V4.70978C3.19897 4.51338 5.55817 4.0002 8.40013 4.0002C9.85854 4.0002 11.1093 4.45418 11.6001 4.65939V20.4001C11.6001 20.4709 11.619 20.5404 11.6546 20.6015C11.6903 20.6627 11.7416 20.7133 11.8032 20.7481C11.8648 20.783 11.9346 20.8009 12.0054 20.7999C12.0762 20.799 12.1454 20.7793 12.2061 20.7429C12.2457 20.7193 16.2089 18.3521 19.7264 17.1797C19.8061 17.1532 19.8754 17.1022 19.9245 17.0341C19.9737 16.966 20.0001 16.8841 20.0001 16.8001V0.400225C20 0.335567 19.9844 0.271876 19.9543 0.214614C19.9243 0.157351 19.8808 0.108225 19.8277 0.0714462C19.7745 0.0345477 19.7133 0.0110868 19.6491 0.00307736C19.585 -0.00493204 19.5198 0.00274936 19.4593 0.0254622C16.2589 1.22583 13.0206 3.24101 12.9881 3.26103C12.8009 3.37822 12.7437 3.62501 12.8609 3.81223C12.9777 3.99945 13.2245 4.05663 13.4121 3.93945C13.4417 3.92065 16.2589 2.16787 19.2 0.98508V16.5138C16.4696 17.4625 13.6189 19.0117 12.4001 19.7053V4.40022C12.4001 4.3259 12.3794 4.25305 12.3403 4.18983C12.3012 4.1266 12.2453 4.0755 12.1789 4.04224C12.1101 4.00826 10.4709 3.20023 8.40013 3.20023C4.78577 3.20023 2.00699 3.98224 1.89018 4.01581C1.80663 4.03966 1.73313 4.09008 1.6808 4.15945C1.62847 4.22881 1.60016 4.31334 1.60017 4.40022V22.0001C1.60028 22.0619 1.61467 22.1229 1.64222 22.1783C1.66977 22.2337 1.70972 22.2819 1.75898 22.3193C1.82844 22.3718 1.91314 22.4002 2.0002 22.4001C2.03699 22.4001 2.07379 22.3949 2.10979 22.3845C2.1374 22.3769 4.90338 21.6001 8.40013 21.6001C9.86253 21.6001 11.1121 22.0553 11.6001 22.2597V23.2001H2.0002C1.33861 23.2001 0.800207 22.6617 0.800207 22.0001V6.40022C0.800207 6.17944 0.621005 6.00024 0.400225 6.00024C0.179446 6.00024 0.000244141 6.17944 0.000244141 6.40022V22.0001C0.000244141 23.1029 0.897425 24.0001 2.00024 24.0001H22.0001C23.1029 24.0001 24.0001 23.1029 24.0001 22.0001V6.40022C24.0001 6.34769 23.9898 6.29566 23.9697 6.24713C23.9496 6.19859 23.9201 6.15448 23.883 6.11733C23.8458 6.08019 23.8017 6.05072 23.7532 6.03062C23.7046 6.01052 23.6526 6.00018 23.6001 6.0002Z"
+                            fill="black"
+                          />
+                          <path
+                            d="M13.6433 8.98162C13.677 9.04737 13.7281 9.10255 13.7911 9.14109C13.8542 9.17962 13.9266 9.20001 14.0005 9.2C14.0635 9.19998 14.1256 9.18504 14.1817 9.15641C14.2053 9.14441 16.5597 7.94841 17.7209 7.58161C17.9313 7.51481 18.0481 7.29 17.9813 7.07963C17.9655 7.02949 17.94 6.98296 17.9062 6.94268C17.8725 6.90241 17.8311 6.86919 17.7844 6.84493C17.7378 6.82067 17.6869 6.80585 17.6345 6.8013C17.5821 6.79676 17.5294 6.80258 17.4793 6.81844C16.2561 7.20525 13.9177 8.39325 13.8185 8.44364C13.6217 8.54362 13.5433 8.78446 13.6433 8.98162ZM13.6433 13.7816C13.677 13.8473 13.7281 13.9025 13.7911 13.941C13.8542 13.9796 13.9266 14 14.0005 14C14.0635 13.9999 14.1256 13.985 14.1817 13.9564C14.2053 13.9444 16.5597 12.7484 17.7209 12.3816C17.9313 12.3148 18.0481 12.09 17.9813 11.8796C17.9655 11.8295 17.94 11.7829 17.9062 11.7426C17.8725 11.7024 17.8311 11.6692 17.7844 11.6449C17.7378 11.6206 17.6869 11.6058 17.6345 11.6013C17.5821 11.5967 17.5294 11.6025 17.4793 11.6184C16.2561 12.0052 13.9177 13.1932 13.8185 13.2436C13.6217 13.3436 13.5433 13.5844 13.6433 13.7816ZM9.69134 7.42327C7.22138 6.84366 4.41457 7.58208 4.29659 7.61367C4.24523 7.62672 4.19698 7.64983 4.15463 7.68167C4.11228 7.71352 4.07668 7.75346 4.04989 7.79917C4.0231 7.84489 4.00566 7.89547 3.99858 7.94798C3.9915 8.00049 3.99492 8.05389 4.00865 8.10506C4.02237 8.15624 4.04613 8.20418 4.07853 8.24611C4.11093 8.28803 4.15134 8.3231 4.19741 8.34927C4.24348 8.37545 4.29429 8.39222 4.34689 8.3986C4.39949 8.40498 4.45283 8.40085 4.50382 8.38645C4.53063 8.37885 7.233 7.66805 9.509 8.20204C9.72299 8.25206 9.93941 8.11884 9.9898 7.90364C10.0401 7.68886 9.90655 7.47366 9.69134 7.42327ZM9.69134 9.82325C7.22138 9.24407 4.41457 9.98206 4.29659 10.0137C4.24523 10.0267 4.19698 10.0498 4.15463 10.0817C4.11228 10.1135 4.07668 10.1534 4.04989 10.1992C4.0231 10.2449 4.00566 10.2955 3.99858 10.348C3.9915 10.4005 3.99492 10.4539 4.00865 10.505C4.02237 10.5562 4.04613 10.6042 4.07853 10.6461C4.11093 10.688 4.15134 10.7231 4.19741 10.7493C4.24348 10.7754 4.29429 10.7922 4.34689 10.7986C4.39949 10.805 4.45283 10.8008 4.50382 10.7864C4.53063 10.7788 7.233 10.068 9.509 10.602C9.72299 10.652 9.93941 10.5188 9.9898 10.3036C10.0401 10.0888 9.90655 9.87364 9.69134 9.82325ZM13.6433 16.1816C13.677 16.2473 13.7281 16.3025 13.7911 16.341C13.8542 16.3796 13.9266 16.4 14.0005 16.3999C14.0635 16.3999 14.1256 16.385 14.1817 16.3564C14.2053 16.3444 16.5597 15.1483 17.7209 14.7816C17.9313 14.7148 18.0481 14.4899 17.9813 14.2796C17.9655 14.2294 17.94 14.1829 17.9062 14.1426C17.8725 14.1024 17.8311 14.0691 17.7844 14.0449C17.7378 14.0206 17.6869 14.0058 17.6345 14.0012C17.5821 13.9967 17.5294 14.0025 17.4793 14.0184C16.2561 14.4052 13.9177 15.5932 13.8185 15.6436C13.6217 15.7436 13.5433 15.9844 13.6433 16.1816ZM9.69134 12.2232C7.22138 11.644 4.41457 12.3816 4.29659 12.4136C4.19413 12.4411 4.10678 12.5082 4.05375 12.6001C4.00071 12.692 3.98634 12.8011 4.01379 12.9036C4.03657 12.9886 4.08673 13.0638 4.15651 13.1174C4.22628 13.1711 4.31179 13.2003 4.39981 13.2004C4.43421 13.2004 4.46899 13.1956 4.50382 13.1864C4.53063 13.1788 7.233 12.468 9.509 13.002C9.72299 13.052 9.93941 12.9188 9.9898 12.7036C10.0401 12.4888 9.90655 12.2736 9.69134 12.2232ZM9.69134 17.0232C7.22138 16.4436 4.41457 17.182 4.29659 17.2136C4.19413 17.2411 4.10678 17.3082 4.05375 17.4C4.00071 17.4919 3.98634 17.6011 4.01379 17.7036C4.03657 17.7886 4.08673 17.8637 4.15651 17.9174C4.22628 17.971 4.31179 18.0002 4.39981 18.0004C4.43421 18.0004 4.46899 17.9956 4.50382 17.9864C4.53063 17.9788 7.233 17.268 9.509 17.802C9.72299 17.8516 9.93941 17.7188 9.9898 17.5036C10.0401 17.2888 9.90655 17.0736 9.69134 17.0232ZM9.69134 14.6232C7.22138 14.0436 4.41457 14.7816 4.29659 14.8136C4.19413 14.8411 4.10678 14.9082 4.05375 15.0001C4.00071 15.0919 3.98634 15.2011 4.01379 15.3036C4.03657 15.3886 4.08673 15.4638 4.15651 15.5174C4.22628 15.5711 4.31179 15.6002 4.39981 15.6004C4.43421 15.6004 4.46899 15.5956 4.50382 15.5864C4.53063 15.5788 7.233 14.868 9.509 15.402C9.72299 15.452 9.93941 15.3188 9.9898 15.1036C10.0401 14.8888 9.90655 14.6736 9.69134 14.6232Z"
+                            fill="black"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1_2230">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <span class="ecosystem-item__title"
+                      >Học liệu sách giáo khoa</span
+                    >
+                  </div>
+                  <!-- Arrow Right -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                  >
+                    <path
+                      d="M28.9225 16.3827C28.8719 16.5053 28.7987 16.6159 28.7067 16.7079L19.3734 26.0412C19.1787 26.2359 18.9227 26.3345 18.6667 26.3345C18.4107 26.3345 18.1546 26.2372 17.96 26.0412C17.5693 25.6505 17.5693 25.0172 17.96 24.6265L25.5866 16.9999H4C3.448 16.9999 3 16.5519 3 15.9999C3 15.4479 3.448 14.9999 4 14.9999H25.5853L17.9587 7.37324C17.568 6.98257 17.568 6.34919 17.9587 5.95853C18.3493 5.56786 18.9827 5.56786 19.3734 5.95853L28.7067 15.2919C28.7987 15.3839 28.8719 15.4944 28.9225 15.6171C29.0239 15.8624 29.0239 16.1373 28.9225 16.3827Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+
+                <!-- Item 2: Học liệu sách tham khảo -->
+                <a href="#" class="ecosystem-item group">
+                  <div class="flex items-center gap-4 sm:gap-6">
+                    <div class="ecosystem-item__icon-wrapper">
+                      <!-- Digital Book Icon -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <g clip-path="url(#clip0_1_2230)">
+                          <path
+                            d="M13.6432 11.3816C13.6769 11.4474 13.728 11.5026 13.791 11.5411C13.8541 11.5796 13.9265 11.6 14.0004 11.6C14.0634 11.6 14.1255 11.585 14.1816 11.5564C14.2052 11.5444 16.5596 10.3484 17.7208 9.98162C17.9312 9.91483 18.048 9.69002 17.9812 9.47964C17.9654 9.4295 17.9399 9.38297 17.9061 9.3427C17.8723 9.30242 17.831 9.26921 17.7843 9.24495C17.7377 9.22069 17.6868 9.20586 17.6344 9.20132C17.582 9.19677 17.5293 9.20259 17.4792 9.21846C16.256 9.60527 13.9176 10.7933 13.8184 10.8436C13.6216 10.9436 13.5432 11.1845 13.6432 11.3816ZM14.0004 6.8001C14.0634 6.80007 14.1255 6.78513 14.1816 6.75651C14.2052 6.74451 16.5596 5.5485 17.7208 5.18171C17.9312 5.11491 18.048 4.8901 17.9812 4.67973C17.9654 4.62959 17.9399 4.58305 17.9061 4.54278C17.8723 4.50251 17.831 4.46929 17.7843 4.44503C17.7377 4.42077 17.6868 4.40595 17.6344 4.4014C17.582 4.39685 17.5293 4.40268 17.4792 4.41854C16.256 4.80535 13.9176 5.99334 13.8184 6.04373C13.6216 6.14372 13.5432 6.38451 13.6432 6.58171C13.6769 6.64746 13.728 6.70264 13.791 6.74117C13.8541 6.7797 13.9265 6.8001 14.0004 6.8001Z"
+                            fill="black"
+                          />
+                          <path
+                            d="M23.6001 6.0002C23.5475 6.00018 23.4955 6.01051 23.447 6.03061C23.3985 6.0507 23.3544 6.08016 23.3172 6.11731C23.2801 6.15445 23.2506 6.19855 23.2305 6.24709C23.2104 6.29563 23.2001 6.34765 23.2001 6.40018V22.0001C23.2001 22.6616 22.6617 23.2 22.0001 23.2H12.4002V22.2797C12.9834 22.0757 14.5026 21.6001 16.0001 21.6001C19.4845 21.6001 21.8505 22.3717 21.8741 22.3796C21.9342 22.3994 21.9982 22.4047 22.0607 22.3951C22.1233 22.3855 22.1827 22.3613 22.2341 22.3244C22.2855 22.2874 22.3274 22.2386 22.3562 22.1822C22.3851 22.1258 22.4001 22.0634 22.4001 22V4.40022C22.4002 4.3092 22.3692 4.22086 22.3122 4.14986C22.2553 4.07886 22.1758 4.02944 22.0869 4.00981C22.0869 4.00981 21.7733 3.93982 21.2373 3.84139C21.0208 3.8014 20.8117 3.9454 20.7717 4.1622C20.7317 4.37979 20.8753 4.58819 21.0925 4.62818C21.2619 4.65926 21.4311 4.69166 21.6001 4.72539V21.4684C20.6937 21.2308 18.6809 20.8001 16.0001 20.8001C14.2573 20.8001 12.5453 21.3724 12.0157 21.5665C11.5449 21.3585 10.1217 20.8001 8.40013 20.8001C5.64493 20.8001 3.37536 21.2545 2.40018 21.4853V4.70978C3.19897 4.51338 5.55817 4.0002 8.40013 4.0002C9.85854 4.0002 11.1093 4.45418 11.6001 4.65939V20.4001C11.6001 20.4709 11.619 20.5404 11.6546 20.6015C11.6903 20.6627 11.7416 20.7133 11.8032 20.7481C11.8648 20.783 11.9346 20.8009 12.0054 20.7999C12.0762 20.799 12.1454 20.7793 12.2061 20.7429C12.2457 20.7193 16.2089 18.3521 19.7264 17.1797C19.8061 17.1532 19.8754 17.1022 19.9245 17.0341C19.9737 16.966 20.0001 16.8841 20.0001 16.8001V0.400225C20 0.335567 19.9844 0.271876 19.9543 0.214614C19.9243 0.157351 19.8808 0.108225 19.8277 0.0714462C19.7745 0.0345477 19.7133 0.0110868 19.6491 0.00307736C19.585 -0.00493204 19.5198 0.00274936 19.4593 0.0254622C16.2589 1.22583 13.0206 3.24101 12.9881 3.26103C12.8009 3.37822 12.7437 3.62501 12.8609 3.81223C12.9777 3.99945 13.2245 4.05663 13.4121 3.93945C13.4417 3.92065 16.2589 2.16787 19.2 0.98508V16.5138C16.4696 17.4625 13.6189 19.0117 12.4001 19.7053V4.40022C12.4001 4.3259 12.3794 4.25305 12.3403 4.18983C12.3012 4.1266 12.2453 4.0755 12.1789 4.04224C12.1101 4.00826 10.4709 3.20023 8.40013 3.20023C4.78577 3.20023 2.00699 3.98224 1.89018 4.01581C1.80663 4.03966 1.73313 4.09008 1.6808 4.15945C1.62847 4.22881 1.60016 4.31334 1.60017 4.40022V22.0001C1.60028 22.0619 1.61467 22.1229 1.64222 22.1783C1.66977 22.2337 1.70972 22.2819 1.75898 22.3193C1.82844 22.3718 1.91314 22.4002 2.0002 22.4001C2.03699 22.4001 2.07379 22.3949 2.10979 22.3845C2.1374 22.3769 4.90338 21.6001 8.40013 21.6001C9.86253 21.6001 11.1121 22.0553 11.6001 22.2597V23.2001H2.0002C1.33861 23.2001 0.800207 22.6617 0.800207 22.0001V6.40022C0.800207 6.17944 0.621005 6.00024 0.400225 6.00024C0.179446 6.00024 0.000244141 6.17944 0.000244141 6.40022V22.0001C0.000244141 23.1029 0.897425 24.0001 2.00024 24.0001H22.0001C23.1029 24.0001 24.0001 23.1029 24.0001 22.0001V6.40022C24.0001 6.34769 23.9898 6.29566 23.9697 6.24713C23.9496 6.19859 23.9201 6.15448 23.883 6.11733C23.8458 6.08019 23.8017 6.05072 23.7532 6.03062C23.7046 6.01052 23.6526 6.00018 23.6001 6.0002Z"
+                            fill="black"
+                          />
+                          <path
+                            d="M13.6433 8.98162C13.677 9.04737 13.7281 9.10255 13.7911 9.14109C13.8542 9.17962 13.9266 9.20001 14.0005 9.2C14.0635 9.19998 14.1256 9.18504 14.1817 9.15641C14.2053 9.14441 16.5597 7.94841 17.7209 7.58161C17.9313 7.51481 18.0481 7.29 17.9813 7.07963C17.9655 7.02949 17.94 6.98296 17.9062 6.94268C17.8725 6.90241 17.8311 6.86919 17.7844 6.84493C17.7378 6.82067 17.6869 6.80585 17.6345 6.8013C17.5821 6.79676 17.5294 6.80258 17.4793 6.81844C16.2561 7.20525 13.9177 8.39325 13.8185 8.44364C13.6217 8.54362 13.5433 8.78446 13.6433 8.98162ZM13.6433 13.7816C13.677 13.8473 13.7281 13.9025 13.7911 13.941C13.8542 13.9796 13.9266 14 14.0005 14C14.0635 13.9999 14.1256 13.985 14.1817 13.9564C14.2053 13.9444 16.5597 12.7484 17.7209 12.3816C17.9313 12.3148 18.0481 12.09 17.9813 11.8796C17.9655 11.8295 17.94 11.7829 17.9062 11.7426C17.8725 11.7024 17.8311 11.6692 17.7844 11.6449C17.7378 11.6206 17.6869 11.6058 17.6345 11.6013C17.5821 11.5967 17.5294 11.6025 17.4793 11.6184C16.2561 12.0052 13.9177 13.1932 13.8185 13.2436C13.6217 13.3436 13.5433 13.5844 13.6433 13.7816ZM9.69134 7.42327C7.22138 6.84366 4.41457 7.58208 4.29659 7.61367C4.24523 7.62672 4.19698 7.64983 4.15463 7.68167C4.11228 7.71352 4.07668 7.75346 4.04989 7.79917C4.0231 7.84489 4.00566 7.89547 3.99858 7.94798C3.9915 8.00049 3.99492 8.05389 4.00865 8.10506C4.02237 8.15624 4.04613 8.20418 4.07853 8.24611C4.11093 8.28803 4.15134 8.3231 4.19741 8.34927C4.24348 8.37545 4.29429 8.39222 4.34689 8.3986C4.39949 8.40498 4.45283 8.40085 4.50382 8.38645C4.53063 8.37885 7.233 7.66805 9.509 8.20204C9.72299 8.25206 9.93941 8.11884 9.9898 7.90364C10.0401 7.68886 9.90655 7.47366 9.69134 7.42327ZM9.69134 9.82325C7.22138 9.24407 4.41457 9.98206 4.29659 10.0137C4.24523 10.0267 4.19698 10.0498 4.15463 10.0817C4.11228 10.1135 4.07668 10.1534 4.04989 10.1992C4.0231 10.2449 4.00566 10.2955 3.99858 10.348C3.9915 10.4005 3.99492 10.4539 4.00865 10.505C4.02237 10.5562 4.04613 10.6042 4.07853 10.6461C4.11093 10.688 4.15134 10.7231 4.19741 10.7493C4.24348 10.7754 4.29429 10.7922 4.34689 10.7986C4.39949 10.805 4.45283 10.8008 4.50382 10.7864C4.53063 10.7788 7.233 10.068 9.509 10.602C9.72299 10.652 9.93941 10.5188 9.9898 10.3036C10.0401 10.0888 9.90655 9.87364 9.69134 9.82325ZM13.6433 16.1816C13.677 16.2473 13.7281 16.3025 13.7911 16.341C13.8542 16.3796 13.9266 16.4 14.0005 16.3999C14.0635 16.3999 14.1256 16.385 14.1817 16.3564C14.2053 16.3444 16.5597 15.1483 17.7209 14.7816C17.9313 14.7148 18.0481 14.4899 17.9813 14.2796C17.9655 14.2294 17.94 14.1829 17.9062 14.1426C17.8725 14.1024 17.8311 14.0691 17.7844 14.0449C17.7378 14.0206 17.6869 14.0058 17.6345 14.0012C17.5821 13.9967 17.5294 14.0025 17.4793 14.0184C16.2561 14.4052 13.9177 15.5932 13.8185 15.6436C13.6217 15.7436 13.5433 15.9844 13.6433 16.1816ZM9.69134 12.2232C7.22138 11.644 4.41457 12.3816 4.29659 12.4136C4.19413 12.4411 4.10678 12.5082 4.05375 12.6001C4.00071 12.692 3.98634 12.8011 4.01379 12.9036C4.03657 12.9886 4.08673 13.0638 4.15651 13.1174C4.22628 13.1711 4.31179 13.2003 4.39981 13.2004C4.43421 13.2004 4.46899 13.1956 4.50382 13.1864C4.53063 13.1788 7.233 12.468 9.509 13.002C9.72299 13.052 9.93941 12.9188 9.9898 12.7036C10.0401 12.4888 9.90655 12.2736 9.69134 12.2232ZM9.69134 17.0232C7.22138 16.4436 4.41457 17.182 4.29659 17.2136C4.19413 17.2411 4.10678 17.3082 4.05375 17.4C4.00071 17.4919 3.98634 17.6011 4.01379 17.7036C4.03657 17.7886 4.08673 17.8637 4.15651 17.9174C4.22628 17.971 4.31179 18.0002 4.39981 18.0004C4.43421 18.0004 4.46899 17.9956 4.50382 17.9864C4.53063 17.9788 7.233 17.268 9.509 17.802C9.72299 17.8516 9.93941 17.7188 9.9898 17.5036C10.0401 17.2888 9.90655 17.0736 9.69134 17.0232ZM9.69134 14.6232C7.22138 14.0436 4.41457 14.7816 4.29659 14.8136C4.19413 14.8411 4.10678 14.9082 4.05375 15.0001C4.00071 15.0919 3.98634 15.2011 4.01379 15.3036C4.03657 15.3886 4.08673 15.4638 4.15651 15.5174C4.22628 15.5711 4.31179 15.6002 4.39981 15.6004C4.43421 15.6004 4.46899 15.5956 4.50382 15.5864C4.53063 15.5788 7.233 14.868 9.509 15.402C9.72299 15.452 9.93941 15.3188 9.9898 15.1036C10.0401 14.8888 9.90655 14.6736 9.69134 14.6232Z"
+                            fill="black"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1_2230">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <span class="ecosystem-item__title"
+                      >Học liệu sách tham khảo</span
+                    >
+                  </div>
+                  <!-- Arrow Right -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                  >
+                    <path
+                      d="M28.9225 16.3827C28.8719 16.5053 28.7987 16.6159 28.7067 16.7079L19.3734 26.0412C19.1787 26.2359 18.9227 26.3345 18.6667 26.3345C18.4107 26.3345 18.1546 26.2372 17.96 26.0412C17.5693 25.6505 17.5693 25.0172 17.96 24.6265L25.5866 16.9999H4C3.448 16.9999 3 16.5519 3 15.9999C3 15.4479 3.448 14.9999 4 14.9999H25.5853L17.9587 7.37324C17.568 6.98257 17.568 6.34919 17.9587 5.95853C18.3493 5.56786 18.9827 5.56786 19.3734 5.95853L28.7067 15.2919C28.7987 15.3839 28.8719 15.4944 28.9225 15.6171C29.0239 15.8624 29.0239 16.1373 28.9225 16.3827Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+
+                <!-- Item 3: Học liệu Giáo dục khác -->
+                <a href="#" class="ecosystem-item group">
+                  <div class="flex items-center gap-4 sm:gap-6">
+                    <div class="ecosystem-item__icon-wrapper">
+                      <!-- Digital Book Icon -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <g clip-path="url(#clip0_1_2230)">
+                          <path
+                            d="M13.6432 11.3816C13.6769 11.4474 13.728 11.5026 13.791 11.5411C13.8541 11.5796 13.9265 11.6 14.0004 11.6C14.0634 11.6 14.1255 11.585 14.1816 11.5564C14.2052 11.5444 16.5596 10.3484 17.7208 9.98162C17.9312 9.91483 18.048 9.69002 17.9812 9.47964C17.9654 9.4295 17.9399 9.38297 17.9061 9.3427C17.8723 9.30242 17.831 9.26921 17.7843 9.24495C17.7377 9.22069 17.6868 9.20586 17.6344 9.20132C17.582 9.19677 17.5293 9.20259 17.4792 9.21846C16.256 9.60527 13.9176 10.7933 13.8184 10.8436C13.6216 10.9436 13.5432 11.1845 13.6432 11.3816ZM14.0004 6.8001C14.0634 6.80007 14.1255 6.78513 14.1816 6.75651C14.2052 6.74451 16.5596 5.5485 17.7208 5.18171C17.9312 5.11491 18.048 4.8901 17.9812 4.67973C17.9654 4.62959 17.9399 4.58305 17.9061 4.54278C17.8723 4.50251 17.831 4.46929 17.7843 4.44503C17.7377 4.42077 17.6868 4.40595 17.6344 4.4014C17.582 4.39685 17.5293 4.40268 17.4792 4.41854C16.256 4.80535 13.9176 5.99334 13.8184 6.04373C13.6216 6.14372 13.5432 6.38451 13.6432 6.58171C13.6769 6.64746 13.728 6.70264 13.791 6.74117C13.8541 6.7797 13.9265 6.8001 14.0004 6.8001Z"
+                            fill="black"
+                          />
+                          <path
+                            d="M23.6001 6.0002C23.5475 6.00018 23.4955 6.01051 23.447 6.03061C23.3985 6.0507 23.3544 6.08016 23.3172 6.11731C23.2801 6.15445 23.2506 6.19855 23.2305 6.24709C23.2104 6.29563 23.2001 6.34765 23.2001 6.40018V22.0001C23.2001 22.6616 22.6617 23.2 22.0001 23.2H12.4002V22.2797C12.9834 22.0757 14.5026 21.6001 16.0001 21.6001C19.4845 21.6001 21.8505 22.3717 21.8741 22.3796C21.9342 22.3994 21.9982 22.4047 22.0607 22.3951C22.1233 22.3855 22.1827 22.3613 22.2341 22.3244C22.2855 22.2874 22.3274 22.2386 22.3562 22.1822C22.3851 22.1258 22.4001 22.0634 22.4001 22V4.40022C22.4002 4.3092 22.3692 4.22086 22.3122 4.14986C22.2553 4.07886 22.1758 4.02944 22.0869 4.00981C22.0869 4.00981 21.7733 3.93982 21.2373 3.84139C21.0208 3.8014 20.8117 3.9454 20.7717 4.1622C20.7317 4.37979 20.8753 4.58819 21.0925 4.62818C21.2619 4.65926 21.4311 4.69166 21.6001 4.72539V21.4684C20.6937 21.2308 18.6809 20.8001 16.0001 20.8001C14.2573 20.8001 12.5453 21.3724 12.0157 21.5665C11.5449 21.3585 10.1217 20.8001 8.40013 20.8001C5.64493 20.8001 3.37536 21.2545 2.40018 21.4853V4.70978C3.19897 4.51338 5.55817 4.0002 8.40013 4.0002C9.85854 4.0002 11.1093 4.45418 11.6001 4.65939V20.4001C11.6001 20.4709 11.619 20.5404 11.6546 20.6015C11.6903 20.6627 11.7416 20.7133 11.8032 20.7481C11.8648 20.783 11.9346 20.8009 12.0054 20.7999C12.0762 20.799 12.1454 20.7793 12.2061 20.7429C12.2457 20.7193 16.2089 18.3521 19.7264 17.1797C19.8061 17.1532 19.8754 17.1022 19.9245 17.0341C19.9737 16.966 20.0001 16.8841 20.0001 16.8001V0.400225C20 0.335567 19.9844 0.271876 19.9543 0.214614C19.9243 0.157351 19.8808 0.108225 19.8277 0.0714462C19.7745 0.0345477 19.7133 0.0110868 19.6491 0.00307736C19.585 -0.00493204 19.5198 0.00274936 19.4593 0.0254622C16.2589 1.22583 13.0206 3.24101 12.9881 3.26103C12.8009 3.37822 12.7437 3.62501 12.8609 3.81223C12.9777 3.99945 13.2245 4.05663 13.4121 3.93945C13.4417 3.92065 16.2589 2.16787 19.2 0.98508V16.5138C16.4696 17.4625 13.6189 19.0117 12.4001 19.7053V4.40022C12.4001 4.3259 12.3794 4.25305 12.3403 4.18983C12.3012 4.1266 12.2453 4.0755 12.1789 4.04224C12.1101 4.00826 10.4709 3.20023 8.40013 3.20023C4.78577 3.20023 2.00699 3.98224 1.89018 4.01581C1.80663 4.03966 1.73313 4.09008 1.6808 4.15945C1.62847 4.22881 1.60016 4.31334 1.60017 4.40022V22.0001C1.60028 22.0619 1.61467 22.1229 1.64222 22.1783C1.66977 22.2337 1.70972 22.2819 1.75898 22.3193C1.82844 22.3718 1.91314 22.4002 2.0002 22.4001C2.03699 22.4001 2.07379 22.3949 2.10979 22.3845C2.1374 22.3769 4.90338 21.6001 8.40013 21.6001C9.86253 21.6001 11.1121 22.0553 11.6001 22.2597V23.2001H2.0002C1.33861 23.2001 0.800207 22.6617 0.800207 22.0001V6.40022C0.800207 6.17944 0.621005 6.00024 0.400225 6.00024C0.179446 6.00024 0.000244141 6.17944 0.000244141 6.40022V22.0001C0.000244141 23.1029 0.897425 24.0001 2.00024 24.0001H22.0001C23.1029 24.0001 24.0001 23.1029 24.0001 22.0001V6.40022C24.0001 6.34769 23.9898 6.29566 23.9697 6.24713C23.9496 6.19859 23.9201 6.15448 23.883 6.11733C23.8458 6.08019 23.8017 6.05072 23.7532 6.03062C23.7046 6.01052 23.6526 6.00018 23.6001 6.0002Z"
+                            fill="black"
+                          />
+                          <path
+                            d="M13.6433 8.98162C13.677 9.04737 13.7281 9.10255 13.7911 9.14109C13.8542 9.17962 13.9266 9.20001 14.0005 9.2C14.0635 9.19998 14.1256 9.18504 14.1817 9.15641C14.2053 9.14441 16.5597 7.94841 17.7209 7.58161C17.9313 7.51481 18.0481 7.29 17.9813 7.07963C17.9655 7.02949 17.94 6.98296 17.9062 6.94268C17.8725 6.90241 17.8311 6.86919 17.7844 6.84493C17.7378 6.82067 17.6869 6.80585 17.6345 6.8013C17.5821 6.79676 17.5294 6.80258 17.4793 6.81844C16.2561 7.20525 13.9177 8.39325 13.8185 8.44364C13.6217 8.54362 13.5433 8.78446 13.6433 8.98162ZM13.6433 13.7816C13.677 13.8473 13.7281 13.9025 13.7911 13.941C13.8542 13.9796 13.9266 14 14.0005 14C14.0635 13.9999 14.1256 13.985 14.1817 13.9564C14.2053 13.9444 16.5597 12.7484 17.7209 12.3816C17.9313 12.3148 18.0481 12.09 17.9813 11.8796C17.9655 11.8295 17.94 11.7829 17.9062 11.7426C17.8725 11.7024 17.8311 11.6692 17.7844 11.6449C17.7378 11.6206 17.6869 11.6058 17.6345 11.6013C17.5821 11.5967 17.5294 11.6025 17.4793 11.6184C16.2561 12.0052 13.9177 13.1932 13.8185 13.2436C13.6217 13.3436 13.5433 13.5844 13.6433 13.7816ZM9.69134 7.42327C7.22138 6.84366 4.41457 7.58208 4.29659 7.61367C4.24523 7.62672 4.19698 7.64983 4.15463 7.68167C4.11228 7.71352 4.07668 7.75346 4.04989 7.79917C4.0231 7.84489 4.00566 7.89547 3.99858 7.94798C3.9915 8.00049 3.99492 8.05389 4.00865 8.10506C4.02237 8.15624 4.04613 8.20418 4.07853 8.24611C4.11093 8.28803 4.15134 8.3231 4.19741 8.34927C4.24348 8.37545 4.29429 8.39222 4.34689 8.3986C4.39949 8.40498 4.45283 8.40085 4.50382 8.38645C4.53063 8.37885 7.233 7.66805 9.509 8.20204C9.72299 8.25206 9.93941 8.11884 9.9898 7.90364C10.0401 7.68886 9.90655 7.47366 9.69134 7.42327ZM9.69134 9.82325C7.22138 9.24407 4.41457 9.98206 4.29659 10.0137C4.24523 10.0267 4.19698 10.0498 4.15463 10.0817C4.11228 10.1135 4.07668 10.1534 4.04989 10.1992C4.0231 10.2449 4.00566 10.2955 3.99858 10.348C3.9915 10.4005 3.99492 10.4539 4.00865 10.505C4.02237 10.5562 4.04613 10.6042 4.07853 10.6461C4.11093 10.688 4.15134 10.7231 4.19741 10.7493C4.24348 10.7754 4.29429 10.7922 4.34689 10.7986C4.39949 10.805 4.45283 10.8008 4.50382 10.7864C4.53063 10.7788 7.233 10.068 9.509 10.602C9.72299 10.652 9.93941 10.5188 9.9898 10.3036C10.0401 10.0888 9.90655 9.87364 9.69134 9.82325ZM13.6433 16.1816C13.677 16.2473 13.7281 16.3025 13.7911 16.341C13.8542 16.3796 13.9266 16.4 14.0005 16.3999C14.0635 16.3999 14.1256 16.385 14.1817 16.3564C14.2053 16.3444 16.5597 15.1483 17.7209 14.7816C17.9313 14.7148 18.0481 14.4899 17.9813 14.2796C17.9655 14.2294 17.94 14.1829 17.9062 14.1426C17.8725 14.1024 17.8311 14.0691 17.7844 14.0449C17.7378 14.0206 17.6869 14.0058 17.6345 14.0012C17.5821 13.9967 17.5294 14.0025 17.4793 14.0184C16.2561 14.4052 13.9177 15.5932 13.8185 15.6436C13.6217 15.7436 13.5433 15.9844 13.6433 16.1816ZM9.69134 12.2232C7.22138 11.644 4.41457 12.3816 4.29659 12.4136C4.19413 12.4411 4.10678 12.5082 4.05375 12.6001C4.00071 12.692 3.98634 12.8011 4.01379 12.9036C4.03657 12.9886 4.08673 13.0638 4.15651 13.1174C4.22628 13.1711 4.31179 13.2003 4.39981 13.2004C4.43421 13.2004 4.46899 13.1956 4.50382 13.1864C4.53063 13.1788 7.233 12.468 9.509 13.002C9.72299 13.052 9.93941 12.9188 9.9898 12.7036C10.0401 12.4888 9.90655 12.2736 9.69134 12.2232ZM9.69134 17.0232C7.22138 16.4436 4.41457 17.182 4.29659 17.2136C4.19413 17.2411 4.10678 17.3082 4.05375 17.4C4.00071 17.4919 3.98634 17.6011 4.01379 17.7036C4.03657 17.7886 4.08673 17.8637 4.15651 17.9174C4.22628 17.971 4.31179 18.0002 4.39981 18.0004C4.43421 18.0004 4.46899 17.9956 4.50382 17.9864C4.53063 17.9788 7.233 17.268 9.509 17.802C9.72299 17.8516 9.93941 17.7188 9.9898 17.5036C10.0401 17.2888 9.90655 17.0736 9.69134 17.0232ZM9.69134 14.6232C7.22138 14.0436 4.41457 14.7816 4.29659 14.8136C4.19413 14.8411 4.10678 14.9082 4.05375 15.0001C4.00071 15.0919 3.98634 15.2011 4.01379 15.3036C4.03657 15.3886 4.08673 15.4638 4.15651 15.5174C4.22628 15.5711 4.31179 15.6002 4.39981 15.6004C4.43421 15.6004 4.46899 15.5956 4.50382 15.5864C4.53063 15.5788 7.233 14.868 9.509 15.402C9.72299 15.452 9.93941 15.3188 9.9898 15.1036C10.0401 14.8888 9.90655 14.6736 9.69134 14.6232Z"
+                            fill="black"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1_2230">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <span class="ecosystem-item__title"
+                      >Học liệu Giáo dục khác</span
+                    >
+                  </div>
+                  <!-- Arrow Right -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                  >
+                    <path
+                      d="M28.9225 16.3827C28.8719 16.5053 28.7987 16.6159 28.7067 16.7079L19.3734 26.0412C19.1787 26.2359 18.9227 26.3345 18.6667 26.3345C18.4107 26.3345 18.1546 26.2372 17.96 26.0412C17.5693 25.6505 17.5693 25.0172 17.96 24.6265L25.5866 16.9999H4C3.448 16.9999 3 16.5519 3 15.9999C3 15.4479 3.448 14.9999 4 14.9999H25.5853L17.9587 7.37324C17.568 6.98257 17.568 6.34919 17.9587 5.95853C18.3493 5.56786 18.9827 5.56786 19.3734 5.95853L28.7067 15.2919C28.7987 15.3839 28.8719 15.4944 28.9225 15.6171C29.0239 15.8624 29.0239 16.1373 28.9225 16.3827Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tin tức Section -->
+      <section class="bg-white overflow-hidden py-16 md:pt-25 md:pb-35">
+        <div class="container">
+          <!-- Section Header -->
+          <header class="mb-8 md:mb-12 text-center">
+            <span
+              class="block mb-4 text-primary text-base md:text-lg font-bold"
+            >
+              TIN TỨC
+            </span>
+            <h2
+              class="text-heading text-3xl md:text-5xl lg:text-6xl font-semibold font-montserrat"
+            >
+              Tin nổi bật
+            </h2>
+          </header>
+
+          <!-- News Grid -->
+          <div
+            class="grid grid-cols-1 xl:grid-cols-2 gap-x-12 gap-y-8 lg:gap-y-10"
+          >
+            <!-- Card 1 -->
+            <a href="#" class="news-card group">
+              <div class="news-card__image-wrapper">
+                <img
+                  src="assets/images/news/new1.png"
+                  alt="Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo dục hiện đại"
+                  class="news-card__image"
+                />
+              </div>
+              <div class="news-card__content">
+                <span class="news-card__category">Tin tức</span>
+                <h3 class="news-card__title">
+                  Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo dục
+                  hiện đại
+                </h3>
+                <p class="news-card__desc">
+                  Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo dục
+                  hiện đại hệ...
+                </p>
+              </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="#" class="news-card group">
+              <div class="news-card__image-wrapper">
+                <img
+                  src="assets/images/news/new2.png"
+                  alt="Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo dục hiện đại"
+                  class="news-card__image"
+                />
+              </div>
+              <div class="news-card__content">
+                <span class="news-card__category">Tin tức</span>
+                <h3 class="news-card__title">
+                  Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo dục
+                  hiện đại
+                </h3>
+                <p class="news-card__desc">
+                  Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo dục
+                  hiện đại hệ...
+                </p>
+              </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="#" class="news-card group">
+              <div class="news-card__image-wrapper">
+                <img
+                  src="assets/images/news/new3.png"
+                  alt="Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo dục hiện đại"
+                  class="news-card__image"
+                />
+              </div>
+              <div class="news-card__content">
+                <span class="news-card__category">Tin tức</span>
+                <h3 class="news-card__title">
+                  Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo dục
+                  hiện đại
+                </h3>
+                <p class="news-card__desc">
+                  Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo dục
+                  hiện đại hệ...
+                </p>
+              </div>
+            </a>
+
+            <!-- Card 4 -->
+            <a href="#" class="news-card group">
+              <div class="news-card__image-wrapper">
+                <img
+                  src="assets/images/news/new4.png"
+                  alt="Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo dục hiện đại"
+                  class="news-card__image"
+                />
+              </div>
+              <div class="news-card__content">
+                <span class="news-card__category">Tin tức</span>
+                <h3 class="news-card__title">
+                  Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo dục
+                  hiện đại
+                </h3>
+                <p class="news-card__desc">
+                  Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo dục
+                  hiện đại hệ...
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Bottom Button -->
+          <div class="flex justify-center mt-8 md:mt-12">
+            <a
+              href="#"
+              class="section-header__more-btn section-header__more-btn--muted"
+            >
+              Xem tất cả
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M10 16.7498C9.80802 16.7498 9.61599 16.6768 9.46999 16.5298C9.17699 16.2368 9.17699 15.7618 9.46999 15.4688L12.94 11.9988L9.46999 8.52883C9.17699 8.23583 9.17699 7.7608 9.46999 7.4678C9.76299 7.1748 10.238 7.1748 10.531 7.4678L14.531 11.4678C14.824 11.7608 14.824 12.2358 14.531 12.5288L10.531 16.5288C10.384 16.6768 10.192 16.7498 10 16.7498Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer
+      class="relative bg-footer-bg py-16 lg:pt-20 lg:pb-12 text-white border-t border-gray-800"
+    >
+      <div class="container">
+        <!-- Footer Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8"
+        >
+          <!-- Column 1: Brand Info -->
+          <div
+            class="md:col-span-2 lg:col-span-3 flex flex-col items-start text-left"
+          >
+            <div class="flex flex-col gap-6 lg:gap-8">
+              <div class="flex items-center">
+                <img
+                  src="assets/images/footer/logo-footer.png"
+                  alt="Nhà xuất bản Giáo dục Hà Nội"
+                  class="footer__logo h-14 w-auto object-contain"
+                />
+              </div>
+
+              <p class="text-base md:text-lg text-[#DCDBE6A6]/65">
+                Tầng 4, Toà Diamond Flower, số 48 Lê Văn Lương, P. Yên Hoà, TP.
+                Hà Nội
+              </p>
+
+              <a
+                href="#"
+                class="inline-block text-sm font-bold text-white hover:text-primary transition-colors underline underline-offset-4"
+              >
+                BẢN ĐỒ CHỬ ĐƯỜNG
+              </a>
+
+              <!-- Social Icons -->
+              <div class="footer__socials flex items-center gap-6 md:gap-9">
+                <!-- Facebook -->
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                  <img src="assets/images/footer/facebook.png" alt="" />
+                </a>
+                <!-- Instagram -->
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                  <img src="assets/images/footer/instagram.png" alt="" />
+                </a>
+                <!-- TikTok -->
+                <a href="#" class="footer__social-link" aria-label="TikTok">
+                  <img src="assets/images/footer/tiktok.png" alt="" />
+                </a>
+                <!-- YouTube -->
+                <a href="#" class="footer__social-link" aria-label="YouTube">
+                  <img src="assets/images/footer/youtube.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Contact Info -->
+          <div
+            class="md:col-span-1 lg:col-span-3 flex flex-col items-start text-left"
+          >
+            <div class="flex flex-col gap-4">
+              <span class="footer__title">LIÊN HỆ</span>
+              <div>
+                <a
+                  href="tel:02435121533"
+                  class="block text-2xl md:text-3xl font-semibold text-primary hover:text-primary/90 transition-colors font-montserrat"
+                >
+                  024.35121533 (118)
+                </a>
+                <a
+                  href="tel:0978051672"
+                  class="block text-2xl md:text-3xl font-semibold text-primary hover:text-primary/90 transition-colors font-montserrat"
+                >
+                  0978 051 672
+                </a>
+              </div>
+
+              <span class="block text-base md:text-lg text-[#DCDBE6A6]/65">
+                Thứ hai - Thứ sáu: 8.00 - 17.00
+              </span>
+              <a
+                href="mailto:kinhdoanh_heps@gmail.com"
+                class="block text-base md:text-lg font-semibold text-[#DCDBE6] hover:text-primary transition-colors"
+              >
+                kinhdoanh_heps@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 3: Explore links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">KHÁM PHÁ</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Giới thiệu</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Service links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">DỊCH VỤ</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Trung tâm trợ giúp</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Đổi trả hàng</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Thu hồi sản phẩm</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Hỗ trợ tiếp cận</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Liên hệ với chúng tôi</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Nhận tại cửa hàng</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Category links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">DANH MỤC</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Sách giáo khoa</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Sách tham khảo</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link"
+                  >Tài liệu giáo dục địa phương</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer__link">Học liệu số</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright Bottom -->
+        <div class="pt-8 mt-6 border-t border-white/10 lg:mt-10 text-center">
+          <p
+            class="text-center text-sm md:text-base text-white font-semibold mb-0"
+          >
+            Copyright © 2026 Công ty Cổ phần dịch vụ Xuất bản giáo dục Hà Nội.
+            All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/vendor/fancybox.umd.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
