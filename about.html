@@ -676,17 +676,22 @@
       <section
         class="relative aspect-[375/180] sm:aspect-[4/1.5] md:aspect-[1920/332] w-full flex items-center bg-cover bg-center bg-no-repeat overflow-hidden py-6 md:py-0"
         style="
-          background-image:
-            linear-gradient(
+          background-image: url(&quot;assets/images/breadcumb/bc-about.png&quot;);
+        "
+      >
+        <!-- Overlay background with blur -->
+        <div
+          class="absolute inset-0 pointer-events-none"
+          style="
+            background-image: linear-gradient(
               180deg,
               rgba(66, 90, 133, 0) 0%,
               rgba(66, 90, 133, 0.8) 100%
-            ),
-            url(&quot;assets/images/breadcumb/bc-about.png&quot;);
-          backdrop-filter: blur(2px);
-        "
-      >
-        <div class="container w-full h-full">
+            );
+            backdrop-filter: blur(2px);
+          "
+        ></div>
+        <div class="container w-full h-full relative z-10">
           <div class="breadcrumb">
             <nav aria-label="Breadcrumb">
               <ol class="breadcrumb__list">
@@ -723,6 +728,7 @@
           </div>
         </div>
       </section>
+
       <section class="pt-16 md:pt-20 lg:pt-30 bg-white">
         <div class="container">
           <div class="flex flex-col lg:grid lg:grid-cols-12 gap-10 xl:gap-24">

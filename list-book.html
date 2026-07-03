@@ -1,0 +1,2122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách sản phẩm sách</title>
+    <!-- Vendor -->
+    <link rel="stylesheet" href="assets/css/vendor/fancybox.css" />
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="bg-primary-blue bg-header h-16 sticky top-0 z-[999]">
+      <div class="container h-full">
+        <div class="flex justify-between items-center h-full">
+          <a href="/" class="flex items-center">
+            <img
+              src="assets/images/header/logo-header.png"
+              alt="Logo Nhà xuất bản Hà Nội"
+              class="h-12 w-auto object-contain"
+            />
+          </a>
+          <nav class="hidden xl:block h-full">
+            <ul class="nav-list h-full">
+              <li class="h-full flex items-center">
+                <a href="" class="nav-link">Trang chủ</a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link nav-link--active">
+                  <span>Giới thiệu</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Sản phẩm</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="" class="dropdown-link">Sách giáo khoa</a>
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link">Sách tham khảo</a>
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link"
+                      >Tài liệu giáo dục địa phương</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link">Học liệu số</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Cổ đông</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Tin tức</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="h-full flex items-center">
+                <a href="" class="nav-link">Liên hệ</a>
+              </li>
+            </ul>
+          </nav>
+          <div
+            class="hidden xl:flex items-center justify-between py-1.5 border-b border-white/40 w-48 md:w-56 bg-transparent"
+          >
+            <input
+              id="search-trigger-input"
+              type="text"
+              placeholder="Tìm kiếm"
+              readonly
+              class="w-full bg-transparent text-white placeholder-white/60 text-sm outline-none cursor-pointer"
+            />
+            <button
+              id="search-trigger-btn"
+              class="flex items-center justify-center text-white/60 hover:text-white transition-colors duration-300 cursor-pointer"
+              aria-label="Tìm kiếm"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22 22L20 20"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <button
+            id="menu-toggle"
+            class="xl:hidden p-1 text-white hover:text-primary transition-colors cursor-pointer"
+            aria-label="Mở Menu"
+          >
+            <svg
+              width="32px"
+              height="32px"
+              viewBox="0 0 24 24"
+              fill="white"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M4 6H20M4 12H20M4 18H20"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Drawer (Slide-out from Left) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[1000] xl:hidden">
+      <!-- Backdrop overlay -->
+      <div
+        id="mobile-menu-backdrop"
+        class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-0"
+      ></div>
+
+      <!-- Drawer Content -->
+      <div
+        id="mobile-menu-content"
+        class="relative w-[300px] max-w-[85vw] h-full bg-primary-blue shadow-2xl flex flex-col p-6 transition-transform duration-300 -translate-x-full overflow-y-auto"
+      >
+        <!-- Close Button & Logo Row -->
+        <div class="flex justify-between items-center mb-8">
+          <a href="/" class="flex items-center">
+            <img
+              src="assets/images/header/logo-header.png"
+              alt="Logo Nhà xuất bản Hà Nội"
+              class="h-10 w-auto object-contain"
+            />
+          </a>
+          <button
+            id="mobile-menu-close"
+            class="text-white hover:text-primary transition-colors duration-200 cursor-pointer"
+            aria-label="Đóng Menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-6 h-6"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- 1. Search Box ("searh xong rồi mới nav") -->
+        <div
+          id="mobile-search-trigger"
+          class="relative flex items-center py-2 border-b border-white/30 mb-8 cursor-pointer"
+        >
+          <input
+            type="text"
+            placeholder="Tìm kiếm..."
+            readonly
+            class="w-full bg-transparent text-white placeholder-white/50 text-sm outline-none cursor-pointer"
+          />
+          <button
+            class="absolute right-0 text-white/50 hover:text-white transition-colors duration-200 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-5 h-5"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- 2. Nav links stacking vertically ("flex-col không nằm ngang nữa") -->
+        <nav class="flex-1">
+          <ul class="flex flex-col gap-6">
+            <li>
+              <a
+                href=""
+                class="block text-white hover:text-primary text-lg font-bold transition-colors"
+                >Trang chủ</a
+              >
+            </li>
+
+            <!-- Giới thiệu -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-primary text-lg font-bold cursor-pointer transition-colors"
+              >
+                <span>Giới thiệu</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tầm nhìn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Sứ mệnh</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Sản phẩm -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Sản phẩm</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Sách giáo khoa</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Sách tham khảo</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tài liệu giáo dục địa phương</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Học liệu số</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Cổ đông -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Cổ đông</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Báo cáo tài chính</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Nghị quyết đại hội</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Tin tức -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Tin tức</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tin tức sự kiện</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Hoạt động công ty</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href=""
+                class="block text-white text-lg font-bold hover:text-primary transition-colors"
+                >Liên hệ</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Search Popup Modal -->
+    <div
+      id="search-popup"
+      class="hidden fixed inset-0 z-50 flex justify-center items-start p-4 pt-[20vh]"
+    >
+      <!-- Backdrop with blur and white overlay as requested -->
+      <div
+        id="search-popup-backdrop"
+        class="absolute inset-0 backdrop-blur-md bg-white/30 transition-opacity duration-300 opacity-0"
+      ></div>
+
+      <!-- Modal Content Box -->
+      <div
+        id="search-popup-content"
+        class="relative w-full max-w-[700px] rounded-2xl bg-white shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300"
+      >
+        <div class="flex justify-between items-center py-4 px-5">
+          <div class="flex items-center gap-3 flex-1 mr-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="#828282"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 21L16.7 16.7"
+                stroke="#828282"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <input
+              id="search-popup-input"
+              type="text"
+              class="w-full text-lg placeholder:text-gray-400 outline-none text-heading bg-transparent"
+              placeholder="Tìm kiếm sách, học liệu số, tin tức..."
+            />
+          </div>
+          <button
+            id="search-popup-close"
+            class="px-5 py-1.5 rounded-full border border-solid border-gray-600 hover:border-gray-600 text-sm text-gray-300 hover:text-gray-800 hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
+          >
+            Đóng
+          </button>
+        </div>
+
+        <hr class="border-t border-gray-100" />
+
+        <div class="py-5 px-5">
+          <p class="mb-4 text-sm font-bold text-gray-200">TÌM KIẾM PHỔ BIẾN</p>
+          <div class="flex flex-wrap gap-3">
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Ngữ văn 7</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Sách giáo khoa lớp 8</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Học liệu số toán</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Tài liệu giáo dục địa phương</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Ôn thi lớp 10</span>
+            </button>
+          </div>
+        </div>
+
+        <hr class="border-t border-gray-100" />
+
+        <div class="bg-gray-50 py-3 px-5">
+          <div class="flex items-center gap-6 text-gray-200">
+            <div class="flex items-center">
+              <span
+                class="mr-1.5 px-1.5 py-0.5 rounded bg-gray-500 font-sans text-xs font-semibold text-gray-200"
+                >ESC</span
+              >
+              <span class="text-xs">để đóng</span>
+            </div>
+            <div class="flex items-center">
+              <span
+                class="mr-1.5 px-1.5 py-0.5 rounded bg-gray-500 font-sans text-xs font-semibold text-gray-200"
+                >Enter</span
+              >
+              <span class="text-xs">để tìm kiếm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section
+        class="relative aspect-[375/180] sm:aspect-[4/1.5] md:aspect-[1920/332] w-full flex items-center bg-cover bg-center bg-no-repeat overflow-hidden py-6 md:py-0"
+        style="
+          background-image: url(&quot;assets/images/breadcumb/bc-about.png&quot;);
+        "
+      >
+        <!-- Overlay background with blur -->
+        <div
+          class="absolute inset-0 pointer-events-none"
+          style="
+            background-image: linear-gradient(
+              180deg,
+              rgba(66, 90, 133, 0) 0%,
+              rgba(66, 90, 133, 0.8) 100%
+            );
+            backdrop-filter: blur(2px);
+          "
+        ></div>
+        <div class="container w-full h-full relative z-10">
+          <div class="breadcrumb">
+            <nav aria-label="Breadcrumb">
+              <ol class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                  <a href="index.html" class="breadcrumb__link">Trang chủ</a>
+                </li>
+                <li class="breadcrumb__separator">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                  >
+                    <path
+                      d="M5.25 10.5L8.75 7L5.25 3.5"
+                      stroke="white"
+                      stroke-width="1.16667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </li>
+                <li class="breadcrumb__item">
+                  <a href="index.html" class="breadcrumb__link">Sản phẩm</a>
+                </li>
+                <li class="breadcrumb__separator">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                  >
+                    <path
+                      d="M5.25 10.5L8.75 7L5.25 3.5"
+                      stroke="white"
+                      stroke-width="1.16667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </li>
+                <li class="breadcrumb__item">
+                  <span
+                    class="breadcrumb__link breadcrumb__link--active"
+                    aria-current="page"
+                    >Sách giáo khoa</span
+                  >
+                </li>
+              </ol>
+            </nav>
+            <h1 class="breadcrumb__title">Sách giáo khoa</h1>
+          </div>
+        </div>
+      </section>
+      <!-- PRODUCT LISTING SECTION -->
+      <section class="py-16 md:py-20 lg:pt-16 lg:pb-20 bg-white">
+        <div class="container">
+          <div class="tabs">
+            <!-- Tabs Navigation -->
+            <div
+              class="flex flex-wrap items-center justify-start gap-3 md:gap-4 mb-8"
+            >
+              <button
+                class="tabs__btn tabs__btn-pill is-active"
+                data-tab="tab-hoc-sinh"
+              >
+                Sách học sinh
+              </button>
+              <button class="tabs__btn tabs__btn-pill" data-tab="tab-giao-vien">
+                Sách giáo viên
+              </button>
+              <button class="tabs__btn tabs__btn-pill" data-tab="tab-bai-tap">
+                Sách bài tập
+              </button>
+            </div>
+
+            <!-- Filter Bar -->
+            <div
+              class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 py-4 px-6 border border-gray-600 rounded-2xl bg-gray-100 mb-6 md:mb-12"
+            >
+              <!-- Left side: filter controls -->
+              <div class="flex flex-wrap items-center gap-3 md:gap-4">
+                <div
+                  class="flex items-center gap-1.5 text-gray-400 select-none"
+                >
+                  <!-- SVG Filter icon -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      d="M17.5003 3.33331H11.667"
+                      stroke="#828282"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.33333 3.33331H2.5"
+                      stroke="#828282"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17.5 10H10"
+                      stroke="#828282"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6.66667 10H2.5"
+                      stroke="#828282"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17.4997 16.6667H13.333"
+                      stroke="#828282"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10 16.6667H2.5"
+                      stroke="#828282"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11.667 1.66669V5.00002"
+                      stroke="#828282"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6.66699 8.33331V11.6666"
+                      stroke="#828282"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M13.333 15V18.3333"
+                      stroke="#828282"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="text-sm font-semibold">Lọc theo:</span>
+                </div>
+
+                <!-- Select 1: Chọn cấp -->
+                <div class="section-header__dropdown">
+                  <button
+                    type="button"
+                    class="section-header__dropdown-btn appearance-none flex items-center justify-between gap-2 bg-white border border-gray-600 rounded-full pl-4 pr-9 py-2 text-heading text-xs md:text-sm outline-none cursor-pointer hover:border-primary-blue hover:text-primary-blue transition-colors duration-200"
+                  >
+                    <span>Chọn cấp</span>
+                    <svg
+                      class="transition-transform duration-300 w-3 h-3 text-gray-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  <ul class="section-header__dropdown-list">
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Tất cả cấp</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Tiểu học</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Trung học cơ sở</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Trung học phổ thông</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Select 2: Chọn lớp -->
+                <div class="section-header__dropdown">
+                  <button
+                    type="button"
+                    class="section-header__dropdown-btn appearance-none flex items-center justify-between gap-2 bg-white border border-gray-600 rounded-full pl-4 pr-9 py-2 text-heading text-xs md:text-sm outline-none cursor-pointer hover:border-primary-blue hover:text-primary-blue transition-colors duration-200"
+                  >
+                    <span>Chọn lớp</span>
+                    <svg
+                      class="transition-transform duration-300 w-3 h-3 text-gray-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  <ul class="section-header__dropdown-list">
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Tất cả lớp</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 2</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 3</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 4</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 5</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 6</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 7</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 8</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 9</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 10</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 11</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lớp 12</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Dropdown Filter 3: Chọn môn -->
+                <div class="section-header__dropdown">
+                  <button
+                    type="button"
+                    class="section-header__dropdown-btn appearance-none flex items-center justify-between gap-2 bg-white border border-gray-600 rounded-full pl-4 pr-9 py-2 text-heading text-xs md:text-sm outline-none cursor-pointer hover:border-primary-blue hover:text-primary-blue transition-colors duration-200"
+                  >
+                    <span>Chọn môn</span>
+                    <svg
+                      class="transition-transform duration-300 w-3 h-3 text-gray-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  <ul class="section-header__dropdown-list">
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Tất cả môn</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item">Toán</a>
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Ngữ Văn</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Vật Lí</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Hóa Học</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Sinh Học</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Lịch Sử</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Địa Lí</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Khoa học tự nhiên</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="section-header__dropdown-item"
+                        >Tiếng Anh</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Right side: search input -->
+              <div class="relative w-full lg:w-72 flex items-center">
+                <input
+                  type="text"
+                  placeholder="Tìm kiếm"
+                  class="w-full bg-white border border-gray-600 rounded-full pl-4 pr-9 py-2 text-xs md:text-sm font-semibold text-heading placeholder-gray-300 outline-none focus:border-primary-blue hover:border-primary-blue transition-colors duration-200"
+                />
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4 text-heading"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M14.3534 13.6467L11.7927 11.086C12.6487 10.0707 13.1667 8.762 13.1667 7.33333C13.1667 4.11667 10.55 1.5 7.33333 1.5C4.11667 1.5 1.5 4.11667 1.5 7.33333C1.5 10.55 4.11667 13.1667 7.33333 13.1667C8.762 13.1667 10.0707 12.6487 11.086 11.7927L13.6466 14.3533C13.744 14.4507 13.872 14.5 14 14.5C14.128 14.5 14.256 14.4513 14.3534 14.3533C14.5487 14.1587 14.5487 13.842 14.3534 13.6467ZM2.5 7.33333C2.5 4.668 4.668 2.5 7.33333 2.5C9.99867 2.5 12.1667 4.668 12.1667 7.33333C12.1667 9.99867 9.99867 12.1667 7.33333 12.1667C4.668 12.1667 2.5 9.99867 2.5 7.33333Z"
+                      fill="currentColor"
+                      fill-opacity="0.8"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Total Products Count -->
+            <div class="text-gray-300 text-lg mb-6">
+              Hiển thị <span class="text-heading font-semibold">15</span> sản
+              phẩm
+            </div>
+
+            <!-- Tab 1: Sách học sinh -->
+            <div class="tabs__panel is-active" id="tab-hoc-sinh">
+              <div
+                class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-3 gap-y-8 sm:gap-x-4 md:gap-y-10 lg:gap-y-12 2xl:gap-y-14"
+              >
+                <!-- Card 1 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/literature_7_v1.png"
+                      alt="Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Ngữ Văn 7 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 2 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/physics_11.png"
+                      alt="Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Vật Lí 11</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 3 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/math_1.png"
+                      alt="Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Toán 1 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 4 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/science_4.png"
+                      alt="Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Khoa học 4</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 5 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/literature_7_v1.png"
+                      alt="Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Ngữ Văn 7 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+
+                <!-- Repeat for rows 2 & 3 -->
+                <!-- Card 6 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/literature_7_v1.png"
+                      alt="Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Ngữ Văn 7 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 7 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/physics_11.png"
+                      alt="Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Vật Lí 11</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 8 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/math_1.png"
+                      alt="Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Toán 1 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 9 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/science_4.png"
+                      alt="Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Khoa học 4</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 10 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/literature_7_v1.png"
+                      alt="Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Ngữ Văn 7 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+
+                <!-- Card 11 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/literature_7_v1.png"
+                      alt="Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Ngữ Văn 7 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 12 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/physics_11.png"
+                      alt="Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Vật Lí 11</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 13 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/math_1.png"
+                      alt="Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Toán 1 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 14 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/science_4.png"
+                      alt="Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Khoa học 4</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 15 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/literature_7_v1.png"
+                      alt="Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Ngữ Văn 7 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Tab 2: Sách giáo viên -->
+            <div class="tabs__panel" id="tab-giao-vien">
+              <div
+                class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-3 gap-y-8 sm:gap-x-4 md:gap-y-10 lg:gap-y-12 2xl:gap-y-14"
+              >
+                <!-- Card 1 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/vietnamese.png"
+                      alt="Sách giáo viên Tiếng Việt"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">
+                      Sách giáo viên Tiếng Việt
+                    </h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 2 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/science_8.png"
+                      alt="Sách giáo viên Khoa học tự nhiên 8"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Sách giáo viên KHTN 8</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 3 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/civic.png"
+                      alt="Sách giáo viên Giáo dục công dân"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Sách giáo viên GDCD</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 4 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/physics_11.png"
+                      alt="Sách giáo viên Vật Lí 11"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">
+                      Sách giáo viên Vật Lí 11
+                    </h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 5 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/math_1.png"
+                      alt="Sách giáo viên Toán 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Sách giáo viên Toán 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+
+                <!-- Repeat rows -->
+                <!-- Card 6 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/vietnamese.png"
+                      alt="Sách giáo viên Tiếng Việt"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">
+                      Sách giáo viên Tiếng Việt
+                    </h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 7 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/science_8.png"
+                      alt="Sách giáo viên Khoa học tự nhiên 8"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Sách giáo viên KHTN 8</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 8 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/civic.png"
+                      alt="Sách giáo viên Giáo dục công dân"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Sách giáo viên GDCD</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 9 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/physics_11.png"
+                      alt="Sách giáo viên Vật Lí 11"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">
+                      Sách giáo viên Vật Lí 11
+                    </h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 10 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/math_1.png"
+                      alt="Sách giáo viên Toán 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Sách giáo viên Toán 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+
+                <!-- Card 11 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/vietnamese.png"
+                      alt="Sách giáo viên Tiếng Việt"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">
+                      Sách giáo viên Tiếng Việt
+                    </h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 12 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/science_8.png"
+                      alt="Sách giáo viên Khoa học tự nhiên 8"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Sách giáo viên KHTN 8</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 13 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/civic.png"
+                      alt="Sách giáo viên Giáo dục công dân"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Sách giáo viên GDCD</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 14 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/physics_11.png"
+                      alt="Sách giáo viên Vật Lí 11"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">
+                      Sách giáo viên Vật Lí 11
+                    </h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 15 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/math_1.png"
+                      alt="Sách giáo viên Toán 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Sách giáo viên Toán 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Tab 3: Sách bài tập -->
+            <div class="tabs__panel" id="tab-bai-tap">
+              <div
+                class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-3 gap-y-8 sm:gap-x-4 md:gap-y-10 lg:gap-y-12 2xl:gap-y-14"
+              >
+                <!-- Card 1 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/science_4.png"
+                      alt="Bài tập Khoa học 4"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Bài tập Khoa học 4</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 2 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/physics_11.png"
+                      alt="Bài tập Vật Lí 11"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Bài tập Vật Lí 11</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 3 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/math_1.png"
+                      alt="Bài tập Toán 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Bài tập Toán 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 4 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/science_8.png"
+                      alt="Bài tập Khoa học tự nhiên 8"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Bài tập KHTN 8</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 5 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/literature_7_v1.png"
+                      alt="Bài tập Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Bài tập Ngữ Văn 7 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+
+                <!-- Repeat rows -->
+                <!-- Card 6 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/science_4.png"
+                      alt="Bài tập Khoa học 4"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Bài tập Khoa học 4</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 7 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/physics_11.png"
+                      alt="Bài tập Vật Lí 11"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Bài tập Vật Lí 11</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 8 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/math_1.png"
+                      alt="Bài tập Toán 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Bài tập Toán 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 9 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/science_8.png"
+                      alt="Bài tập Khoa học tự nhiên 8"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Bài tập KHTN 8</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 10 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/literature_7_v1.png"
+                      alt="Bài tập Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Bài tập Ngữ Văn 7 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+
+                <!-- Card 11 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/science_4.png"
+                      alt="Bài tập Khoa học 4"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Bài tập Khoa học 4</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 12 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/physics_11.png"
+                      alt="Bài tập Vật Lí 11"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Bài tập Vật Lí 11</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 13 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/math_1.png"
+                      alt="Bài tập Toán 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Bài tập Toán 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 14 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/science_8.png"
+                      alt="Bài tập Khoa học tự nhiên 8"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Bài tập KHTN 8</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+                <!-- Card 15 -->
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/literature_7_v1.png"
+                      alt="Bài tập Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Bài tập Ngữ Văn 7 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <div
+              class="flex items-center justify-center gap-2 mt-12 md:mt-16 select-none h-9"
+            >
+              <!-- Prev Button -->
+              <a
+                href="#"
+                class="flex items-center gap-1 px-2.5 py-1.5 text-heading hover:text-primary transition-colors text-xs sm:text-sm font-semibold cursor-pointer rounded-full border border-gray-150"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-heading"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10.2329 4.18414C10.4626 4.423 10.4551 4.80282 10.2163 5.0325L7.06605 8L10.2163 10.9675C10.4551 11.1972 10.4626 11.577 10.2329 11.8159C10.0032 12.0547 9.62339 12.0622 9.38452 11.8325L5.78452 8.4325C5.66688 8.31938 5.60039 8.16321 5.60039 8C5.60039 7.83679 5.66688 7.68062 5.78452 7.5675L9.38452 4.1675C9.62339 3.93782 10.0032 3.94527 10.2329 4.18414Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span>Trở lại</span>
+              </a>
+
+              <!-- Page 1 -->
+              <a
+                href="#"
+                class="flex flex-col items-center justify-center w-9 py-2 px-3 self-stretch border border-gray-150 text-heading hover:bg-gray-100 font-semibold text-xs sm:text-sm transition-colors rounded-full cursor-pointer"
+                >1</a
+              >
+
+              <!-- Page 2 (active) -->
+              <div
+                class="flex flex-col items-center justify-center w-9 py-2 px-3 self-stretch bg-dark-blue text-white font-bold text-xs sm:text-sm rounded-full"
+              >
+                2
+              </div>
+
+              <!-- Page 3 -->
+              <a
+                href="#"
+                class="flex flex-col items-center justify-center w-9 py-2 px-3 self-stretch border border-gray-150 text-heading hover:bg-gray-100 font-semibold text-xs sm:text-sm transition-colors rounded-full cursor-pointer"
+                >3</a
+              >
+
+              <!-- Page 4 -->
+              <a
+                href="#"
+                class="flex flex-col items-center justify-center w-9 py-2 px-3 self-stretch border border-gray-150 text-heading hover:bg-gray-100 font-semibold text-xs sm:text-sm transition-colors rounded-full cursor-pointer"
+                >4</a
+              >
+
+              <!-- Ellipsis (represented as 3 dots of 6px) -->
+              <div
+                class="flex flex-col items-center justify-center w-9 py-2 px-3 self-stretch"
+              >
+                <div class="flex items-center gap-1 justify-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="6"
+                    height="6"
+                    viewBox="0 0 6 6"
+                    fill="none"
+                    class="w-1.5 h-1.5 shrink-0"
+                  >
+                    <circle cx="3" cy="3" r="3" fill="#E9E9E9" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="6"
+                    height="6"
+                    viewBox="0 0 6 6"
+                    fill="none"
+                    class="w-1.5 h-1.5 shrink-0"
+                  >
+                    <circle cx="3" cy="3" r="3" fill="#E9E9E9" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="6"
+                    height="6"
+                    viewBox="0 0 6 6"
+                    fill="none"
+                    class="w-1.5 h-1.5 shrink-0"
+                  >
+                    <circle cx="3" cy="3" r="3" fill="#E9E9E9" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Page 10 -->
+              <a
+                href="#"
+                class="flex flex-col items-center justify-center w-9 py-2 px-3 self-stretch border border-gray-150 text-heading hover:bg-gray-100 font-semibold text-xs sm:text-sm transition-colors rounded-full cursor-pointer"
+                >10</a
+              >
+
+              <!-- Next Button -->
+              <a
+                href="#"
+                class="flex items-center gap-1 px-2.5 py-1.5 text-heading hover:text-primary transition-colors text-xs sm:text-sm font-semibold cursor-pointer rounded-full border border-gray-150"
+              >
+                <span>Tiếp</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-heading"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.76711 11.8159C5.53743 11.577 5.54488 11.1972 5.78374 10.9675L8.93395 8L5.78374 5.0325C5.54488 4.80282 5.53743 4.423 5.76711 4.18413C5.99679 3.94527 6.37661 3.93782 6.61548 4.1675L10.2155 7.5675C10.3331 7.68062 10.3996 7.83679 10.3996 8C10.3996 8.16321 10.3331 8.31938 10.2155 8.4325L6.61548 11.8325C6.37661 12.0622 5.99679 12.0547 5.76711 11.8159Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer
+      class="relative bg-footer-bg py-16 lg:pt-20 lg:pb-12 text-white border-t border-gray-800"
+    >
+      <div class="container">
+        <!-- Footer Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8"
+        >
+          <!-- Column 1: Brand Info -->
+          <div
+            class="md:col-span-2 lg:col-span-3 flex flex-col items-start text-left"
+          >
+            <div class="flex flex-col gap-6 lg:gap-8">
+              <div class="flex items-center">
+                <img
+                  src="assets/images/footer/logo-footer.png"
+                  alt="Nhà xuất bản Giáo dục Hà Nội"
+                  class="footer__logo h-14 w-auto object-contain"
+                />
+              </div>
+
+              <p class="text-base md:text-lg text-footer-text/65">
+                Tầng 4, Toà Diamond Flower, số 48 Lê Văn Lương, P. Yên Hoà, TP.
+                Hà Nội
+              </p>
+
+              <a
+                href="#"
+                class="inline-block text-sm font-bold text-white hover:text-primary transition-colors underline underline-offset-4"
+              >
+                BẢN ĐỒ CHỬ ĐƯỜNG
+              </a>
+
+              <!-- Social Icons -->
+              <div class="footer__socials flex items-center gap-6 md:gap-9">
+                <!-- Facebook -->
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                  <img src="assets/images/footer/facebook.png" alt="" />
+                </a>
+                <!-- Instagram -->
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                  <img src="assets/images/footer/instagram.png" alt="" />
+                </a>
+                <!-- TikTok -->
+                <a href="#" class="footer__social-link" aria-label="TikTok">
+                  <img src="assets/images/footer/tiktok.png" alt="" />
+                </a>
+                <!-- YouTube -->
+                <a href="#" class="footer__social-link" aria-label="YouTube">
+                  <img src="assets/images/footer/youtube.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Contact Info -->
+          <div
+            class="md:col-span-1 lg:col-span-3 flex flex-col items-start text-left"
+          >
+            <div class="flex flex-col gap-4">
+              <span class="footer__title">LIÊN HỆ</span>
+              <div>
+                <a
+                  href="tel:02435121533"
+                  class="block text-2xl md:text-3xl font-semibold text-primary hover:text-primary/90 transition-colors font-montserrat"
+                >
+                  024.35121533 (118)
+                </a>
+                <a
+                  href="tel:0978051672"
+                  class="block text-2xl md:text-3xl font-semibold text-primary hover:text-primary/90 transition-colors font-montserrat"
+                >
+                  0978 051 672
+                </a>
+              </div>
+
+              <span class="block text-base md:text-lg text-footer-text/65">
+                Thứ hai - Thứ sáu: 8.00 - 17.00
+              </span>
+              <a
+                href="mailto:kinhdoanh_heps@gmail.com"
+                class="block text-base md:text-lg font-semibold text-footer-text hover:text-primary transition-colors"
+              >
+                kinhdoanh_heps@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 3: Explore links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">KHÁM PHÁ</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Giới thiệu</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Service links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">DỊCH VỤ</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Trung tâm trợ giúp</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Đổi trả hàng</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Thu hồi sản phẩm</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Hỗ trợ tiếp cận</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Liên hệ với chúng tôi</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Nhận tại cửa hàng</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Category links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">DANH MỤC</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Sách giáo khoa</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Sách tham khảo</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link"
+                  >Tài liệu giáo dục địa phương</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer__link">Học liệu số</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright Bottom -->
+        <div class="pt-8 mt-6 border-t border-white/10 lg:mt-10 text-center">
+          <p
+            class="text-center text-sm md:text-base text-white font-semibold mb-0"
+          >
+            Copyright © 2026 Công ty Cổ phần dịch vụ Xuất bản giáo dục Hà Nội.
+            All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/vendor/fancybox.umd.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
