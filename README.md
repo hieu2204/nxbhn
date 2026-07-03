@@ -35,6 +35,7 @@ project/
 ```
 
 **Nguyên tắc:**
+
 - `src/` chỉ chứa CSS — JS không có build step nên để thẳng trong `assets/js/`
 - `assets/css/style.css` là file output — không bao giờ chỉnh tay
 - `vendor/` là vùng cấm — không trộn code tự viết với code thư viện
@@ -48,6 +49,7 @@ npm install tailwindcss @tailwindcss/cli
 ```
 
 **`src/input.css`:**
+
 ```css
 @import "tailwindcss";
 @import "./components/_buttons.css";
@@ -61,6 +63,7 @@ npm install tailwindcss @tailwindcss/cli
 ```
 
 **`package.json` scripts:**
+
 ```json
 "scripts": {
   "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./assets/css/style.css --watch",
@@ -79,26 +82,51 @@ Layout → Spacing → Visual → Typography → State
 ```
 
 ```html
-<button class="flex items-center gap-2   px-5 py-2.5   bg-primary rounded-lg   text-white font-medium   hover:bg-primary-dark transition-colors">
+<button
+  class="flex items-center gap-2   px-5 py-2.5   bg-primary rounded-lg   text-white font-medium   hover:bg-primary-dark transition-colors"
+></button>
 ```
 
-| Nhóm | Gồm những gì |
-|---|---|
-| Layout | `flex`, `grid`, `items-center`, `gap-2`, `w-full`, `overflow-hidden` |
-| Spacing | `p-4`, `px-5`, `py-2.5`, `m-4`, `mt-2`, `mx-auto` |
-| Visual | `bg-primary`, `border`, `rounded-lg`, `shadow-md`, `opacity-50` |
-| Typography | `text-white`, `text-lg`, `font-medium`, `leading-6`, `uppercase` |
-| State | `hover:bg-primary-dark`, `focus:ring`, `transition-colors`, `cursor-pointer` |
+| Nhóm       | Gồm những gì                                                                 |
+| ---------- | ---------------------------------------------------------------------------- |
+| Layout     | `flex`, `grid`, `items-center`, `gap-2`, `w-full`, `overflow-hidden`         |
+| Spacing    | `p-4`, `px-5`, `py-2.5`, `m-4`, `mt-2`, `mx-auto`                            |
+| Visual     | `bg-primary`, `border`, `rounded-lg`, `shadow-md`, `opacity-50`              |
+| Typography | `text-white`, `text-lg`, `font-medium`, `leading-6`, `uppercase`             |
+| State      | `hover:bg-primary-dark`, `focus:ring`, `transition-colors`, `cursor-pointer` |
+
+## Quy tắc sửa font-size responsive
+
+- Class KHÔNG có prefix (`text-lg`) = áp dụng desktop trở xuống (mobile-first)
+  → đây là giá trị GỐC, tuyệt đối không đổi trừ khi được yêu cầu rõ ràng.
+- Chỉ được sửa class có prefix `sm:` và `md:` (tablet/mobile theo breakpoint
+  đang dùng trong project) khi:
+  a. Giá trị font-size ở `sm:`/`md:` đang GIỐNG NHAU ở nhiều nơi
+  (VD: nhiều chỗ đều là `md:text-base`)
+  b. Không đụng đến color, giữ nguyên toàn bộ `text-{color}` class
+- Trước khi sửa: liệt kê tất cả vị trí có `sm:text-*` hoặc `md:text-*` trùng
+  giá trị, xác nhận với người dùng trước khi đổi hàng loạt.
+- KHÔNG tự suy luận rằng font-size desktop "chắc cũng nên đổi theo" — nếu
+  không có prefix nghĩa là không được đụng.
 
 ### Khi nào tách component
 
 ```
-Dùng 1–2 lần         → giữ inline
-Dùng 3+ lần          → tách vào @layer components trong src/input.css
-Dùng nhiều file      → tách ra file _component.css riêng
+Tách khi THỎA ĐỦ cả 2 điều kiện:
+1. Xuất hiện ≥ 3 lần trong project (không phải "trông giống" — phải giống
+   >80% class list, ví dụ cùng layout + spacing + visual, chỉ khác nội dung)
+2. Có Ý NGHĨA NGỮ NGHĨA riêng (button, card, badge...) — không tách nếu
+   chỉ là 2-3 utility class trùng ngẫu nhiên (VD: `flex items-center` xuất
+   hiện khắp nơi không có nghĩa nó là 1 component)
+
+KHÔNG tách khi:
+- Chỉ dùng 1-2 lần
+- Giống nhau về layout nhưng khác domain (VD: card sản phẩm và card tác giả
+  nhìn giống nhưng là 2 khái niệm khác — tách riêng, đừng dùng chung 1 class)
 ```
 
 **Ví dụ tách component:**
+
 ```css
 /* src/components/_buttons.css */
 @layer components {
@@ -116,12 +144,16 @@ Dùng nhiều file      → tách ra file _component.css riêng
 ```html
 <!-- ❌ Arbitrary value tùy tiện -->
 <div class="mt-[13px] w-[347px] text-[15px]">
+  <!-- ❌ CSS thuần cho thứ Tailwind đã có -->
+  <style>
+    .card {
+      padding: 1rem;
+    }
+  </style>
 
-<!-- ❌ CSS thuần cho thứ Tailwind đã có -->
-<style>.card { padding: 1rem; }</style>
-
-<!-- ❌ Inline style -->
-<div style="color: #2563eb">
+  <!-- ❌ Inline style -->
+  <div style="color: #2563eb"></div>
+</div>
 ```
 
 ---
@@ -135,34 +167,38 @@ Dùng nhiều file      → tách ra file _component.css riêng
   --color-primary-dark: #1d4ed8;
 
   /* Font size + line-height theo cặp */
-  --text-3xl: 1.75rem;                      /* 28px */
+  --text-3xl: 1.75rem; /* 28px */
   --text-3xl--line-height: calc(40 / 28);
 
-  --text-4xl: 2rem;                         /* 32px */
+  --text-4xl: 2rem; /* 32px */
   --text-4xl--line-height: calc(48 / 32);
 
-  --text-5xl: 2.5rem;                       /* 40px */
+  --text-5xl: 2.5rem; /* 40px */
   --text-5xl--line-height: calc(56 / 40);
 }
 ```
 
 **Nguyên tắc đặt tên:**
+
 - Đặt tên theo **vai trò**, không theo số pixel: `--text-display` thay vì `--text-40`
 - Khi có 2 line-height khác nhau cho cùng font-size → dùng `leading-[value]` inline cho exception, token cho giá trị phổ biến hơn
 
 ---
 
 ## Refactor checklist — đọc file references/refactor-checklist.md
+
 ---
 
 ## Load thư viện JS
 
 **Thứ tự trong HTML:**
+
 ```html
 <head>
   <link rel="stylesheet" href="assets/css/vendor/swiper.min.css" />
   <link rel="stylesheet" href="assets/css/vendor/fancybox.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />  <!-- Tailwind output cuối cùng -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Tailwind output cuối cùng -->
 </head>
 <body>
   <script src="assets/js/vendor/swiper.min.js"></script>

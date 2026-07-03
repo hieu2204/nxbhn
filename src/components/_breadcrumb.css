@@ -1,0 +1,30 @@
+@layer components {
+  /* Breadcrumb Component */
+  .breadcrumb {
+    @apply flex flex-col justify-end h-full text-white pb-6 2xl:pb-15;
+  }
+
+  .breadcrumb__title {
+    @apply font-montserrat text-white text-3xl md:text-4xl lg:text-5xl font-bold mt-3 xl:mt-6;
+  }
+
+  .breadcrumb__list {
+    @apply flex flex-wrap items-center gap-1.5 md:gap-2.5 p-0 m-0 list-none;
+  }
+
+  .breadcrumb__item {
+    @apply flex items-center gap-1.5 md:gap-2.5 text-sm md:text-base font-semibold font-sans;
+  }
+
+  .breadcrumb__link {
+    @apply text-white/70 hover:text-primary transition-all duration-300 no-underline cursor-pointer;
+  }
+
+  .breadcrumb__link--active {
+    @apply text-white pointer-events-none;
+  }
+
+  .breadcrumb__separator {
+    @apply flex items-center justify-center text-white/50 select-none;
+  }
+}

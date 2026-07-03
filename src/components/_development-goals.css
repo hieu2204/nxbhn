@@ -1,0 +1,82 @@
+@layer components {
+  /* Section background and styling */
+  .development-goals {
+    @apply relative bg-white overflow-hidden py-16 lg:py-30;
+  }
+
+  /* Goal Card component */
+  .goal-card {
+    @apply flex flex-col bg-white border border-gray-100/50 rounded-3xl p-8 lg:p-10 transition-all duration-300;
+    box-shadow:
+      0px 10px 40px rgba(24, 58, 142, 0.03),
+      0px 2px 8px rgba(0, 0, 0, 0.01);
+  }
+
+  .goal-card:hover {
+    @apply -translate-y-1.5;
+    box-shadow:
+      0px 20px 50px rgba(24, 58, 142, 0.06),
+      0px 4px 16px rgba(0, 0, 0, 0.02);
+  }
+
+  /* Icon wrapper: Orange background */
+  .goal-card__icon-wrapper {
+    @apply flex items-center justify-center w-14 h-14 rounded-2xl bg-primary text-white mb-6;
+  }
+
+  .goal-card__icon {
+    @apply w-7 h-7 object-contain;
+  }
+
+  /* Text Elements */
+  .goal-card__title {
+    @apply text-heading text-xl lg:text-2xl  mb-2.5;
+  }
+
+  .goal-card__text {
+    @apply text-gray-400 text-base md:text-lg text-justify m-0;
+  }
+
+  /* List & Bullet Items for Card 3 */
+  .goal-card__list {
+    @apply list-disc pl-5 flex flex-col gap-3 text-left mb-2 transition-all duration-300;
+  }
+
+  .goal-card__list.is-hidden {
+    @apply hidden;
+  }
+
+  .goal-card__list-item {
+    @apply text-gray-400 text-base md:text-lg;
+  }
+
+  /* Detailed list style adjustments */
+  .goal-card__list--detailed {
+    @apply overflow-hidden max-h-0 opacity-0;
+  }
+
+  .goal-card__list--detailed.is-open {
+    @apply max-h-[500px] opacity-100;
+  }
+
+  .goal-card__list-item--detailed {
+    @apply text-gray-400 font-normal;
+  }
+
+  .goal-card__list-item--detailed strong {
+    @apply text-gray-700 font-bold;
+  }
+
+  /* Toggle button */
+  .goal-card__toggle-btn {
+    @apply inline-flex items-center gap-1.5 mt-4 text-primary-blue hover:text-primary font-bold text-base transition-colors duration-300 cursor-pointer p-0 bg-transparent border-none outline-none;
+  }
+
+  .goal-card__toggle-icon {
+    @apply w-4 h-4 transition-transform duration-300;
+  }
+
+  .goal-card__toggle-btn.is-active .goal-card__toggle-icon {
+    @apply rotate-180;
+  }
+}

@@ -342,6 +342,85 @@ function initProductFilterDropdown() {
   });
 }
 
+function initHistoryTimeline() {
+  const wheelItems = document.querySelectorAll(".history-wheel__year-item[data-year]");
+  const mobileButtons = document.querySelectorAll("[data-mobile-year]");
+  const panels = document.querySelectorAll(".history-content-panel");
+
+  if (!wheelItems.length && !mobileButtons.length) return;
+
+  function setActiveYear(year) {
+    const activeItem = Array.from(wheelItems).find((item) => item.dataset.year === year);
+    if (!activeItem) return;
+
+    // 1. Update active states on desktop wheel items
+    wheelItems.forEach((item) => {
+      item.classList.toggle("is-active", item.dataset.year === year);
+    });
+
+    // 2. Update active states on mobile slider buttons
+    mobileButtons.forEach((btn) => {
+      const isActive = btn.dataset.mobileYear === year;
+      btn.classList.toggle("border-b-2", isActive);
+      btn.classList.toggle("border-primary", isActive);
+      btn.classList.toggle("text-primary", isActive);
+      btn.classList.toggle("text-gray-300", !isActive);
+      // Scroll active button into view on mobile
+      if (isActive) btn.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    });
+
+    // 3. Update active panel for event content
+    panels.forEach((panel) => {
+      panel.classList.toggle("is-active", panel.id === `panel-${year}`);
+    });
+  }
+
+  // Bind click event to desktop wheel items
+  wheelItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const year = item.dataset.year;
+      setActiveYear(year);
+    });
+  });
+
+  // Bind click event to mobile slider buttons
+  mobileButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const year = btn.dataset.mobileYear;
+      setActiveYear(year);
+    });
+  });
+
+  // Initialize active year on load
+  setActiveYear("2009");
+}
+
+function initGoalsToggle() {
+  const toggleBtn = document.getElementById("goalsToggleBtn");
+  const shortList = document.getElementById("goalsShortList");
+  const detailedList = document.getElementById("goalsDetailedList");
+  if (!toggleBtn || !shortList || !detailedList) return;
+
+  toggleBtn.addEventListener("click", () => {
+    const isOpen = detailedList.classList.contains("is-open");
+    const spanText = toggleBtn.querySelector("span");
+
+    if (isOpen) {
+      detailedList.classList.remove("is-open");
+      shortList.classList.remove("is-hidden");
+      toggleBtn.classList.remove("is-active");
+      toggleBtn.setAttribute("aria-expanded", "false");
+      if (spanText) spanText.textContent = "Xem thêm";
+    } else {
+      detailedList.classList.add("is-open");
+      shortList.classList.add("is-hidden");
+      toggleBtn.classList.add("is-active");
+      toggleBtn.setAttribute("aria-expanded", "true");
+      if (spanText) spanText.textContent = "Thu gọn";
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initTabs();
   initSearchPopup();
@@ -349,4 +428,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeroSlider();
   initProductsSlider();
   initProductFilterDropdown();
+  initHistoryTimeline();
+  initGoalsToggle();
 });
