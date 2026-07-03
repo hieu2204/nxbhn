@@ -52,11 +52,14 @@
   --color-gray-300: #828282;
   --color-gray-400: #6a6a6a;
   --color-gray-500: #ebebeb;
+  --color-gray-eee: #eeeeee;
   --color-gray-600: #dbdbdb;
   --color-gray-700: #3f3f3f;
   --color-gray-800: #dde6f5;
   --color-footer-bg: #262d35;
   --color-footer-text: #dcdbe6;
+  --color-table: #ececec;
+  --color-text-table: #2a2a2a;
 
   /* Font Family */
   --font-sans: "Averta Std CY";
@@ -240,15 +243,15 @@
 
   /* Section Header Component (BEM) */
   .section-header {
-    @apply flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 md:gap-6 mb-6;
+    @apply flex flex-col md:flex-row gap-3  md:items-center md:justify-between  mb-6;
   }
 
   .section-header__left {
-    @apply flex flex-wrap items-center gap-4 md:gap-6;
+    @apply flex flex-wrap items-center gap-4;
   }
 
   .section-header__title {
-    @apply text-heading text-3xl md:text-4xl font-bold font-montserrat tracking-tight m-0;
+    @apply text-heading text-4xl md:text-5xl font-semibold font-montserrat m-0;
   }
 
   .section-header__divider {
@@ -441,25 +444,43 @@
   }
 }
 
-[data-thumbs-action="toggle"] svg {
-  display: none;
-}
-
 [data-thumbs-action="toggle"] {
   position: fixed;
   bottom: 24px;
   right: 24px;
   z-index: 9999;
+  transition: bottom 0.3s ease;
 }
 
-[data-thumbs-action="toggle"]::before {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Crect x='3' y='3' width='7' height='7'/%3E%3Crect x='14' y='3' width='7' height='7'/%3E%3Crect x='3' y='14' width='7' height='7'/%3E%3Crect x='14' y='14' width='7' height='7'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: contain;
+.fancybox__container:has(.fancybox__thumbs:not(.is-hidden))
+  [data-thumbs-action="toggle"] {
+  bottom: calc(
+    var(--f-thumb-height, 80px) + var(--f-thumbs-padding-y, 8px) * 2
+  );
+}
+
+/* Fancybox Thumbnails matching book detail page design */
+.fancybox__container {
+  --f-thumb-width: 80px;
+  --f-thumb-height: 80px;
+  --f-thumb-gap: 10px;
+  --f-thumb-border-radius: 4px;
+  --f-thumb-bg: #ffffff;
+  --f-thumb-img-fit: contain;
+  --f-thumb-outline-color: #f26e1d;
+  --f-thumb-selected-shadow: 0 0 0 2px #f26e1d;
+}
+
+.fancybox__thumbs .f-thumbs__slide button {
+  border: 1px solid #ffffff;
+}
+
+.fancybox__thumbs .f-thumbs__slide.is-selected button {
+  border-color: #f26e1d;
+}
+
+.f-thumbs img {
+  background-color: #0d0a0a;
 }
 
 body {

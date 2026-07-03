@@ -1,0 +1,2298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết sản phẩm sách</title>
+    <!-- Vendor -->
+    <link rel="stylesheet" href="assets/css/vendor/fancybox.css" />
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="bg-primary-blue bg-header h-16 sticky top-0 z-[999]">
+      <div class="container h-full">
+        <div class="flex justify-between items-center h-full">
+          <a href="/" class="flex items-center">
+            <img
+              src="assets/images/header/logo-header.png"
+              alt="Logo Nhà xuất bản Hà Nội"
+              class="h-12 w-auto object-contain"
+            />
+          </a>
+          <nav class="hidden xl:block h-full">
+            <ul class="nav-list h-full">
+              <li class="h-full flex items-center">
+                <a href="" class="nav-link">Trang chủ</a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link nav-link--active">
+                  <span>Giới thiệu</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Sản phẩm</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="" class="dropdown-link">Sách giáo khoa</a>
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link">Sách tham khảo</a>
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link"
+                      >Tài liệu giáo dục địa phương</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link">Học liệu số</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Cổ đông</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Tin tức</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="h-full flex items-center">
+                <a href="" class="nav-link">Liên hệ</a>
+              </li>
+            </ul>
+          </nav>
+          <div
+            class="hidden xl:flex items-center justify-between py-1.5 border-b border-white/40 w-48 md:w-56 bg-transparent"
+          >
+            <input
+              id="search-trigger-input"
+              type="text"
+              placeholder="Tìm kiếm"
+              readonly
+              class="w-full bg-transparent text-white placeholder-white/60 text-sm outline-none cursor-pointer"
+            />
+            <button
+              id="search-trigger-btn"
+              class="flex items-center justify-center text-white/60 hover:text-white transition-colors duration-300 cursor-pointer"
+              aria-label="Tìm kiếm"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22 22L20 20"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <button
+            id="menu-toggle"
+            class="xl:hidden p-1 text-white hover:text-primary transition-colors cursor-pointer"
+            aria-label="Mở Menu"
+          >
+            <svg
+              width="32px"
+              height="32px"
+              viewBox="0 0 24 24"
+              fill="white"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M4 6H20M4 12H20M4 18H20"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Drawer (Slide-out from Left) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[1000] xl:hidden">
+      <!-- Backdrop overlay -->
+      <div
+        id="mobile-menu-backdrop"
+        class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-0"
+      ></div>
+
+      <!-- Drawer Content -->
+      <div
+        id="mobile-menu-content"
+        class="relative w-[300px] max-w-[85vw] h-full bg-primary-blue shadow-2xl flex flex-col p-6 transition-transform duration-300 -translate-x-full overflow-y-auto"
+      >
+        <!-- Close Button & Logo Row -->
+        <div class="flex justify-between items-center mb-8">
+          <a href="/" class="flex items-center">
+            <img
+              src="assets/images/header/logo-header.png"
+              alt="Logo Nhà xuất bản Hà Nội"
+              class="h-10 w-auto object-contain"
+            />
+          </a>
+          <button
+            id="mobile-menu-close"
+            class="text-white hover:text-primary transition-colors duration-200 cursor-pointer"
+            aria-label="Đóng Menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-6 h-6"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- 1. Search Box ("searh xong rồi mới nav") -->
+        <div
+          id="mobile-search-trigger"
+          class="relative flex items-center py-2 border-b border-white/30 mb-8 cursor-pointer"
+        >
+          <input
+            type="text"
+            placeholder="Tìm kiếm..."
+            readonly
+            class="w-full bg-transparent text-white placeholder-white/50 text-sm outline-none cursor-pointer"
+          />
+          <button
+            class="absolute right-0 text-white/50 hover:text-white transition-colors duration-200 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-5 h-5"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- 2. Nav links stacking vertically ("flex-col không nằm ngang nữa") -->
+        <nav class="flex-1">
+          <ul class="flex flex-col gap-6">
+            <li>
+              <a
+                href=""
+                class="block text-white hover:text-primary text-lg font-bold transition-colors"
+                >Trang chủ</a
+              >
+            </li>
+
+            <!-- Giới thiệu -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-primary text-lg font-bold cursor-pointer transition-colors"
+              >
+                <span>Giới thiệu</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tầm nhìn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Sứ mệnh</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Sản phẩm -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Sản phẩm</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Sách giáo khoa</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Sách tham khảo</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tài liệu giáo dục địa phương</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Học liệu số</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Cổ đông -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Cổ đông</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Báo cáo tài chính</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Nghị quyết đại hội</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Tin tức -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Tin tức</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tin tức sự kiện</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Hoạt động công ty</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href=""
+                class="block text-white text-lg font-bold hover:text-primary transition-colors"
+                >Liên hệ</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Search Popup Modal -->
+    <div
+      id="search-popup"
+      class="hidden fixed inset-0 z-50 flex justify-center items-start p-4 pt-[20vh]"
+    >
+      <!-- Backdrop with blur and white overlay as requested -->
+      <div
+        id="search-popup-backdrop"
+        class="absolute inset-0 backdrop-blur-md bg-white/30 transition-opacity duration-300 opacity-0"
+      ></div>
+
+      <!-- Modal Content Box -->
+      <div
+        id="search-popup-content"
+        class="relative w-full max-w-[700px] rounded-2xl bg-white shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300"
+      >
+        <div class="flex justify-between items-center py-4 px-5">
+          <div class="flex items-center gap-3 flex-1 mr-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="#828282"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 21L16.7 16.7"
+                stroke="#828282"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <input
+              id="search-popup-input"
+              type="text"
+              class="w-full text-lg placeholder:text-gray-400 outline-none text-heading bg-transparent"
+              placeholder="Tìm kiếm sách, học liệu số, tin tức..."
+            />
+          </div>
+          <button
+            id="search-popup-close"
+            class="px-5 py-1.5 rounded-full border border-solid border-gray-600 hover:border-gray-600 text-sm text-gray-300 hover:text-gray-800 hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
+          >
+            Đóng
+          </button>
+        </div>
+
+        <hr class="border-t border-gray-100" />
+
+        <div class="py-5 px-5">
+          <p class="mb-4 text-sm font-bold text-gray-200">TÌM KIẾM PHỔ BIẾN</p>
+          <div class="flex flex-wrap gap-3">
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Ngữ văn 7</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Sách giáo khoa lớp 8</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Học liệu số toán</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Tài liệu giáo dục địa phương</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Ôn thi lớp 10</span>
+            </button>
+          </div>
+        </div>
+
+        <hr class="border-t border-gray-100" />
+
+        <div class="bg-gray-50 py-3 px-5">
+          <div class="flex items-center gap-6 text-gray-200">
+            <div class="flex items-center">
+              <span
+                class="mr-1.5 px-1.5 py-0.5 rounded bg-gray-500 text-xs font-semibold text-gray-200"
+                >ESC</span
+              >
+              <span class="text-xs">để đóng</span>
+            </div>
+            <div class="flex items-center">
+              <span
+                class="mr-1.5 px-1.5 py-0.5 rounded bg-gray-500 text-xs font-semibold text-gray-200"
+                >Enter</span
+              >
+              <span class="text-xs">để tìm kiếm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="py-4 bg-[#F8F8F8]">
+        <div class="container">
+          <ol
+            class="flex flex-wrap items-center gap-1.5 md:gap-2 text-sm md:text-base font-semibold text-gray-300"
+          >
+            <li class="flex items-center">
+              <a
+                href="index.html"
+                class="text-gray-300 hover:text-primary transition-colors duration-300"
+                >Trang chủ</a
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                class=""
+              >
+                <path
+                  d="M5.25 10.5L8.75 7L5.25 3.5"
+                  stroke="#828282"
+                  stroke-width="1.16667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li class="flex items-center">
+              <a
+                href="#"
+                class="text-gray-300 hover:text-primary transition-colors duration-300"
+                >Sản phẩm</a
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                class=""
+              >
+                <path
+                  d="M5.25 10.5L8.75 7L5.25 3.5"
+                  stroke="#828282"
+                  stroke-width="1.16667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li class="flex items-center">
+              <a
+                href="list-book.html"
+                class="text-gray-300 hover:text-primary transition-colors duration-300"
+                >Sách giáo khoa</a
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                class=""
+              >
+                <path
+                  d="M5.25 10.5L8.75 7L5.25 3.5"
+                  stroke="#828282"
+                  stroke-width="1.16667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li class="flex items-center">
+              <span class="text-heading" aria-current="page">Toán 2 Tập 2</span>
+            </li>
+          </ol>
+        </div>
+      </nav>
+
+      <!-- Book Detail Info Section -->
+      <section class="py-8 md:pt-10 md:py-25 bg-white">
+        <div class="container">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start"
+          >
+            <!-- Left Column: Image Gallery with Fancybox -->
+            <div class="lg:col-span-6 flex flex-col gap-4">
+              <!-- Main Large Cover -->
+              <div
+                class="w-full max-w-[388px] mx-auto py-4 flex justify-center items-center bg-white aspect-[388/547] overflow-hidden"
+              >
+                <a
+                  href="assets/images/products/math_2_v2.png"
+                  data-fancybox="gallery"
+                  class="w-full h-full flex justify-center items-center"
+                >
+                  <img
+                    src="assets/images/products/math_2_v2.png"
+                    alt="Toán 2 Tập 2"
+                    class="w-full h-full object-contain hover:scale-105 transition-transform duration-300 cursor-zoom-in"
+                  />
+                </a>
+              </div>
+
+              <!-- Thumbnails Row -->
+              <div
+                class="flex flex-wrap items-center gap-2.5 md:gap-3 justify-center"
+              >
+                <!-- Thumb 1: Math 2 Tập 2 (Main) -->
+                <div
+                  class="w-20 h-20 border border-primary rounded-xl overflow-hidden bg-white px-3 py-0 flex justify-center items-center hover:border-primary transition-all duration-300 cursor-pointer shrink-0"
+                >
+                  <a
+                    href="assets/images/products/math_2_v2.png"
+                    data-fancybox="gallery"
+                    class="w-full h-full flex justify-center items-center"
+                  >
+                    <img
+                      src="assets/images/products/math_2_v2.png"
+                      alt="Toán 2 Tập 2"
+                      class="w-full h-full object-contain"
+                    />
+                  </a>
+                </div>
+                <!-- Thumb 2: Math 2 Tập 1 -->
+                <div
+                  class="w-20 h-20 border border-gray-eee rounded-xl overflow-hidden bg-white px-3 py-0 flex justify-center items-center hover:border-primary transition-all duration-300 cursor-pointer shrink-0"
+                >
+                  <a
+                    href="assets/images/products/math_2_v1.png"
+                    data-fancybox="gallery"
+                    class="w-full h-full flex justify-center items-center"
+                  >
+                    <img
+                      src="assets/images/products/math_2_v1.png"
+                      alt="Toán 2 Tập 1"
+                      class="w-full h-full object-contain"
+                    />
+                  </a>
+                </div>
+                <!-- Thumb 3: Music 2 -->
+                <div
+                  class="w-20 h-20 border border-gray-eee rounded-xl overflow-hidden bg-white px-3 py-0 flex justify-center items-center hover:border-primary transition-all duration-300 cursor-pointer shrink-0"
+                >
+                  <a
+                    href="assets/images/products/music_2.png"
+                    data-fancybox="gallery"
+                    class="w-full h-full flex justify-center items-center"
+                  >
+                    <img
+                      src="assets/images/products/music_2.png"
+                      alt="Âm nhạc 2"
+                      class="w-full h-full object-contain"
+                    />
+                  </a>
+                </div>
+                <!-- Thumb 4: Art 2 -->
+                <div
+                  class="w-20 h-20 border border-gray-eee rounded-xl overflow-hidden bg-white px-3 py-0 flex justify-center items-center hover:border-primary transition-all duration-300 cursor-pointer shrink-0"
+                >
+                  <a
+                    href="assets/images/products/art_2.png"
+                    data-fancybox="gallery"
+                    class="w-full h-full flex justify-center items-center"
+                  >
+                    <img
+                      src="assets/images/products/art_2.png"
+                      alt="Mỹ thuật 2"
+                      class="w-full h-full object-contain"
+                    />
+                  </a>
+                </div>
+                <!-- Thumb 5: Literature 7 with +28 Overlay -->
+                <div
+                  class="relative w-20 h-20 border border-gray-eee rounded-xl overflow-hidden bg-white px-3 py-0 flex justify-center items-center hover:border-primary transition-all duration-300 cursor-pointer shrink-0"
+                >
+                  <a
+                    href="assets/images/products/literature_7_v1.png"
+                    data-fancybox="gallery"
+                    class="w-full h-full flex justify-center items-center"
+                  >
+                    <img
+                      src="assets/images/products/literature_7_v1.png"
+                      alt="Ngữ văn 7"
+                      class="w-full h-full object-contain opacity-0"
+                    />
+                    <div
+                      class="absolute inset-0 bg-[rgba(13,14,15,0.80)] flex items-center justify-center text-white text-base md:text-lg font-bold font-montserrat z-10"
+                    >
+                      +28
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Hidden Gallery Images for Fancybox -->
+              <div class="hidden">
+                <a
+                  href="assets/images/products/civic.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/local_bac_giang_1.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/local_binh_duong_1.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/local_cao_bang_10.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/math_1.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/physics_11.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/science_4.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/science_8.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/sience_4.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/vietnamese.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/math_2_v2.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/math_2_v1.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/music_2.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/art_2.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/civic.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/local_bac_giang_1.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/local_binh_duong_1.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/local_cao_bang_10.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/math_1.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/physics_11.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/science_4.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/science_8.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/sience_4.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/vietnamese.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/math_2_v2.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/math_2_v1.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/music_2.png"
+                  data-fancybox="gallery"
+                ></a>
+                <a
+                  href="assets/images/products/art_2.png"
+                  data-fancybox="gallery"
+                ></a>
+              </div>
+            </div>
+
+            <!-- Right Column: Info and Table Details -->
+            <div class="lg:col-span-6 flex flex-col text-left">
+              <!-- Category Badge -->
+              <div>
+                <span
+                  class="inline-block px-3 py-1 bg-primary-blue/10 text-primary-blue rounded-full text-xs font-bold"
+                >
+                  Sách giáo khoa • Sách học sinh
+                </span>
+              </div>
+
+              <!-- Title -->
+              <h1
+                class="text-heading text-4xl md:text-5xl font-semibold font-montserrat mt-4 mb-2"
+              >
+                Toán 2 Tập 2
+              </h1>
+
+              <!-- Authors -->
+              <div class="flex flex-col text-sm text-gray-300 gap-1 mb-3">
+                <p>
+                  Tổng chủ biên:
+                  <span class="font-bold text-heading">Nhiều Tác Giả</span>
+                </p>
+                <p>
+                  Chủ biên:
+                  <span class="font-bold text-heading">Nhiều Tác Giả</span>
+                </p>
+              </div>
+
+              <!-- Rating -->
+              <div class="flex items-center gap-1.5 mb-6">
+                <div class="flex items-center gap-0.5">
+                  <!-- Star 1 -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M7.68323 1.53C7.71245 1.47097 7.75758 1.42129 7.81353 1.38655C7.86949 1.35181 7.93404 1.3334 7.9999 1.3334C8.06576 1.3334 8.13031 1.35181 8.18626 1.38655C8.24222 1.42129 8.28735 1.47097 8.31656 1.53L9.85656 4.64933C9.95802 4.85465 10.1078 5.03227 10.293 5.16697C10.4782 5.30167 10.6933 5.38941 10.9199 5.42267L14.3639 5.92667C14.4292 5.93612 14.4905 5.96365 14.5409 6.00613C14.5913 6.04862 14.6289 6.10437 14.6492 6.16707C14.6696 6.22978 14.6721 6.29694 14.6563 6.36096C14.6405 6.42498 14.6071 6.4833 14.5599 6.52933L12.0692 8.95467C11.905 9.11474 11.7821 9.31232 11.7111 9.53042C11.6402 9.74852 11.6233 9.98059 11.6619 10.2067L12.2499 13.6333C12.2614 13.6986 12.2544 13.7657 12.2296 13.8271C12.2048 13.8885 12.1632 13.9417 12.1096 13.9807C12.056 14.0196 11.9926 14.0427 11.9265 14.0473C11.8604 14.0519 11.7944 14.0378 11.7359 14.0067L8.65723 12.388C8.45438 12.2815 8.22868 12.2258 7.99956 12.2258C7.77044 12.2258 7.54475 12.2815 7.3419 12.388L4.2639 14.0067C4.20545 14.0376 4.1395 14.0515 4.07353 14.0468C4.00757 14.0421 3.94424 14.019 3.89076 13.9801C3.83728 13.9412 3.79579 13.8881 3.771 13.8268C3.74622 13.7655 3.73914 13.6985 3.75056 13.6333L4.3379 10.2073C4.3767 9.98116 4.35989 9.74893 4.28892 9.5307C4.21796 9.31246 4.09497 9.11477 3.93056 8.95467L1.4399 6.53C1.39229 6.48402 1.35856 6.4256 1.34254 6.36138C1.32652 6.29717 1.32886 6.22975 1.34928 6.16679C1.36971 6.10384 1.40741 6.04789 1.45808 6.00532C1.50876 5.96275 1.57037 5.93527 1.6359 5.926L5.07923 5.42267C5.30607 5.38967 5.52149 5.30204 5.70695 5.16733C5.89242 5.03261 6.04237 4.85485 6.1439 4.64933L7.68323 1.53Z"
+                      fill="#F26E1D"
+                      stroke="#F26E1D"
+                      stroke-width="1.33333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <!-- Star 2 -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M7.68323 1.53C7.71245 1.47097 7.75758 1.42129 7.81353 1.38655C7.86949 1.35181 7.93404 1.3334 7.9999 1.3334C8.06576 1.3334 8.13031 1.35181 8.18626 1.38655C8.24222 1.42129 8.28735 1.47097 8.31656 1.53L9.85656 4.64933C9.95802 4.85465 10.1078 5.03227 10.293 5.16697C10.4782 5.30167 10.6933 5.38941 10.9199 5.42267L14.3639 5.92667C14.4292 5.93612 14.4905 5.96365 14.5409 6.00613C14.5913 6.04862 14.6289 6.10437 14.6492 6.16707C14.6696 6.22978 14.6721 6.29694 14.6563 6.36096C14.6405 6.42498 14.6071 6.4833 14.5599 6.52933L12.0692 8.95467C11.905 9.11474 11.7821 9.31232 11.7111 9.53042C11.6402 9.74852 11.6233 9.98059 11.6619 10.2067L12.2499 13.6333C12.2614 13.6986 12.2544 13.7657 12.2296 13.8271C12.2048 13.8885 12.1632 13.9417 12.1096 13.9807C12.056 14.0196 11.9926 14.0427 11.9265 14.0473C11.8604 14.0519 11.7944 14.0378 11.7359 14.0067L8.65723 12.388C8.45438 12.2815 8.22868 12.2258 7.99956 12.2258C7.77044 12.2258 7.54475 12.2815 7.3419 12.388L4.2639 14.0067C4.20545 14.0376 4.1395 14.0515 4.07353 14.0468C4.00757 14.0421 3.94424 14.019 3.89076 13.9801C3.83728 13.9412 3.79579 13.8881 3.771 13.8268C3.74622 13.7655 3.73914 13.6985 3.75056 13.6333L4.3379 10.2073C4.3767 9.98116 4.35989 9.74893 4.28892 9.5307C4.21796 9.31246 4.09497 9.11477 3.93056 8.95467L1.4399 6.53C1.39229 6.48402 1.35856 6.4256 1.34254 6.36138C1.32652 6.29717 1.32886 6.22975 1.34928 6.16679C1.36971 6.10384 1.40741 6.04789 1.45808 6.00532C1.50876 5.96275 1.57037 5.93527 1.6359 5.926L5.07923 5.42267C5.30607 5.38967 5.52149 5.30204 5.70695 5.16733C5.89242 5.03261 6.04237 4.85485 6.1439 4.64933L7.68323 1.53Z"
+                      fill="#F26E1D"
+                      stroke="#F26E1D"
+                      stroke-width="1.33333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <!-- Star 3 -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M7.68323 1.53C7.71245 1.47097 7.75758 1.42129 7.81353 1.38655C7.86949 1.35181 7.93404 1.3334 7.9999 1.3334C8.06576 1.3334 8.13031 1.35181 8.18626 1.38655C8.24222 1.42129 8.28735 1.47097 8.31656 1.53L9.85656 4.64933C9.95802 4.85465 10.1078 5.03227 10.293 5.16697C10.4782 5.30167 10.6933 5.38941 10.9199 5.42267L14.3639 5.92667C14.4292 5.93612 14.4905 5.96365 14.5409 6.00613C14.5913 6.04862 14.6289 6.10437 14.6492 6.16707C14.6696 6.22978 14.6721 6.29694 14.6563 6.36096C14.6405 6.42498 14.6071 6.4833 14.5599 6.52933L12.0692 8.95467C11.905 9.11474 11.7821 9.31232 11.7111 9.53042C11.6402 9.74852 11.6233 9.98059 11.6619 10.2067L12.2499 13.6333C12.2614 13.6986 12.2544 13.7657 12.2296 13.8271C12.2048 13.8885 12.1632 13.9417 12.1096 13.9807C12.056 14.0196 11.9926 14.0427 11.9265 14.0473C11.8604 14.0519 11.7944 14.0378 11.7359 14.0067L8.65723 12.388C8.45438 12.2815 8.22868 12.2258 7.99956 12.2258C7.77044 12.2258 7.54475 12.2815 7.3419 12.388L4.2639 14.0067C4.20545 14.0376 4.1395 14.0515 4.07353 14.0468C4.00757 14.0421 3.94424 14.019 3.89076 13.9801C3.83728 13.9412 3.79579 13.8881 3.771 13.8268C3.74622 13.7655 3.73914 13.6985 3.75056 13.6333L4.3379 10.2073C4.3767 9.98116 4.35989 9.74893 4.28892 9.5307C4.21796 9.31246 4.09497 9.11477 3.93056 8.95467L1.4399 6.53C1.39229 6.48402 1.35856 6.4256 1.34254 6.36138C1.32652 6.29717 1.32886 6.22975 1.34928 6.16679C1.36971 6.10384 1.40741 6.04789 1.45808 6.00532C1.50876 5.96275 1.57037 5.93527 1.6359 5.926L5.07923 5.42267C5.30607 5.38967 5.52149 5.30204 5.70695 5.16733C5.89242 5.03261 6.04237 4.85485 6.1439 4.64933L7.68323 1.53Z"
+                      fill="#F26E1D"
+                      stroke="#F26E1D"
+                      stroke-width="1.33333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <!-- Star 4 -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M7.68323 1.53C7.71245 1.47097 7.75758 1.42129 7.81353 1.38655C7.86949 1.35181 7.93404 1.3334 7.9999 1.3334C8.06576 1.3334 8.13031 1.35181 8.18626 1.38655C8.24222 1.42129 8.28735 1.47097 8.31656 1.53L9.85656 4.64933C9.95802 4.85465 10.1078 5.03227 10.293 5.16697C10.4782 5.30167 10.6933 5.38941 10.9199 5.42267L14.3639 5.92667C14.4292 5.93612 14.4905 5.96365 14.5409 6.00613C14.5913 6.04862 14.6289 6.10437 14.6492 6.16707C14.6696 6.22978 14.6721 6.29694 14.6563 6.36096C14.6405 6.42498 14.6071 6.4833 14.5599 6.52933L12.0692 8.95467C11.905 9.11474 11.7821 9.31232 11.7111 9.53042C11.6402 9.74852 11.6233 9.98059 11.6619 10.2067L12.2499 13.6333C12.2614 13.6986 12.2544 13.7657 12.2296 13.8271C12.2048 13.8885 12.1632 13.9417 12.1096 13.9807C12.056 14.0196 11.9926 14.0427 11.9265 14.0473C11.8604 14.0519 11.7944 14.0378 11.7359 14.0067L8.65723 12.388C8.45438 12.2815 8.22868 12.2258 7.99956 12.2258C7.77044 12.2258 7.54475 12.2815 7.3419 12.388L4.2639 14.0067C4.20545 14.0376 4.1395 14.0515 4.07353 14.0468C4.00757 14.0421 3.94424 14.019 3.89076 13.9801C3.83728 13.9412 3.79579 13.8881 3.771 13.8268C3.74622 13.7655 3.73914 13.6985 3.75056 13.6333L4.3379 10.2073C4.3767 9.98116 4.35989 9.74893 4.28892 9.5307C4.21796 9.31246 4.09497 9.11477 3.93056 8.95467L1.4399 6.53C1.39229 6.48402 1.35856 6.4256 1.34254 6.36138C1.32652 6.29717 1.32886 6.22975 1.34928 6.16679C1.36971 6.10384 1.40741 6.04789 1.45808 6.00532C1.50876 5.96275 1.57037 5.93527 1.6359 5.926L5.07923 5.42267C5.30607 5.38967 5.52149 5.30204 5.70695 5.16733C5.89242 5.03261 6.04237 4.85485 6.1439 4.64933L7.68323 1.53Z"
+                      fill="#F26E1D"
+                      stroke="#F26E1D"
+                      stroke-width="1.33333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <!-- Star 5 -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M7.68323 1.53C7.71245 1.47097 7.75758 1.42129 7.81353 1.38655C7.86949 1.35181 7.93404 1.3334 7.9999 1.3334C8.06576 1.3334 8.13031 1.35181 8.18626 1.38655C8.24222 1.42129 8.28735 1.47097 8.31656 1.53L9.85656 4.64933C9.95802 4.85465 10.1078 5.03227 10.293 5.16697C10.4782 5.30167 10.6933 5.38941 10.9199 5.42267L14.3639 5.92667C14.4292 5.93612 14.4905 5.96365 14.5409 6.00613C14.5913 6.04862 14.6289 6.10437 14.6492 6.16707C14.6696 6.22978 14.6721 6.29694 14.6563 6.36096C14.6405 6.42498 14.6071 6.4833 14.5599 6.52933L12.0692 8.95467C11.905 9.11474 11.7821 9.31232 11.7111 9.53042C11.6402 9.74852 11.6233 9.98059 11.6619 10.2067L12.2499 13.6333C12.2614 13.6986 12.2544 13.7657 12.2296 13.8271C12.2048 13.8885 12.1632 13.9417 12.1096 13.9807C12.056 14.0196 11.9926 14.0427 11.9265 14.0473C11.8604 14.0519 11.7944 14.0378 11.7359 14.0067L8.65723 12.388C8.45438 12.2815 8.22868 12.2258 7.99956 12.2258C7.77044 12.2258 7.54475 12.2815 7.3419 12.388L4.2639 14.0067C4.20545 14.0376 4.1395 14.0515 4.07353 14.0468C4.00757 14.0421 3.94424 14.019 3.89076 13.9801C3.83728 13.9412 3.79579 13.8881 3.771 13.8268C3.74622 13.7655 3.73914 13.6985 3.75056 13.6333L4.3379 10.2073C4.3767 9.98116 4.35989 9.74893 4.28892 9.5307C4.21796 9.31246 4.09497 9.11477 3.93056 8.95467L1.4399 6.53C1.39229 6.48402 1.35856 6.4256 1.34254 6.36138C1.32652 6.29717 1.32886 6.22975 1.34928 6.16679C1.36971 6.10384 1.40741 6.04789 1.45808 6.00532C1.50876 5.96275 1.57037 5.93527 1.6359 5.926L5.07923 5.42267C5.30607 5.38967 5.52149 5.30204 5.70695 5.16733C5.89242 5.03261 6.04237 4.85485 6.1439 4.64933L7.68323 1.53Z"
+                      fill="#F26E1D"
+                      stroke="#F26E1D"
+                      stroke-width="1.33333"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <span class="text-sm md:text-base text-gray-300">
+                  (128 đánh giá)
+                </span>
+              </div>
+
+              <!-- Price Box -->
+              <div
+                style="
+                  background: linear-gradient(
+                    180deg,
+                    #fff8f5 0%,
+                    rgba(255, 248, 245, 0) 100%
+                  );
+                "
+                class="p-5 rounded-2xl flex flex-col items-start w-full"
+              >
+                <span class="text-4xl font-semibold text-primary">
+                  18.000đ
+                </span>
+                <span
+                  class="text-xs md:text-sm text-gray-300 mt-1 font-semibold"
+                >
+                  Giá bìa đã có VAT
+                </span>
+              </div>
+
+              <!-- Metadata Table -->
+              <div
+                class="border border-table overflow-hidden mt-6 max-w-full lg:max-w-2xl bg-white"
+              >
+                <table
+                  class="w-full text-sm md:text-base border-collapse text-text-table"
+                >
+                  <tbody>
+                    <tr class="border-b border-gray-150">
+                      <td
+                        class="w-[30%] p-3.5 md:p-4 md:pr-2 font-semibold border-r border-table"
+                      >
+                        Lớp
+                      </td>
+                      <td class="p-3.5 md:p-4">Lớp 2</td>
+                    </tr>
+                    <tr class="border-b border-gray-150">
+                      <td
+                        class="w-[30%] p-3.5 md:p-4 md:pr-2 font-semibold border-r border-table"
+                      >
+                        Môn học
+                      </td>
+                      <td class="p-3.5 md:p-4">Toán</td>
+                    </tr>
+                    <tr class="border-b border-gray-150">
+                      <td
+                        class="w-[30%] p-3.5 md:p-4 md:pr-2 font-semibold border-r border-table"
+                      >
+                        Số trang
+                      </td>
+                      <td class="p-3.5 md:p-4">234 trang</td>
+                    </tr>
+                    <tr class="border-b border-gray-150">
+                      <td
+                        class="w-[30%] p-3.5 md:p-4 md:pr-2 font-semibold border-r border-table"
+                      >
+                        Kích thước
+                      </td>
+                      <td class="p-3.5 md:p-4">19 x 26.5 cm</td>
+                    </tr>
+                    <tr class="border-b border-gray-150">
+                      <td
+                        class="w-[30%] p-3.5 md:p-4 md:pr-2 font-semibold border-r border-table"
+                      >
+                        NXB
+                      </td>
+                      <td class="p-3.5 md:p-4">NXB Giáo dục tại Hà Nội</td>
+                    </tr>
+                    <tr class="border-b border-gray-150">
+                      <td
+                        class="w-[30%] p-3.5 md:p-4 md:pr-2 font-semibold border-r border-table"
+                      >
+                        Năm xuất bản
+                      </td>
+                      <td class="p-3.5 md:p-4">2025</td>
+                    </tr>
+                    <tr class="border-none">
+                      <td
+                        class="w-[30%] p-3.5 md:p-4 md:pr-2 font-semibold border-r border-table"
+                      >
+                        ISBN
+                      </td>
+                      <td class="p-3.5 md:p-4 font-montserrat">
+                        978-604-0-42156-8
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Mua sách liên hệ -->
+              <div class="flex flex-wrap items-center gap-4 mt-6">
+                <span class="text-sm md:text-base font-bold text-gray-400">
+                  Mua sách liên hệ:
+                </span>
+
+                <!-- Phone contact trigger -->
+                <a
+                  href="tel:09234353"
+                  class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-gray-600 rounded-full text-heading hover:text-primary hover:border-primary transition-all duration-300 text-sm font-semibold"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    class="w-5 h-5 shrink-0"
+                  >
+                    <path
+                      d="M16.5518 21.752C16.0928 21.752 15.6309 21.69 15.1749 21.565C9.01086 19.873 4.12885 14.995 2.43585 8.83402C2.05085 7.43302 2.2618 5.97301 3.0318 4.72501C3.8048 3.47101 5.07586 2.58701 6.51886 2.29801C7.47186 2.10701 8.42785 2.53301 8.91485 3.35501L10.4778 5.99399C11.2368 7.27599 10.8597 8.92799 9.61871 9.75299L8.48785 10.505C9.54485 12.676 11.3227 14.458 13.4837 15.514L14.2459 14.377C15.0749 13.138 16.7278 12.767 18.0088 13.53L20.6519 15.106C21.4699 15.594 21.8938 16.548 21.7068 17.481C21.4188 18.924 20.5338 20.195 19.2808 20.968C18.4388 21.487 17.5018 21.752 16.5518 21.752ZM6.97784 3.75C6.92884 3.75 6.87887 3.75502 6.83087 3.76502C5.77687 3.97602 4.86487 4.611 4.30987 5.512C3.76087 6.402 3.60985 7.44101 3.88385 8.43601C5.43685 14.09 9.91584 18.566 15.5718 20.118C16.5668 20.391 17.6047 20.239 18.4927 19.691C19.3927 19.136 20.0289 18.222 20.2359 17.186C20.2979 16.875 20.1568 16.556 19.8838 16.394L17.2408 14.818C16.6428 14.463 15.8758 14.637 15.4918 15.212L14.3768 16.877C14.1768 17.175 13.7909 17.289 13.4649 17.151C10.5019 15.913 8.09189 13.496 6.85089 10.522C6.71289 10.19 6.82975 9.80801 7.12775 9.60901L8.78888 8.504C9.36488 8.121 9.53983 7.35401 9.18683 6.75901L7.62384 4.12C7.48684 3.887 7.23884 3.75 6.97784 3.75ZM14.8687 14.794H14.8787H14.8687ZM17.7498 10C17.7498 7.932 16.0668 6.25 13.9998 6.25C13.5858 6.25 13.2498 6.586 13.2498 7C13.2498 7.414 13.5858 7.75 13.9998 7.75C15.2398 7.75 16.2498 8.759 16.2498 10C16.2498 10.414 16.5858 10.75 16.9998 10.75C17.4138 10.75 17.7498 10.414 17.7498 10ZM20.7498 10C20.7498 6.278 17.7218 3.25 13.9998 3.25C13.5858 3.25 13.2498 3.586 13.2498 4C13.2498 4.414 13.5858 4.75 13.9998 4.75C16.8948 4.75 19.2498 7.105 19.2498 10C19.2498 10.414 19.5858 10.75 19.9998 10.75C20.4138 10.75 20.7498 10.414 20.7498 10Z"
+                      fill="#313131"
+                      class="fill-[#313131] group-hover:fill-primary transition-colors"
+                    />
+                  </svg>
+                  <span>09234353</span>
+                </a>
+
+                <!-- Email contact trigger -->
+                <a
+                  href="mailto:kinhdoanh.heps@gmail.com"
+                  class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-gray-600 rounded-full text-heading hover:text-primary hover:border-primary transition-all duration-300 text-sm font-semibold"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    class="w-5 h-5 shrink-0"
+                  >
+                    <path
+                      d="M18 20.75H6C3.582 20.75 2.25 19.418 2.25 17V8C2.25 5.582 3.582 4.25 6 4.25H18C20.418 4.25 21.75 5.582 21.75 8V17C21.75 19.418 20.418 20.75 18 20.75ZM6 5.75C4.423 5.75 3.75 6.423 3.75 8V17C3.75 18.577 4.423 19.25 6 19.25H18C19.577 19.25 20.25 18.577 20.25 17V8C20.25 6.423 19.577 5.75 18 5.75H6ZM13.0291 13.179L17.9409 9.60699C18.2759 9.36399 18.35 8.89401 18.106 8.55901C17.863 8.22501 17.3951 8.149 17.0581 8.394L12.146 11.966C12.058 12.03 11.941 12.03 11.853 11.966L6.94092 8.394C6.60292 8.149 6.13607 8.22601 5.89307 8.55901C5.64907 8.89401 5.72311 9.36299 6.05811 9.60699L10.97 13.18C11.278 13.404 11.639 13.515 11.999 13.515C12.359 13.515 12.7221 13.403 13.0291 13.179Z"
+                      fill="#313131"
+                      class="fill-[#313131] group-hover:fill-primary transition-colors"
+                    />
+                  </svg>
+                  <span>kinhdoanh.heps@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Tabs Section (Giới thiệu sách & Tài liệu đính kèm) -->
+          <div class="tabs mt-8 md:mt-12">
+            <!-- Tabs Navigation -->
+            <div
+              class="flex border-b border-gray-150 gap-6 md:gap-8 mb-8 overflow-x-auto scrollbar-none"
+            >
+              <button
+                class="tabs__btn pb-3 mb-0 border-0 border-b-2 border-transparent text-base md:text-lg font-bold text-gray-300 hover:text-primary transition-all cursor-pointer whitespace-nowrap [&.is-active]:border-primary [&.is-active]:text-primary is-active"
+                data-tab="tab-intro"
+              >
+                Giới thiệu sách
+              </button>
+              <button
+                class="tabs__btn pb-3 mb-0 border-0 border-b-2 border-transparent text-base md:text-lg font-bold text-gray-300 hover:text-primary transition-all cursor-pointer whitespace-nowrap [&.is-active]:border-primary [&.is-active]:text-primary"
+                data-tab="tab-attachments"
+              >
+                Tài liệu đính kèm
+              </button>
+            </div>
+
+            <!-- Tab 1 Panel: Giới thiệu sách -->
+            <div class="tabs__panel is-active text-left" id="tab-intro">
+              <h2
+                class="text-heading text-xl md:text-2xl font-bold font-montserrat tracking-tight mb-4"
+              >
+                Giới thiệu về cuốn sách
+              </h2>
+              <div
+                class="flex flex-col gap-4 text-base md:text-lg text-gray-400 leading-relaxed"
+              >
+                <p>
+                  Ngữ Văn 7 Tập 1 là cuốn sách giáo khoa được biên soạn theo
+                  chương trình Giáo dục phổ thông 2018, dành cho học sinh lớp 7.
+                  Cuốn sách tập trung vào việc phát triển năng lực ngôn ngữ và
+                  năng lực văn học cho học sinh thông qua các hoạt động đọc,
+                  viết, nói và nghe.
+                </p>
+                <p>
+                  Sách được cấu trúc thành 6 chủ điểm lớn, mỗi chủ điểm bao gồm
+                  các bài học với đa dạng thể loại văn bản như truyện ngắn, thơ,
+                  kịch, văn bản nghị luận và văn bản thông tin. Qua đó, học sinh
+                  sẽ được tiếp cận với nhiều tác phẩm văn học có giá trị của
+                  Việt Nam và thế giới.
+                </p>
+                <p>
+                  Đặc biệt, sách chú trọng vào việc rèn luyện kỹ năng đọc hiểu
+                  văn bản, kỹ năng viết văn nghị luận và văn thuyết minh, kỹ
+                  năng nói và nghe trong các tình huống giao tiếp đa dạng.
+                </p>
+              </div>
+            </div>
+
+            <!-- Tab 2 Panel: Tài liệu đính kèm -->
+            <div class="tabs__panel text-left" id="tab-attachments">
+              <div class="flex flex-col gap-4">
+                <!-- Row 1 -->
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 md:p-5 border border-gray-150 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <div class="flex items-center gap-4">
+                    <!-- Icon tài liệu wrapped in light orange square -->
+                    <div
+                      class="flex items-center justify-center w-12 h-12 rounded-2xl bg-[#FFF0E6] shrink-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M12.4997 1.66663H4.99967C4.55765 1.66663 4.13372 1.84222 3.82116 2.15478C3.5086 2.46734 3.33301 2.89127 3.33301 3.33329V16.6666C3.33301 17.1087 3.5086 17.5326 3.82116 17.8451C4.13372 18.1577 4.55765 18.3333 4.99967 18.3333H14.9997C15.4417 18.3333 15.8656 18.1577 16.1782 17.8451C16.4907 17.5326 16.6663 17.1087 16.6663 16.6666V5.83329L12.4997 1.66663Z"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.667 1.66663V4.99996C11.667 5.44199 11.8426 5.86591 12.1551 6.17847C12.4677 6.49103 12.8916 6.66663 13.3337 6.66663H16.667"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.33366 7.5H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.3337 10.8334H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.3337 14.1666H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="flex flex-col text-left">
+                      <h3 class="text-heading text-base md:text-lg font-bold">
+                        Phần 1 - Văn bản và đọc hiểu (Trang 5–67)
+                      </h3>
+                      <p
+                        class="text-xs md:text-sm text-gray-300 mt-1 font-semibold"
+                      >
+                        Chương 1: Lý thuyết + bài tập đọc hiểu • 5.2 MB
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Action Buttons -->
+                  <div
+                    class="flex items-center gap-2.5 sm:gap-3 w-full sm:w-auto justify-end"
+                  >
+                    <!-- Button Xem -->
+                    <a
+                      href="assets/images/products/math_2_v2.png"
+                      data-fancybox="attachment-1"
+                      class="inline-flex items-center gap-1.5 px-4 py-2 border border-gray-600 rounded-full text-heading hover:text-primary hover:border-primary transition-all duration-300 text-sm font-semibold"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        class="w-4 h-4 shrink-0"
+                      >
+                        <path
+                          d="M1.20248 6.79697C1.15386 6.92793 1.15386 7.072 1.20248 7.20297C1.67597 8.35105 2.47969 9.33269 3.51176 10.0234C4.54383 10.7142 5.75775 11.0829 6.99964 11.0829C8.24153 11.0829 9.45546 10.7142 10.4875 10.0234C11.5196 9.33269 12.3233 8.35105 12.7968 7.20297C12.8454 7.072 12.8454 6.92793 12.7968 6.79697C12.3233 5.64888 11.5196 4.66724 10.4875 3.97649C9.45546 3.28574 8.24153 2.91699 6.99964 2.91699C5.75775 2.91699 4.54383 3.28574 3.51176 3.97649C2.47969 4.66724 1.67597 5.64888 1.20248 6.79697Z"
+                          stroke="#6B6B6B"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="stroke-[#6B6B6B] group-hover:stroke-primary"
+                        />
+                        <path
+                          d="M7 8.75C7.9665 8.75 8.75 7.9665 8.75 7C8.75 6.0335 7.9665 5.25 7 5.25C6.0335 5.25 5.25 6.0335 5.25 7C5.25 7.9665 6.0335 8.75 7 8.75Z"
+                          stroke="#6B6B6B"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="stroke-[#6B6B6B] group-hover:stroke-primary"
+                        />
+                      </svg>
+                      <span>Xem</span>
+                    </a>
+                    <!-- Button Tải xuống -->
+                    <a
+                      href="assets/images/products/math_2_v2.png"
+                      download
+                      class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary hover:bg-[#D95F14] text-white rounded-full transition-all duration-300 text-sm font-semibold"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        class="w-4 h-4 shrink-0"
+                      >
+                        <path
+                          d="M12.25 8.75V11.0833C12.25 11.3928 12.1271 11.6895 11.9083 11.9083C11.6895 12.1271 11.3928 12.25 11.0833 12.25H2.91667C2.60725 12.25 2.3105 12.1271 2.09171 11.9083C1.87292 11.6895 1.75 11.3928 1.75 11.0833V8.75"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M4.08301 5.83337L6.99967 8.75004L9.91634 5.83337"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7 8.75V1.75"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <span>Tải xuống</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 md:p-5 border border-gray-150 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 rounded-2xl bg-[#FFF0E6] shrink-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M12.4997 1.66663H4.99967C4.55765 1.66663 4.13372 1.84222 3.82116 2.15478C3.5086 2.46734 3.33301 2.89127 3.33301 3.33329V16.6666C3.33301 17.1087 3.5086 17.5326 3.82116 17.8451C4.13372 18.1577 4.55765 18.3333 4.99967 18.3333H14.9997C15.4417 18.3333 15.8656 18.1577 16.1782 17.8451C16.4907 17.5326 16.6663 17.1087 16.6663 16.6666V5.83329L12.4997 1.66663Z"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.667 1.66663V4.99996C11.667 5.44199 11.8426 5.86591 12.1551 6.17847C12.4677 6.49103 12.8916 6.66663 13.3337 6.66663H16.667"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.33366 7.5H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.3337 10.8334H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.3337 14.1666H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="flex flex-col text-left">
+                      <h3 class="text-heading text-base md:text-lg font-bold">
+                        Phần 2 - Tiếng Việt thực hành (Trang 68–123)
+                      </h3>
+                      <p
+                        class="text-xs md:text-sm text-gray-300 mt-1 font-semibold"
+                      >
+                        Chương 2: Ngữ pháp, từ vựng, biện pháp tu từ • 4.8 MB
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-2.5 sm:gap-3 w-full sm:w-auto justify-end"
+                  >
+                    <a
+                      href="assets/images/products/math_2_v1.png"
+                      data-fancybox="attachment-2"
+                      class="inline-flex items-center gap-1.5 px-4 py-2 border border-gray-600 rounded-full text-heading hover:text-primary hover:border-primary transition-all duration-300 text-sm font-semibold"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        class="w-4 h-4 shrink-0"
+                      >
+                        <path
+                          d="M1.20248 6.79697C1.15386 6.92793 1.15386 7.072 1.20248 7.20297C1.67597 8.35105 2.47969 9.33269 3.51176 10.0234C4.54383 10.7142 5.75775 11.0829 6.99964 11.0829C8.24153 11.0829 9.45546 10.7142 10.4875 10.0234C11.5196 9.33269 12.3233 8.35105 12.7968 7.20297C12.8454 7.072 12.8454 6.92793 12.7968 6.79697C12.3233 5.64888 11.5196 4.66724 10.4875 3.97649C9.45546 3.28574 8.24153 2.91699 6.99964 2.91699C5.75775 2.91699 4.54383 3.28574 3.51176 3.97649C2.47969 4.66724 1.67597 5.64888 1.20248 6.79697Z"
+                          stroke="#6B6B6B"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7 8.75C7.9665 8.75 8.75 7.9665 8.75 7C8.75 6.0335 7.9665 5.25 7 5.25C6.0335 5.25 5.25 6.0335 5.25 7C5.25 7.9665 6.0335 8.75 7 8.75Z"
+                          stroke="#6B6B6B"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <span>Xem</span>
+                    </a>
+                    <a
+                      href="assets/images/products/math_2_v1.png"
+                      download
+                      class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary hover:bg-[#D95F14] text-white rounded-full transition-all duration-300 text-sm font-semibold"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        class="w-4 h-4 shrink-0"
+                      >
+                        <path
+                          d="M12.25 8.75V11.0833C12.25 11.3928 12.1271 11.6895 11.9083 11.9083C11.6895 12.1271 11.3928 12.25 11.0833 12.25H2.91667C2.60725 12.25 2.3105 12.1271 2.09171 11.9083C1.87292 11.6895 1.75 11.3928 1.75 11.0833V8.75"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M4.08301 5.83337L6.99967 8.75004L9.91634 5.83337"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7 8.75V1.75"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <span>Tải xuống</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 md:p-5 border border-gray-150 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 rounded-2xl bg-[#FFF0E6] shrink-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M12.4997 1.66663H4.99967C4.55765 1.66663 4.13372 1.84222 3.82116 2.15478C3.5086 2.46734 3.33301 2.89127 3.33301 3.33329V16.6666C3.33301 17.1087 3.5086 17.5326 3.82116 17.8451C4.13372 18.1577 4.55765 18.3333 4.99967 18.3333H14.9997C15.4417 18.3333 15.8656 18.1577 16.1782 17.8451C16.4907 17.5326 16.6663 17.1087 16.6663 16.6666V5.83329L12.4997 1.66663Z"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.667 1.66663V4.99996C11.667 5.44199 11.8426 5.86591 12.1551 6.17847C12.4677 6.49103 12.8916 6.66663 13.3337 6.66663H16.667"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.33366 7.5H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.3337 10.8334H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.3337 14.1666H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="flex flex-col text-left">
+                      <h3 class="text-heading text-base md:text-lg font-bold">
+                        Phần 3 - Tập làm văn (Trang 124–197)
+                      </h3>
+                      <p
+                        class="text-xs md:text-sm text-gray-300 mt-1 font-semibold"
+                      >
+                        Chương 3: Văn nghị luận xã hội và văn học • 6.1 MB
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-2.5 sm:gap-3 w-full sm:w-auto justify-end"
+                  >
+                    <a
+                      href="assets/images/products/music_2.png"
+                      data-fancybox="attachment-3"
+                      class="inline-flex items-center gap-1.5 px-4 py-2 border border-gray-600 rounded-full text-heading hover:text-primary hover:border-primary transition-all duration-300 text-sm font-semibold"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        class="w-4 h-4 shrink-0"
+                      >
+                        <path
+                          d="M1.20248 6.79697C1.15386 6.92793 1.15386 7.072 1.20248 7.20297C1.67597 8.35105 2.47969 9.33269 3.51176 10.0234C4.54383 10.7142 5.75775 11.0829 6.99964 11.0829C8.24153 11.0829 9.45546 10.7142 10.4875 10.0234C11.5196 9.33269 12.3233 8.35105 12.7968 7.20297C12.8454 7.072 12.8454 6.92793 12.7968 6.79697C12.3233 5.64888 11.5196 4.66724 10.4875 3.97649C9.45546 3.28574 8.24153 2.91699 6.99964 2.91699C5.75775 2.91699 4.54383 3.28574 3.51176 3.97649C2.47969 4.66724 1.67597 5.64888 1.20248 6.79697Z"
+                          stroke="#6B6B6B"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7 8.75C7.9665 8.75 8.75 7.9665 8.75 7C8.75 6.0335 7.9665 5.25 7 5.25C6.0335 5.25 5.25 6.0335 5.25 7C5.25 7.9665 6.0335 8.75 7 8.75Z"
+                          stroke="#6B6B6B"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <span>Xem</span>
+                    </a>
+                    <a
+                      href="assets/images/products/music_2.png"
+                      download
+                      class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary hover:bg-[#D95F14] text-white rounded-full transition-all duration-300 text-sm font-semibold"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        class="w-4 h-4 shrink-0"
+                      >
+                        <path
+                          d="M12.25 8.75V11.0833C12.25 11.3928 12.1271 11.6895 11.9083 11.9083C11.6895 12.1271 11.3928 12.25 11.0833 12.25H2.91667C2.60725 12.25 2.3105 12.1271 2.09171 11.9083C1.87292 11.6895 1.75 11.3928 1.75 11.0833V8.75"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M4.08301 5.83337L6.99967 8.75004L9.91634 5.83337"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7 8.75V1.75"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <span>Tải xuống</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 md:p-5 border border-gray-150 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 rounded-2xl bg-[#FFF0E6] shrink-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M12.4997 1.66663H4.99967C4.55765 1.66663 4.13372 1.84222 3.82116 2.15478C3.5086 2.46734 3.33301 2.89127 3.33301 3.33329V16.6666C3.33301 17.1087 3.5086 17.5326 3.82116 17.8451C4.13372 18.1577 4.55765 18.3333 4.99967 18.3333H14.9997C15.4417 18.3333 15.8656 18.1577 16.1782 17.8451C16.4907 17.5326 16.6663 17.1087 16.6663 16.6666V5.83329L12.4997 1.66663Z"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.667 1.66663V4.99996C11.667 5.44199 11.8426 5.86591 12.1551 6.17847C12.4677 6.49103 12.8916 6.66663 13.3337 6.66663H16.667"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.33366 7.5H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.3337 10.8334H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.3337 14.1666H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="flex flex-col text-left">
+                      <h3 class="text-heading text-base md:text-lg font-bold">
+                        Đề thi thử + Đáp án (Trang 198–256)
+                      </h3>
+                      <p
+                        class="text-xs md:text-sm text-gray-300 mt-1 font-semibold"
+                      >
+                        Chương 4: 12 đề thi thử có hướng dẫn giải chi tiết • 3.9
+                        MB
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-2.5 sm:gap-3 w-full sm:w-auto justify-end"
+                  >
+                    <a
+                      href="assets/images/products/art_2.png"
+                      data-fancybox="attachment-4"
+                      class="inline-flex items-center gap-1.5 px-4 py-2 border border-gray-600 rounded-full text-heading hover:text-primary hover:border-primary transition-all duration-300 text-sm font-semibold"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        class="w-4 h-4 shrink-0"
+                      >
+                        <path
+                          d="M1.20248 6.79697C1.15386 6.92793 1.15386 7.072 1.20248 7.20297C1.67597 8.35105 2.47969 9.33269 3.51176 10.0234C4.54383 10.7142 5.75775 11.0829 6.99964 11.0829C8.24153 11.0829 9.45546 10.7142 10.4875 10.0234C11.5196 9.33269 12.3233 8.35105 12.7968 7.20297C12.8454 7.072 12.8454 6.92793 12.7968 6.79697C12.3233 5.64888 11.5196 4.66724 10.4875 3.97649C9.45546 3.28574 8.24153 2.91699 6.99964 2.91699C5.75775 2.91699 4.54383 3.28574 3.51176 3.97649C2.47969 4.66724 1.67597 5.64888 1.20248 6.79697Z"
+                          stroke="#6B6B6B"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7 8.75C7.9665 8.75 8.75 7.9665 8.75 7C8.75 6.0335 7.9665 5.25 7 5.25C6.0335 5.25 5.25 6.0335 5.25 7C5.25 7.9665 6.0335 8.75 7 8.75Z"
+                          stroke="#6B6B6B"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <span>Xem</span>
+                    </a>
+                    <a
+                      href="assets/images/products/art_2.png"
+                      download
+                      class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary hover:bg-[#D95F14] text-white rounded-full transition-all duration-300 text-sm font-semibold"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        class="w-4 h-4 shrink-0"
+                      >
+                        <path
+                          d="M12.25 8.75V11.0833C12.25 11.3928 12.1271 11.6895 11.9083 11.9083C11.6895 12.1271 11.3928 12.25 11.0833 12.25H2.91667C2.60725 12.25 2.3105 12.1271 2.09171 11.9083C1.87292 11.6895 1.75 11.3928 1.75 11.0833V8.75"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M4.08301 5.83337L6.99967 8.75004L9.91634 5.83337"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7 8.75V1.75"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <span>Tải xuống</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Row 5 (Download only) -->
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 md:p-5 border border-gray-150 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 rounded-2xl bg-[#FFF0E6] shrink-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M12.4997 1.66663H4.99967C4.55765 1.66663 4.13372 1.84222 3.82116 2.15478C3.5086 2.46734 3.33301 2.89127 3.33301 3.33329V16.6666C3.33301 17.1087 3.5086 17.5326 3.82116 17.8451C4.13372 18.1577 4.55765 18.3333 4.99967 18.3333H14.9997C15.4417 18.3333 15.8656 18.1577 16.1782 17.8451C16.4907 17.5326 16.6663 17.1087 16.6663 16.6666V5.83329L12.4997 1.66663Z"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.667 1.66663V4.99996C11.667 5.44199 11.8426 5.86591 12.1551 6.17847C12.4677 6.49103 12.8916 6.66663 13.3337 6.66663H16.667"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.33366 7.5H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.3337 10.8334H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.3337 14.1666H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="flex flex-col text-left">
+                      <h3 class="text-heading text-base md:text-lg font-bold">
+                        Bảng tổng hợp kiến thức trọng tâm
+                      </h3>
+                      <p
+                        class="text-xs md:text-sm text-gray-300 mt-1 font-semibold"
+                      >
+                        Tài liệu tóm tắt 2 trang, in ra ôn tập nhanh • 0.4 MB
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-2.5 sm:gap-3 w-full sm:w-auto justify-end"
+                  >
+                    <a
+                      href="assets/images/products/math_2_v2.png"
+                      download
+                      class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary hover:bg-[#D95F14] text-white rounded-full transition-all duration-300 text-sm font-semibold"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        class="w-4 h-4 shrink-0"
+                      >
+                        <path
+                          d="M12.25 8.75V11.0833C12.25 11.3928 12.1271 11.6895 11.9083 11.9083C11.6895 12.1271 11.3928 12.25 11.0833 12.25H2.91667C2.60725 12.25 2.3105 12.1271 2.09171 11.9083C1.87292 11.6895 1.75 11.3928 1.75 11.0833V8.75"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M4.08301 5.83337L6.99967 8.75004L9.91634 5.83337"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7 8.75V1.75"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <span>Tải xuống</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Products Section -->
+      <section class="py-12 md:pt-12 md:pb-20 bg-white overflow-hidden">
+        <div class="container">
+          <!-- Section Header -->
+          <header class="section-header">
+            <!-- Left Side: Title -->
+            <div class="section-header__left">
+              <h2 class="section-header__title font-montserrat">
+                Sách liên quan
+              </h2>
+            </div>
+
+            <!-- Right Side: See More Button -->
+            <a href="#" class="section-header__more-btn">
+              Xem thêm
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M10 16.75C9.80802 16.75 9.61599 16.6771 9.46999 16.5301C9.17699 16.2371 9.17699 15.762 9.46999 15.469L12.94 11.999L9.46999 8.52908C9.17699 8.23608 9.17699 7.76104 9.46999 7.46804C9.76299 7.17504 10.238 7.17504 10.531 7.46804L14.531 11.468C14.824 11.761 14.824 12.2361 14.531 12.5291L10.531 16.5291C10.384 16.6771 10.192 16.75 10 16.75Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+          </header>
+
+          <!-- Swiper Carousel -->
+          <div class="swiper products-swiper overflow-visible relative">
+            <div class="swiper-wrapper">
+              <!-- Slide 1: Literature 7 Vol 1 -->
+              <div class="swiper-slide h-full flex flex-col">
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/literature_7_v1.png"
+                      alt="Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Ngữ Văn 7 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 2: Physics 11 -->
+              <div class="swiper-slide h-full flex flex-col">
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/physics_11.png"
+                      alt="Chuyên đề học tập Vật Lí 11"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Ngữ Văn 7 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 3: Math 1 -->
+              <div class="swiper-slide h-full flex flex-col">
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/math_1.png"
+                      alt="Toán 1 Tập 2"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Ngữ Văn 7 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 4: Science 4 -->
+              <div class="swiper-slide h-full flex flex-col">
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/science_4.png"
+                      alt="Khoa học tự nhiên 4"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Ngữ Văn 7 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 5: Literature 7 Vol 1 -->
+              <div class="swiper-slide h-full flex flex-col">
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/literature_7_v1.png"
+                      alt="Ngữ Văn 7 Tập 1"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Ngữ Văn 7 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 6: Physics 11 -->
+              <div class="swiper-slide h-full flex flex-col">
+                <a href="#" class="product-card">
+                  <div class="product-card__image-wrapper">
+                    <img
+                      src="assets/images/products/physics_11.png"
+                      alt="Chuyên đề học tập Vật Lí 11"
+                      class="product-card__image"
+                    />
+                  </div>
+                  <span class="product-card__category">Sách giáo khoa</span>
+                  <div class="product-card__content">
+                    <h3 class="product-card__title">Ngữ Văn 7 Tập 1</h3>
+                    <span class="product-card__price">10.000đ</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer
+      class="relative bg-footer-bg py-16 lg:pt-20 lg:pb-12 text-white border-t border-gray-800"
+    >
+      <div class="container">
+        <!-- Footer Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8"
+        >
+          <!-- Column 1: Brand Info -->
+          <div
+            class="md:col-span-2 lg:col-span-3 flex flex-col items-start text-left"
+          >
+            <div class="flex flex-col gap-6 lg:gap-8">
+              <div class="flex items-center">
+                <img
+                  src="assets/images/footer/logo-footer.png"
+                  alt="Nhà xuất bản Giáo dục Hà Nội"
+                  class="footer__logo h-14 w-auto object-contain"
+                />
+              </div>
+
+              <p class="text-base md:text-lg text-footer-text/65">
+                Tầng 4, Toà Diamond Flower, số 48 Lê Văn Lương, P. Yên Hoà, TP.
+                Hà Nội
+              </p>
+
+              <a
+                href="#"
+                class="inline-block text-sm font-bold text-white hover:text-primary transition-colors underline underline-offset-4"
+              >
+                BẢN ĐỒ CHỬ ĐƯỜNG
+              </a>
+
+              <!-- Social Icons -->
+              <div class="footer__socials flex items-center gap-6 md:gap-9">
+                <!-- Facebook -->
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                  <img src="assets/images/footer/facebook.png" alt="" />
+                </a>
+                <!-- Instagram -->
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                  <img src="assets/images/footer/instagram.png" alt="" />
+                </a>
+                <!-- TikTok -->
+                <a href="#" class="footer__social-link" aria-label="TikTok">
+                  <img src="assets/images/footer/tiktok.png" alt="" />
+                </a>
+                <!-- YouTube -->
+                <a href="#" class="footer__social-link" aria-label="YouTube">
+                  <img src="assets/images/footer/youtube.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Contact Info -->
+          <div
+            class="md:col-span-1 lg:col-span-3 flex flex-col items-start text-left"
+          >
+            <div class="flex flex-col gap-4">
+              <span class="footer__title">LIÊN HỆ</span>
+              <div>
+                <a
+                  href="tel:02435121533"
+                  class="block text-2xl md:text-3xl font-semibold text-primary hover:text-primary/90 transition-colors font-montserrat"
+                >
+                  024.35121533 (118)
+                </a>
+                <a
+                  href="tel:0978051672"
+                  class="block text-2xl md:text-3xl font-semibold text-primary hover:text-primary/90 transition-colors font-montserrat"
+                >
+                  0978 051 672
+                </a>
+              </div>
+
+              <span class="block text-base md:text-lg text-footer-text/65">
+                Thứ hai - Thứ sáu: 8.00 - 17.00
+              </span>
+              <a
+                href="mailto:kinhdoanh_heps@gmail.com"
+                class="block text-base md:text-lg font-semibold text-footer-text hover:text-primary transition-colors"
+              >
+                kinhdoanh_heps@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 3: Explore links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">KHÁM PHÁ</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Giới thiệu</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Service links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">DỊCH VỤ</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Trung tâm trợ giúp</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Đổi trả hàng</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Thu hồi sản phẩm</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Hỗ trợ tiếp cận</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Liên hệ với chúng tôi</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Nhận tại cửa hàng</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Category links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">DANH MỤC</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Sách giáo khoa</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Sách tham khảo</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link"
+                  >Tài liệu giáo dục địa phương</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer__link">Học liệu số</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright Bottom -->
+        <div class="pt-8 mt-6 border-t border-white/10 lg:mt-10 text-center">
+          <p
+            class="text-center text-sm md:text-base text-white font-semibold mb-0"
+          >
+            Copyright © 2026 Công ty Cổ phần dịch vụ Xuất bản giáo dục Hà Nội.
+            All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/vendor/fancybox.umd.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
