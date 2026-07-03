@@ -426,6 +426,94 @@ function initGoalsToggle() {
   });
 }
 
+function initDynamicGalleryOverlay() {
+  const hiddenContainer = document.getElementById("gallery-hidden");
+  const thumbnailsRow = document.getElementById("gallery-thumbnails");
+  if (!hiddenContainer || !thumbnailsRow) return;
+
+  const hiddenCount = hiddenContainer.querySelectorAll('a[data-fancybox="gallery"]').length;
+  if (thumbnailsRow.children.length < 5) return;
+
+  const fifthThumb = thumbnailsRow.children[4];
+  const overlay = fifthThumb.querySelector(".absolute");
+  const img = fifthThumb.querySelector("img");
+
+  if (hiddenCount > 0) {
+    if (overlay) {
+      overlay.textContent = `+${hiddenCount}`;
+      overlay.style.setProperty("display", "flex", "important");
+    }
+    if (img) {
+      img.classList.add("opacity-0");
+    }
+  } else {
+    if (overlay) {
+      overlay.style.setProperty("display", "none", "important");
+    }
+    if (img) {
+      img.classList.remove("opacity-0");
+    }
+  }
+}
+
+function initProductGallery() {
+  const mainCoverLink = document.getElementById("main-cover-link");
+  const mainCoverImg = mainCoverLink ? mainCoverLink.querySelector("img") : null;
+  const thumbnailsRow = document.getElementById("gallery-thumbnails");
+  if (!thumbnailsRow) return;
+
+  const thumbs = thumbnailsRow.querySelectorAll(".w-20.h-20");
+
+  thumbs.forEach((thumb, index) => {
+    // The 5th thumbnail is the +28 overflow overlay. Clicking it should trigger Fancybox immediately.
+    if (index === 4) return;
+
+    const anchor = thumb.querySelector("a");
+    if (!anchor) return;
+
+    anchor.addEventListener("click", (e) => {
+      // If programmatically clicked (from the main cover click redirect), let it bubble up to Fancybox
+      if (!e.isTrusted) return;
+
+      // Manual user click: intercept to update main image on the page instead of opening Fancybox
+      e.preventDefault();
+      e.stopPropagation();
+
+      const imgSrc = anchor.getAttribute("href");
+      const imgAlt = anchor.querySelector("img") ? anchor.querySelector("img").getAttribute("alt") : "";
+
+      // Update main cover src, href, and alt
+      if (mainCoverLink && mainCoverImg) {
+        mainCoverLink.setAttribute("href", imgSrc);
+        mainCoverImg.setAttribute("src", imgSrc);
+        mainCoverImg.setAttribute("alt", imgAlt);
+      }
+
+      // Update active border styles
+      thumbs.forEach((t) => {
+        t.classList.remove("border-primary");
+        t.classList.add("border-gray-eee");
+      });
+      thumb.classList.remove("border-gray-eee");
+      thumb.classList.add("border-primary");
+    });
+  });
+
+  // Clicking the main cover image triggers Fancybox on the currently active thumbnail link
+  if (mainCoverLink) {
+    mainCoverLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      const activeThumb = thumbnailsRow.querySelector(".border-primary a");
+      if (activeThumb) {
+        activeThumb.click();
+      } else {
+        const firstThumb = thumbnailsRow.querySelector("a[data-fancybox=\"gallery\"]");
+        if (firstThumb) firstThumb.click();
+      }
+    });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initTabs();
   initSearchPopup();
@@ -435,4 +523,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initProductFilterDropdown();
   initHistoryTimeline();
   initGoalsToggle();
+  initDynamicGalleryOverlay();
+  initProductGallery();
 });
