@@ -296,6 +296,33 @@ function initProductsSlider() {
   });
 }
 
+function initRelatedNewsSlider() {
+  const swiperContainers = document.querySelectorAll(".related-news-swiper");
+  if (!swiperContainers.length) return;
+
+  swiperContainers.forEach((container) => {
+    new Swiper(container, {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+      grabCursor: true,
+      breakpoints: {
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 24,
+        }
+      }
+    });
+  });
+}
+
 function initProductFilterDropdown() {
   const dropdowns = document.querySelectorAll(".section-header__dropdown");
   if (!dropdowns.length) return;
@@ -520,6 +547,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   initHeroSlider();
   initProductsSlider();
+  initRelatedNewsSlider();
   initProductFilterDropdown();
   initHistoryTimeline();
   initGoalsToggle();

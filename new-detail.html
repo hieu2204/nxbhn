@@ -1,0 +1,1510 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết bài viết</title>
+    <!-- Vendor -->
+    <link rel="stylesheet" href="assets/css/vendor/fancybox.css" />
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="bg-primary-blue bg-header h-16 sticky top-0 z-[999]">
+      <div class="container h-full">
+        <div class="flex justify-between items-center h-full">
+          <a href="/" class="flex items-center">
+            <img
+              src="assets/images/header/logo-header.png"
+              alt="Logo Nhà xuất bản Hà Nội"
+              class="h-12 w-auto object-contain"
+            />
+          </a>
+          <nav class="hidden xl:block h-full">
+            <ul class="nav-list h-full">
+              <li class="h-full flex items-center">
+                <a href="" class="nav-link">Trang chủ</a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Giới thiệu</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Sản phẩm</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="" class="dropdown-link">Sách giáo khoa</a>
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link">Sách tham khảo</a>
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link"
+                      >Tài liệu giáo dục địa phương</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link">Học liệu số</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Cổ đông</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link nav-link--active">
+                  <span>Tin tức</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="h-full flex items-center">
+                <a href="" class="nav-link">Liên hệ</a>
+              </li>
+            </ul>
+          </nav>
+          <div
+            class="hidden xl:flex items-center justify-between py-1.5 border-b border-white/40 w-48 md:w-56 bg-transparent"
+          >
+            <input
+              id="search-trigger-input"
+              type="text"
+              placeholder="Tìm kiếm"
+              readonly
+              class="w-full bg-transparent text-white placeholder-white/60 text-sm outline-none cursor-pointer"
+            />
+            <button
+              id="search-trigger-btn"
+              class="flex items-center justify-center text-white/60 hover:text-white transition-colors duration-300 cursor-pointer"
+              aria-label="Tìm kiếm"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22 22L20 20"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <button
+            id="menu-toggle"
+            class="xl:hidden p-1 text-white hover:text-primary transition-colors cursor-pointer"
+            aria-label="Mở Menu"
+          >
+            <svg
+              width="32px"
+              height="32px"
+              viewBox="0 0 24 24"
+              fill="white"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M4 6H20M4 12H20M4 18H20"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Drawer (Slide-out from Left) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[1000] xl:hidden">
+      <!-- Backdrop overlay -->
+      <div
+        id="mobile-menu-backdrop"
+        class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-0"
+      ></div>
+
+      <!-- Drawer Content -->
+      <div
+        id="mobile-menu-content"
+        class="relative w-[300px] max-w-[85vw] h-full bg-primary-blue shadow-2xl flex flex-col p-6 transition-transform duration-300 -translate-x-full overflow-y-auto"
+      >
+        <!-- Close Button & Logo Row -->
+        <div class="flex justify-between items-center mb-8">
+          <a href="/" class="flex items-center">
+            <img
+              src="assets/images/header/logo-header.png"
+              alt="Logo Nhà xuất bản Hà Nội"
+              class="h-10 w-auto object-contain"
+            />
+          </a>
+          <button
+            id="mobile-menu-close"
+            class="text-white hover:text-primary transition-colors duration-200 cursor-pointer"
+            aria-label="Đóng Menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-6 h-6"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- 1. Search Box ("searh xong rồi mới nav") -->
+        <div
+          id="mobile-search-trigger"
+          class="relative flex items-center py-2 border-b border-white/30 mb-8 cursor-pointer"
+        >
+          <input
+            type="text"
+            placeholder="Tìm kiếm..."
+            readonly
+            class="w-full bg-transparent text-white placeholder-white/50 text-sm outline-none cursor-pointer"
+          />
+          <button
+            class="absolute right-0 text-white/50 hover:text-white transition-colors duration-200 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-5 h-5"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- 2. Nav links stacking vertically ("flex-col không nằm ngang nữa") -->
+        <nav class="flex-1">
+          <ul class="flex flex-col gap-6">
+            <li>
+              <a
+                href=""
+                class="block text-white hover:text-primary text-lg font-bold transition-colors"
+                >Trang chủ</a
+              >
+            </li>
+
+            <!-- Giới thiệu -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer transition-colors"
+              >
+                <span>Giới thiệu</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tầm nhìn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Sứ mệnh</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Sản phẩm -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Sản phẩm</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Sách giáo khoa</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Sách tham khảo</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tài liệu giáo dục địa phương</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Học liệu số</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Cổ đông -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Cổ đông</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Báo cáo tài chính</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Nghị quyết đại hội</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Tin tức -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-primary text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Tin tức</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tin tức sự kiện</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Hoạt động công ty</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href=""
+                class="block text-white text-lg font-bold hover:text-primary transition-colors"
+                >Liên hệ</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Search Popup Modal -->
+    <div
+      id="search-popup"
+      class="hidden fixed inset-0 z-50 flex justify-center items-start p-4 pt-[20vh]"
+    >
+      <!-- Backdrop with blur and white overlay as requested -->
+      <div
+        id="search-popup-backdrop"
+        class="absolute inset-0 backdrop-blur-md bg-white/30 transition-opacity duration-300 opacity-0"
+      ></div>
+
+      <!-- Modal Content Box -->
+      <div
+        id="search-popup-content"
+        class="relative w-full max-w-[700px] rounded-2xl bg-white shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300"
+      >
+        <div class="flex justify-between items-center py-4 px-5">
+          <div class="flex items-center gap-3 flex-1 mr-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="#828282"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 21L16.7 16.7"
+                stroke="#828282"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <input
+              id="search-popup-input"
+              type="text"
+              class="w-full text-lg placeholder:text-gray-400 outline-none text-heading bg-transparent"
+              placeholder="Tìm kiếm sách, học liệu số, tin tức..."
+            />
+          </div>
+          <button
+            id="search-popup-close"
+            class="px-5 py-1.5 rounded-full border border-solid border-gray-600 hover:border-gray-600 text-sm text-gray-300 hover:text-gray-800 hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
+          >
+            Đóng
+          </button>
+        </div>
+
+        <hr class="border-t border-gray-100" />
+
+        <div class="py-5 px-5">
+          <p class="mb-4 text-sm font-bold text-gray-200">TÌM KIẾM PHỔ BIẾN</p>
+          <div class="flex flex-wrap gap-3">
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Ngữ văn 7</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Sách giáo khoa lớp 8</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Học liệu số toán</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Tài liệu giáo dục địa phương</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Ôn thi lớp 10</span>
+            </button>
+          </div>
+        </div>
+
+        <hr class="border-t border-gray-100" />
+
+        <div class="bg-gray-50 py-3 px-5">
+          <div class="flex items-center gap-6 text-gray-200">
+            <div class="flex items-center">
+              <span
+                class="mr-1.5 px-1.5 py-0.5 rounded bg-gray-500 text-xs font-semibold text-gray-200"
+                >ESC</span
+              >
+              <span class="text-xs">để đóng</span>
+            </div>
+            <div class="flex items-center">
+              <span
+                class="mr-1.5 px-1.5 py-0.5 rounded bg-gray-500 text-xs font-semibold text-gray-200"
+                >Enter</span
+              >
+              <span class="text-xs">để tìm kiếm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="py-4 bg-[#F8F8F8]">
+        <div class="container">
+          <ol
+            class="flex flex-wrap items-center gap-1.5 md:gap-2 text-sm md:text-base font-semibold text-gray-300"
+          >
+            <li class="flex items-center">
+              <a
+                href="index.html"
+                class="text-gray-300 hover:text-primary transition-colors duration-300"
+                >Trang chủ</a
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  d="M5.25 10.5L8.75 7L5.25 3.5"
+                  stroke="#828282"
+                  stroke-width="1.16667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li class="flex items-center">
+              <a
+                href="news.html"
+                class="text-gray-300 hover:text-primary transition-colors duration-300"
+                >Tin tức</a
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  d="M5.25 10.5L8.75 7L5.25 3.5"
+                  stroke="#828282"
+                  stroke-width="1.16667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li class="flex items-center">
+              <span class="text-heading line-clamp-1" aria-current="page"
+                >Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo dục
+                hiện đại</span
+              >
+            </li>
+          </ol>
+        </div>
+      </nav>
+
+      <!-- Main Article Detail Content Section -->
+      <section class="py-12 md:py-16 bg-white">
+        <div class="container">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-4 2xl:gap-12 items-start"
+          >
+            <!-- Left Column: Sticky share buttons (1/12 cols) -->
+            <div
+              class="lg:col-span-1 flex flex-row lg:flex-col lg:items-center gap-4 lg:sticky lg:top-24 border-b border-gray-150 lg:border-0 pb-4 lg:pb-0 mb-3 lg:mb-0"
+            >
+              <a
+                href="#"
+                class="hover:opacity-80 transition-opacity p-2.5 rounded-full bg-[#EAEDF3]"
+              >
+                <img
+                  src="assets/images/news/Facebook.png"
+                  alt="Share Facebook"
+                  class="w-9 h-9 object-contain"
+                />
+              </a>
+              <a
+                href="#"
+                class="hover:opacity-80 transition-opacity p-2.5 rounded-full bg-[#EAEDF3]"
+              >
+                <img
+                  src="assets/images/news/Link.png"
+                  alt="Copy Link"
+                  class="w-9 h-9 object-contain"
+                />
+              </a>
+            </div>
+
+            <!-- Middle Column: Main article details (8/12 cols) -->
+            <div class="lg:col-span-8 text-left">
+              <!-- Article Header -->
+              <div class="mb-12">
+                <h1
+                  class="text-gray-700 text-3xl sm:text-4xl md:text-5xl font-bold font-montserrat mb-4"
+                >
+                  Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo dục
+                  hiện đại
+                </h1>
+
+                <div class="flex gap-4 items-center">
+                  <!-- Meta Info Row -->
+                  <div
+                    class="flex items-center gap-2 text-gray-300 text-sm sm:text-base"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      class="w-5 h-5 sm:w-6 sm:h-6"
+                    >
+                      <path
+                        d="M17 14C17.5523 14 18 13.5523 18 13C18 12.4477 17.5523 12 17 12C16.4477 12 16 12.4477 16 13C16 13.5523 16.4477 14 17 14Z"
+                        fill="#666666"
+                      />
+                      <path
+                        d="M17 18C17.5523 18 18 17.5523 18 17C18 16.4477 17.5523 16 17 16C16.4477 16 16 16.4477 16 17C16 17.5523 16.4477 18 17 18Z"
+                        fill="#666666"
+                      />
+                      <path
+                        d="M13 13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13C11 12.4477 11.4477 12 12 12C12.5523 12 13 12.4477 13 13Z"
+                        fill="#666666"
+                      />
+                      <path
+                        d="M13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17Z"
+                        fill="#666666"
+                      />
+                      <path
+                        d="M7 14C7.55229 14 8 13.5523 8 13C8 12.4477 7.55229 12 7 12C6.44772 12 6 12.4477 6 13C6 13.5523 6.44772 14 7 14Z"
+                        fill="#666666"
+                      />
+                      <path
+                        d="M7 18C7.55229 18 8 17.5523 8 17C8 16.4477 7.55229 16 7 16C6.44772 16 6 16.4477 6 17C6 17.5523 6.44772 18 7 18Z"
+                        fill="#666666"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7 1.75C7.41421 1.75 7.75 2.08579 7.75 2.5V3.26272C8.412 3.24999 9.14133 3.24999 9.94346 3.25H14.0564C14.8586 3.24999 15.588 3.24999 16.25 3.26272V2.5C16.25 2.08579 16.5858 1.75 17 1.75C17.4142 1.75 17.75 2.08579 17.75 2.5V3.32709C18.0099 3.34691 18.2561 3.37182 18.489 3.40313C19.6614 3.56076 20.6104 3.89288 21.3588 4.64124C22.1071 5.38961 22.4392 6.33855 22.5969 7.51098C22.75 8.65018 22.75 10.1058 22.75 11.9435V14.0564C22.75 15.8941 22.75 17.3498 22.5969 18.489C22.4392 19.6614 22.1071 20.6104 21.3588 21.3588C20.6104 22.1071 19.6614 22.4392 18.489 22.5969C17.3498 22.75 15.8942 22.75 14.0565 22.75H9.94359C8.10585 22.75 6.65018 22.75 5.51098 22.5969C4.33856 22.4392 3.38961 22.1071 2.64124 21.3588C1.89288 20.6104 1.56076 19.6614 1.40314 18.489C1.24997 17.3498 1.24998 15.8942 1.25 14.0564V11.9436C1.24998 10.1058 1.24997 8.65019 1.40314 7.51098C1.56076 6.33855 1.89288 5.38961 2.64124 4.64124C3.38961 3.89288 4.33856 3.56076 5.51098 3.40313C5.7439 3.37182 5.99006 3.34691 6.25 3.32709V2.5C6.25 2.08579 6.58579 1.75 7 1.75ZM5.71085 4.88976C4.70476 5.02502 4.12511 5.27869 3.7019 5.7019C3.27869 6.12511 3.02502 6.70476 2.88976 7.71085C2.86685 7.88123 2.8477 8.06061 2.83168 8.25H21.1683C21.1523 8.06061 21.1331 7.88124 21.1102 7.71085C20.975 6.70476 20.7213 6.12511 20.2981 5.7019C19.8749 5.27869 19.2952 5.02502 18.2892 4.88976C17.2615 4.75159 15.9068 4.75 14 4.75H10C8.09318 4.75 6.73851 4.75159 5.71085 4.88976ZM2.75 12C2.75 11.146 2.75032 10.4027 2.76309 9.75H21.2369C21.2497 10.4027 21.25 11.146 21.25 12V14C21.25 15.9068 21.2484 17.2615 21.1102 18.2892C20.975 19.2952 20.7213 19.8749 20.2981 20.2981C19.8749 20.7213 19.2952 20.975 18.2892 21.1102C17.2615 21.2484 15.9068 21.25 14 21.25H10C8.09318 21.25 6.73851 21.2484 5.71085 21.1102C4.70476 20.975 4.12511 20.7213 3.7019 20.2981C3.27869 19.8749 3.02502 19.2952 2.88976 18.2892C2.75159 17.2615 2.75 15.9068 2.75 14V12Z"
+                        fill="#666666"
+                      />
+                    </svg>
+                    <span class="text-[#666666] font-semibold"
+                      >8 Tháng 11, 2024</span
+                    >
+                  </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="4"
+                    height="4"
+                    viewBox="0 0 4 4"
+                    fill="none"
+                  >
+                    <circle cx="2" cy="2" r="2" fill="#CCCCCC" />
+                  </svg>
+                  <span class="text-[#333] font-semibold">Tin tức</span>
+                </div>
+              </div>
+
+              <!-- Banner Cover Image -->
+              <div
+                class="w-full aspect-[16/9] overflow-hidden rounded-2xl mb-8"
+              >
+                <img
+                  src="assets/images/news/new3.png"
+                  alt="Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo dục hiện đại"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <!-- Article Body Content -->
+              <div
+                class="prose max-w-none text-text text-base md:text-lg leading-relaxed text-left flex flex-col gap-6"
+              >
+                <p class="font-bold text-lg md:text-xl text-heading">
+                  Hệ sinh thái học liệu số là một hợp phần quan trọng trong quá
+                  trình chuyển đổi số giáo dục. Việc xây dựng và phát triển một
+                  hệ sinh thái học liệu phong phú, chất lượng cao không chỉ hỗ
+                  trợ tối đa cho giáo viên trong hoạt động giảng dạy mà còn tạo
+                  không gian tự học chủ động, linh hoạt cho học sinh mọi lúc,
+                  mọi nơi.
+                </p>
+                <p>
+                  Trong những năm gần đây, chuyển đổi số trong giáo dục đã và
+                  đang diễn ra mạnh mẽ tại Việt Nam. Việc ứng dụng công nghệ
+                  thông tin vào quản lý và dạy học đã thay đổi căn bản cách thức
+                  truyền thụ và tiếp thu kiến thức. Trong đó,
+                  <strong>học liệu số</strong> đóng vai trò là "linh hồn", là
+                  nền tảng cốt lõi quyết định sự thành công của quá trình này.
+                </p>
+                <p>
+                  Nhà xuất bản Hà Nội luôn tiên phong đi đầu trong công tác xây
+                  dựng các học liệu số hỗ trợ giáo viên và học sinh. Các sản
+                  phẩm học liệu số của nhà xuất bản được đầu tư bài bản về nội
+                  dung chuyên môn lẫn giao diện kỹ thuật, đảm bảo tính khoa học,
+                  thẩm mỹ và sự tương tác trực quan cao.
+                </p>
+                <blockquote
+                  class="border-l-4 border-primary pl-6 py-2 my-4 italic text-heading bg-gray-50 rounded-r-lg font-semibold"
+                >
+                  "Phát triển hệ sinh thái học liệu số toàn diện là mục tiêu
+                  chiến lược của chúng tôi nhằm nâng cao chất lượng giáo dục,
+                  đáp ứng yêu cầu của chương trình giáo dục phổ thông mới và
+                  mang lại trải nghiệm học tập hiện đại nhất cho thế hệ trẻ."
+                </blockquote>
+                <h3
+                  class="text-heading text-xl md:text-2xl font-bold mt-4 mb-2"
+                >
+                  Vai trò cốt lõi của hệ sinh thái học liệu số
+                </h3>
+                <p>Hệ sinh thái học liệu số đóng vai trò vô cùng quan trọng:</p>
+                <ul class="list-disc pl-6 flex flex-col gap-2">
+                  <li>
+                    <strong>Tăng tính tương tác:</strong> Học sinh không chỉ đọc
+                    sách tĩnh mà còn tương tác trực tiếp với các bài tập, video
+                    bài giảng, hình ảnh động và mô hình 3D trực quan.
+                  </li>
+                  <li>
+                    <strong>Cá nhân hóa học tập:</strong> Cho phép người học tự
+                    điều chỉnh tốc độ, hướng đi phù hợp với năng lực cá nhân.
+                  </li>
+                  <li>
+                    <strong>Tiết kiệm thời gian và tài nguyên:</strong> Hỗ trợ
+                    giáo viên dễ dàng chia sẻ, chỉnh sửa và chuẩn bị bài giảng
+                    nhanh chóng.
+                  </li>
+                  <li>
+                    <strong>Mọi lúc mọi nơi:</strong> Xóa bỏ ranh giới địa lý,
+                    mang giáo dục chất lượng cao đến mọi vùng miền đất nước
+                    thông qua môi trường Internet.
+                  </li>
+                </ul>
+                <p>
+                  Với việc tiếp tục nghiên cứu và mở rộng các giải pháp số,
+                  chúng tôi hy vọng sẽ đóng góp tích cực vào công cuộc hiện đại
+                  hóa nền giáo dục nước nhà, mang lại giá trị thiết thực cho
+                  hàng triệu thầy cô giáo và học sinh trên cả nước.
+                </p>
+              </div>
+
+              <!-- Navigation Row at Bottom of Middle Column -->
+              <div class="border-t border-gray-150 mt-12 pt-8">
+                <div class="flex flex-col sm:flex-row justify-between gap-6">
+                  <!-- Previous Article -->
+                  <a
+                    href="#"
+                    class="flex flex-col gap-2 group text-left w-full sm:w-1/2"
+                  >
+                    <div
+                      class="flex items-center gap-2 text-[#100249] group-hover:text-primary-blue transition-colors font-bold"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        class="w-6 h-6 transition-transform duration-300 group-hover:-translate-x-1"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12C2.75 6.89137 6.89137 2.75 12 2.75ZM22.75 12C22.75 6.06294 17.9371 1.25 12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12ZM11.5303 8.46967C11.2374 8.17678 10.7626 8.17678 10.4697 8.46967L7.46967 11.4697C7.17678 11.7626 7.17678 12.2374 7.46967 12.5303L10.4697 15.5303C10.7626 15.8232 11.2374 15.8232 11.5303 15.5303C11.8232 15.2374 11.8232 14.7626 11.5303 14.4697L9.81066 12.75H16C16.4142 12.75 16.75 12.4142 16.75 12C16.75 11.5858 16.4142 11.25 16 11.25H9.81066L11.5303 9.53033C11.8232 9.23744 11.8232 8.76256 11.5303 9.53033C11.8232 9.23744 11.8232 8.76256 11.5303 8.46967Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <span>Bài viết trước</span>
+                    </div>
+                    <span
+                      class="block text-base md:text-lg text-[#1A1A1A] group-hover:text-primary-blue transition-colors underline line-clamp-1"
+                    >
+                      Tập huấn sử dụng sách giáo khoa năm học mới
+                    </span>
+                  </a>
+
+                  <!-- Next Article -->
+                  <a
+                    href="#"
+                    class="flex flex-col gap-2 group text-right items-end w-full sm:w-1/2"
+                  >
+                    <div
+                      class="flex items-center gap-2 text-[#100249] group-hover:text-primary-blue transition-colors font-bold"
+                    >
+                      <span>Bài viết sau</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        class="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12 2.75C6.89137 2.75 2.75 6.89137 2.75 12C2.75 17.1086 6.89137 21.25 12 21.25C17.1086 21.25 21.25 17.1086 21.25 12C21.25 6.89137 17.1086 2.75 12 2.75ZM1.25 12C1.25 6.06294 6.06294 1.25 12 1.25C17.9371 1.25 22.75 6.06294 22.75 12C22.75 17.9371 17.9371 22.75 12 22.75C6.06294 22.75 1.25 17.9371 1.25 12ZM12.4697 8.46967C12.7626 8.17678 13.2374 8.17678 13.5303 8.46967L16.5303 11.4697C16.8232 11.7626 16.8232 12.2374 16.5303 12.5303L13.5303 15.5303C13.2374 15.8232 12.7626 15.8232 12.4697 15.5303C12.1768 15.2374 12.1768 14.7626 12.4697 14.4697L14.1893 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H14.1893L12.4697 9.53033C12.1768 9.23744 12.1768 8.76256 12.4697 8.46967Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="block text-base md:text-lg text-[#1A1A1A] group-hover:text-primary-blue transition-colors underline line-clamp-1"
+                    >
+                      Khai mạc Hội chợ Sách Quốc tế Hà Nội 2026
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Tin nổi bật sidebar (3/12 cols) -->
+            <div
+              class="pl-4 2xl:pl-8 border-s border-s-[#E6E6E6] lg:col-span-3 text-left self-stretch"
+            >
+              <div class="mb-6">
+                <h3
+                  class="text-[#333] text-2xl font-bold font-montserrat uppercase"
+                >
+                  Tin nổi bật
+                </h3>
+              </div>
+              <div class="flex flex-col gap-6">
+                <!-- Highlight Item 1 -->
+                <a
+                  href="new-detail.html"
+                  class="flex flex-row lg:flex-col xl:flex-row gap-4 group cursor-pointer"
+                >
+                  <div
+                    class="xl:w-28 h-20 shrink-0 rounded-lg overflow-hidden bg-gray-100"
+                  >
+                    <img
+                      src="assets/images/news/new1.png"
+                      alt="Tin nổi bật"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div class="flex flex-col justify-between">
+                    <h4
+                      class="font-semibold text-[#333] group-hover:text-primary-blue transition-colors duration-300"
+                    >
+                      Khai mạc hội chợ sách quốc tế Hà Nội 2026 tại Hoàng Thành
+                    </h4>
+                    <span class="text-sm text-[#666] mt-2"
+                      >8 Tháng 11, 2024</span
+                    >
+                  </div>
+                </a>
+
+                <!-- Highlight Item 2 -->
+                <a
+                  href="new-detail.html"
+                  class="flex flex-row lg:flex-col xl:flex-row gap-4 group cursor-pointer"
+                >
+                  <div
+                    class="xl:xl:w-28 h-20 shrink-0 rounded-lg overflow-hidden bg-gray-100"
+                  >
+                    <img
+                      src="assets/images/news/new2.png"
+                      alt="Tin nổi bật"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div class="flex flex-col justify-between">
+                    <h4
+                      class="font-semibold text-[#333] group-hover:text-primary-blue transition-colors duration-300"
+                    >
+                      Tập huấn sử dụng sách giáo khoa mới cho giáo viên phổ
+                      thông
+                    </h4>
+                    <span class="text-sm text-[#666] mt-2"
+                      >8 Tháng 11, 2024</span
+                    >
+                  </div>
+                </a>
+
+                <!-- Highlight Item 3 -->
+                <a
+                  href="new-detail.html"
+                  class="flex flex-row lg:flex-col xl:flex-row gap-4 group cursor-pointer"
+                >
+                  <div
+                    class="xl:xl:w-28 h-20 shrink-0 rounded-lg overflow-hidden bg-gray-100"
+                  >
+                    <img
+                      src="assets/images/news/new4.png"
+                      alt="Tin nổi bật"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div class="flex flex-col justify-between">
+                    <h4
+                      class="font-semibold text-[#333] group-hover:text-primary-blue transition-colors duration-300"
+                    >
+                      Xây dựng ngân hàng câu hỏi trắc nghiệm khách quan trực
+                      tuyến
+                    </h4>
+                    <span class="text-sm text-[#666] mt-2"
+                      >8 Tháng 11, 2024</span
+                    >
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related News Section -->
+      <section class="py-12 md:py-25 bg-white overflow-hidden">
+        <div class="container">
+          <!-- Section Header -->
+          <header class="section-header mb-8 lg:mb-12">
+            <div class="section-header__left">
+              <h2 class="section-header__title font-montserrat">
+                Bài viết liên quan
+              </h2>
+            </div>
+            <a href="news.html" class="section-header__more-btn">
+              Xem thêm
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M10 16.75C9.80802 16.75 9.61599 16.6771 9.46999 16.5301C9.17699 16.2371 9.17699 15.762 9.46999 15.469L12.94 11.999L9.46999 8.52908C9.17699 8.23608 9.17699 7.76104 9.46999 7.46804C9.76299 7.17504 10.238 7.17504 10.531 7.46804L14.531 11.468C14.824 11.761 14.824 12.2361 14.531 12.5291L10.531 16.5291C10.384 16.6771 10.192 16.75 10 16.75Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+          </header>
+
+          <!-- Swiper Carousel -->
+          <div class="swiper related-news-swiper overflow-visible relative">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide h-full flex flex-col">
+                <a
+                  href="new-detail.html"
+                  class="group flex flex-col h-full bg-white transition-all rounded-2xl duration-300 border border-[#E4E4E4] hover:translate-y-[-4px]"
+                >
+                  <div
+                    class="aspect-[306/186] w-full overflow-hidden rounded-2xl bg-gray-100"
+                  >
+                    <img
+                      src="assets/images/news/new1.png"
+                      alt="Tin tức"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div class="flex flex-col flex-1 text-left p-4">
+                    <span class="text-new-desc font-semibold mb-1"
+                      >Tin tức</span
+                    >
+                    <div class="flex flex-col flex-1 justify-between">
+                      <h3
+                        class="text-new-title text-lg font-bold mb-5 group-hover:text-primary-blue transition-colors duration-300 line-clamp-2"
+                      >
+                        Khai mạc hội chợ sách quốc tế Hà Nội 2026 tại Hoàng
+                        Thành Thăng Long
+                      </h3>
+                      <div class="flex justify-end">
+                        <span class="text-new-desc text-sm font-bold"
+                          >8 Tháng 11, 2024</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide h-full flex flex-col">
+                <a
+                  href="new-detail.html"
+                  class="group flex flex-col h-full bg-white transition-all rounded-2xl duration-300 border border-[#E4E4E4] hover:translate-y-[-4px]"
+                >
+                  <div
+                    class="aspect-[306/186] w-full overflow-hidden rounded-2xl bg-gray-100"
+                  >
+                    <img
+                      src="assets/images/news/new2.png"
+                      alt="Tin tức"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div class="flex flex-col flex-1 text-left p-4">
+                    <span class="text-new-desc font-semibold mb-1"
+                      >Tin tức</span
+                    >
+                    <div class="flex flex-col flex-1 justify-between">
+                      <h3
+                        class="text-new-title text-lg font-bold mb-5 group-hover:text-primary-blue transition-colors duration-300 line-clamp-2"
+                      >
+                        Tập huấn sử dụng bộ sách giáo khoa mới cho giáo viên phổ
+                        thông
+                      </h3>
+                      <div class="flex justify-end">
+                        <span class="text-new-desc text-sm font-bold"
+                          >8 Tháng 11, 2024</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide h-full flex flex-col">
+                <a
+                  href="new-detail.html"
+                  class="group flex flex-col h-full bg-white transition-all rounded-2xl duration-300 border border-[#E4E4E4] hover:translate-y-[-4px]"
+                >
+                  <div
+                    class="aspect-[306/186] w-full overflow-hidden rounded-2xl bg-gray-100"
+                  >
+                    <img
+                      src="assets/images/news/new4.png"
+                      alt="Tin tức"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div class="flex flex-col flex-1 text-left p-4">
+                    <span class="text-new-desc font-semibold mb-1"
+                      >Tin tức</span
+                    >
+                    <div class="flex flex-col flex-1 justify-between">
+                      <h3
+                        class="text-new-title text-lg font-bold mb-5 group-hover:text-primary-blue transition-colors duration-300 line-clamp-2"
+                      >
+                        Xây dựng ngân hàng câu hỏi trắc nghiệm khách quan trực
+                        tuyến
+                      </h3>
+                      <div class="flex justify-end">
+                        <span class="text-new-desc text-sm font-bold"
+                          >8 Tháng 11, 2024</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="swiper-slide h-full flex flex-col">
+                <a
+                  href="new-detail.html"
+                  class="group flex flex-col h-full bg-white transition-all rounded-2xl duration-300 border border-[#E4E4E4] hover:translate-y-[-4px]"
+                >
+                  <div
+                    class="aspect-[306/186] w-full overflow-hidden rounded-2xl bg-gray-100"
+                  >
+                    <img
+                      src="assets/images/news/new1.png"
+                      alt="Tin tức"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div class="flex flex-col flex-1 text-left p-4">
+                    <span class="text-new-desc font-semibold mb-1"
+                      >Tin tức</span
+                    >
+                    <div class="flex flex-col flex-1 justify-between">
+                      <h3
+                        class="text-new-title text-lg font-bold mb-5 group-hover:text-primary-blue transition-colors duration-300 line-clamp-2"
+                      >
+                        Phương pháp dạy học tích cực trong môn Toán tiểu học
+                      </h3>
+                      <div class="flex justify-end">
+                        <span class="text-new-desc text-sm font-bold"
+                          >8 Tháng 11, 2024</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 5 -->
+              <div class="swiper-slide h-full flex flex-col">
+                <a
+                  href="new-detail.html"
+                  class="group flex flex-col h-full bg-white transition-all rounded-2xl duration-300 border border-[#E4E4E4] hover:translate-y-[-4px]"
+                >
+                  <div
+                    class="aspect-[306/186] w-full overflow-hidden rounded-2xl bg-gray-100"
+                  >
+                    <img
+                      src="assets/images/news/new2.png"
+                      alt="Tin tức"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div class="flex flex-col flex-1 text-left p-4">
+                    <span class="text-new-desc font-semibold mb-1"
+                      >Tin tức</span
+                    >
+                    <div class="flex flex-col flex-1 justify-between">
+                      <h3
+                        class="text-new-title text-lg font-bold mb-5 group-hover:text-primary-blue transition-colors duration-300 line-clamp-2"
+                      >
+                        Hội nghị tổng kết công tác xuất bản giáo dục thủ đô
+                      </h3>
+                      <div class="flex justify-end">
+                        <span class="text-new-desc text-sm font-bold"
+                          >8 Tháng 11, 2024</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 6 -->
+              <div class="swiper-slide h-full flex flex-col">
+                <a
+                  href="new-detail.html"
+                  class="group flex flex-col h-full bg-white transition-all rounded-2xl duration-300 border border-[#E4E4E4] hover:translate-y-[-4px]"
+                >
+                  <div
+                    class="aspect-[306/186] w-full overflow-hidden rounded-2xl bg-gray-100"
+                  >
+                    <img
+                      src="assets/images/news/new4.png"
+                      alt="Tin tức"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div class="flex flex-col flex-1 text-left p-4">
+                    <span class="text-new-desc font-semibold mb-1"
+                      >Tin tức</span
+                    >
+                    <div class="flex flex-col flex-1 justify-between">
+                      <h3
+                        class="text-new-title text-lg font-bold mb-5 group-hover:text-primary-blue transition-colors duration-300 line-clamp-2"
+                      >
+                        Chương trình giáo dục địa phương thành phố Hà Nội
+                      </h3>
+                      <div class="flex justify-end">
+                        <span class="text-new-desc text-sm font-bold"
+                          >8 Tháng 11, 2024</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer
+      class="relative bg-footer-bg py-16 lg:pt-20 lg:pb-12 text-white border-t border-gray-800"
+    >
+      <div class="container">
+        <!-- Footer Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8"
+        >
+          <!-- Column 1: Brand Info -->
+          <div
+            class="md:col-span-2 lg:col-span-3 flex flex-col items-start text-left"
+          >
+            <div class="flex flex-col gap-6 lg:gap-8">
+              <div class="flex items-center">
+                <img
+                  src="assets/images/footer/logo-footer.png"
+                  alt="Nhà xuất bản Giáo dục Hà Nội"
+                  class="footer__logo h-14 w-auto object-contain"
+                />
+              </div>
+
+              <p class="text-base md:text-lg text-footer-text/65">
+                Tầng 4, Toà Diamond Flower, số 48 Lê Văn Lương, P. Yên Hoà, TP.
+                Hà Nội
+              </p>
+
+              <a
+                href="#"
+                class="inline-block text-sm font-bold text-white hover:text-primary transition-colors underline underline-offset-4"
+              >
+                BẢN ĐỒ CHỬ ĐƯỜNG
+              </a>
+
+              <!-- Social Icons -->
+              <div class="footer__socials flex items-center gap-6 md:gap-9">
+                <!-- Facebook -->
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                  <img src="assets/images/footer/facebook.png" alt="" />
+                </a>
+                <!-- Instagram -->
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                  <img src="assets/images/footer/instagram.png" alt="" />
+                </a>
+                <!-- TikTok -->
+                <a href="#" class="footer__social-link" aria-label="TikTok">
+                  <img src="assets/images/footer/tiktok.png" alt="" />
+                </a>
+                <!-- YouTube -->
+                <a href="#" class="footer__social-link" aria-label="YouTube">
+                  <img src="assets/images/footer/youtube.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Contact Info -->
+          <div
+            class="md:col-span-1 lg:col-span-3 flex flex-col items-start text-left"
+          >
+            <div class="flex flex-col gap-4">
+              <span class="footer__title">LIÊN HỆ</span>
+              <div>
+                <a
+                  href="tel:02435121533"
+                  class="block text-2xl md:text-3xl font-semibold text-primary hover:text-primary/90 transition-colors font-montserrat"
+                >
+                  024.35121533 (118)
+                </a>
+                <a
+                  href="tel:0978051672"
+                  class="block text-2xl md:text-3xl font-semibold text-primary hover:text-primary/90 transition-colors font-montserrat"
+                >
+                  0978 051 672
+                </a>
+              </div>
+
+              <span class="block text-base md:text-lg text-footer-text/65">
+                Thứ hai - Thứ sáu: 8.00 - 17.00
+              </span>
+              <a
+                href="mailto:kinhdoanh_heps@gmail.com"
+                class="block text-base md:text-lg font-semibold text-footer-text hover:text-primary transition-colors"
+              >
+                kinhdoanh_heps@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 3: Explore links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">KHÁM PHÁ</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Giới thiệu</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Service links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">DỊCH VỤ</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Trung tâm trợ giúp</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Đổi trả hàng</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Thu hồi sản phẩm</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Hỗ trợ tiếp cận</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Liên hệ với chúng tôi</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Nhận tại cửa hàng</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Category links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">DANH MỤC</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Sách giáo khoa</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Sách tham khảo</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link"
+                  >Tài liệu giáo dục địa phương</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer__link">Học liệu số</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright Bottom -->
+        <div class="pt-8 mt-6 border-t border-white/10 lg:mt-10 text-center">
+          <p
+            class="text-center text-sm md:text-base text-white font-semibold mb-0"
+          >
+            Copyright © 2026 Công ty Cổ phần dịch vụ Xuất bản giáo dục Hà Nội.
+            All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/vendor/fancybox.umd.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
