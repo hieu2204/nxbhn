@@ -1,0 +1,1972 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết học liệu số - Tiếng Việt 1 Tập Một</title>
+    <!-- Vendor -->
+    <link rel="stylesheet" href="assets/css/vendor/fancybox.css" />
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="bg-primary-blue bg-header h-16 sticky top-0 z-[999]">
+      <div class="container h-full">
+        <div class="flex justify-between items-center h-full">
+          <a href="/" class="flex items-center">
+            <img
+              src="assets/images/header/logo-header.png"
+              alt="Logo Nhà xuất bản Hà Nội"
+              class="h-12 w-auto object-contain"
+            />
+          </a>
+          <nav class="hidden xl:block h-full">
+            <ul class="nav-list h-full">
+              <li class="h-full flex items-center">
+                <a href="" class="nav-link">Trang chủ</a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link nav-link--active">
+                  <span>Giới thiệu</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Sản phẩm</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="" class="dropdown-link">Sách giáo khoa</a>
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link">Sách tham khảo</a>
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link"
+                      >Tài liệu giáo dục địa phương</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link">Học liệu số</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Cổ đông</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Tin tức</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="h-full flex items-center">
+                <a href="" class="nav-link">Liên hệ</a>
+              </li>
+            </ul>
+          </nav>
+          <div
+            class="hidden xl:flex items-center justify-between py-1.5 border-b border-white/40 w-48 md:w-56 bg-transparent"
+          >
+            <input
+              id="search-trigger-input"
+              type="text"
+              placeholder="Tìm kiếm"
+              readonly
+              class="w-full bg-transparent text-white placeholder-white/60 text-sm outline-none cursor-pointer"
+            />
+            <button
+              id="search-trigger-btn"
+              class="flex items-center justify-center text-white/60 hover:text-white transition-colors duration-300 cursor-pointer"
+              aria-label="Tìm kiếm"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22 22L20 20"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <button
+            id="menu-toggle"
+            class="xl:hidden p-1 text-white hover:text-primary transition-colors cursor-pointer"
+            aria-label="Mở Menu"
+          >
+            <svg
+              width="32px"
+              height="32px"
+              viewBox="0 0 24 24"
+              fill="white"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M4 6H20M4 12H20M4 18H20"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Drawer (Slide-out from Left) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[1000] xl:hidden">
+      <!-- Backdrop overlay -->
+      <div
+        id="mobile-menu-backdrop"
+        class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-0"
+      ></div>
+
+      <!-- Drawer Content -->
+      <div
+        id="mobile-menu-content"
+        class="relative w-[300px] max-w-[85vw] h-full bg-primary-blue shadow-2xl flex flex-col p-6 transition-transform duration-300 -translate-x-full overflow-y-auto"
+      >
+        <!-- Close Button & Logo Row -->
+        <div class="flex justify-between items-center mb-8">
+          <a href="/" class="flex items-center">
+            <img
+              src="assets/images/header/logo-header.png"
+              alt="Logo Nhà xuất bản Hà Nội"
+              class="h-10 w-auto object-contain"
+            />
+          </a>
+          <button
+            id="mobile-menu-close"
+            class="text-white hover:text-primary transition-colors duration-200 cursor-pointer"
+            aria-label="Đóng Menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-6 h-6"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Search Box -->
+        <div
+          id="mobile-search-trigger"
+          class="relative flex items-center py-2 border-b border-white/30 mb-8 cursor-pointer"
+        >
+          <input
+            type="text"
+            placeholder="Tìm kiếm..."
+            readonly
+            class="w-full bg-transparent text-white placeholder-white/50 text-sm outline-none cursor-pointer"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            class="w-4 h-4 text-white/50"
+          >
+            <path
+              d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M22 22L20 20"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="flex-1">
+          <ul class="flex flex-col gap-6 text-left">
+            <li>
+              <a
+                href="#"
+                class="block text-white hover:text-primary text-base font-semibold transition-colors duration-200"
+                >Trang chủ</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block text-white hover:text-primary text-base font-semibold transition-colors duration-200"
+                >Giới thiệu</a
+              >
+            </li>
+            <li class="mobile-dropdown-parent">
+              <button
+                class="w-full flex justify-between items-center text-white hover:text-primary text-base font-semibold transition-colors duration-200 cursor-pointer"
+              >
+                <span>Sản phẩm</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 ml-1 transition-transform duration-200 mobile-dropdown-arrow"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <ul
+                class="mobile-dropdown-menu hidden pl-4 mt-3 flex flex-col gap-3 border-l border-white/20"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block text-white/80 hover:text-primary text-sm font-semibold transition-colors duration-200"
+                    >Sách giáo khoa</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block text-white/80 hover:text-primary text-sm font-semibold transition-colors duration-200"
+                    >Sách tham khảo</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block text-white/80 hover:text-primary text-sm font-semibold transition-colors duration-200"
+                    >Tài liệu giáo dục địa phương</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block text-white/80 hover:text-primary text-sm font-semibold transition-colors duration-200"
+                    >Học liệu số</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block text-white hover:text-primary text-base font-semibold transition-colors duration-200"
+                >Cổ đông</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block text-white hover:text-primary text-base font-semibold transition-colors duration-200"
+                >Tin tức</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block text-white hover:text-primary text-base font-semibold transition-colors duration-200"
+                >Liên hệ</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Search Popup Modal -->
+    <div
+      id="search-popup"
+      class="hidden fixed inset-0 z-50 flex justify-center items-start p-4 pt-[20vh]"
+    >
+      <!-- Backdrop with blur and white overlay -->
+      <div
+        id="search-popup-backdrop"
+        class="absolute inset-0 backdrop-blur-md bg-white/30 transition-opacity duration-300 opacity-0"
+      ></div>
+
+      <!-- Modal Content Box -->
+      <div
+        id="search-popup-content"
+        class="relative w-full max-w-[700px] rounded-2xl bg-white shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300"
+      >
+        <div class="flex justify-between items-center py-4 px-5">
+          <div class="flex items-center gap-3 flex-1 mr-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="#828282"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 21L16.7 16.7"
+                stroke="#828282"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <input
+              id="search-popup-input"
+              type="text"
+              class="w-full text-lg placeholder:text-gray-400 outline-none text-heading bg-transparent"
+              placeholder="Tìm kiếm sách, học liệu số, tin tức..."
+            />
+          </div>
+          <button
+            id="search-popup-close"
+            class="px-5 py-1.5 rounded-full border border-solid border-gray-600 hover:border-gray-600 text-sm text-gray-300 hover:text-gray-800 hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
+          >
+            Đóng
+          </button>
+        </div>
+
+        <hr class="border-t border-gray-100" />
+
+        <div class="py-5 px-5">
+          <p class="mb-4 text-sm font-bold text-gray-200">TÌM KIẾM PHỔ BIẾN</p>
+          <div class="flex flex-wrap gap-3">
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Ngữ văn 7</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Sách giáo khoa lớp 8</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Học liệu số toán</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Tài liệu giáo dục địa phương</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Ôn thi lớp 10</span>
+            </button>
+          </div>
+        </div>
+
+        <hr class="border-t border-gray-100" />
+
+        <div class="bg-gray-50 py-3 px-5">
+          <div class="flex items-center gap-6 text-gray-200">
+            <div class="flex items-center">
+              <span
+                class="mr-1.5 px-1.5 py-0.5 rounded bg-gray-500 text-xs font-semibold text-gray-200"
+                >ESC</span
+              >
+              <span class="text-xs">để đóng</span>
+            </div>
+            <div class="flex items-center">
+              <span
+                class="mr-1.5 px-1.5 py-0.5 rounded bg-gray-500 text-xs font-semibold text-gray-200"
+                >Enter</span
+              >
+              <span class="text-xs">để tìm kiếm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="py-4 bg-[#F8F8F8]">
+        <div class="container">
+          <ol
+            class="flex flex-wrap items-center gap-1.5 md:gap-2 text-sm md:text-base text-gray-300"
+          >
+            <li class="flex items-center">
+              <a
+                href="index.html"
+                class="text-gray-300 hover:text-primary transition-colors duration-300"
+                >Trang chủ</a
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                class=""
+              >
+                <path
+                  d="M5.25 10.5L8.75 7L5.25 3.5"
+                  stroke="#828282"
+                  stroke-width="1.16667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li class="flex items-center">
+              <a
+                href="#"
+                class="text-gray-300 hover:text-primary transition-colors duration-300"
+                >Sản phẩm</a
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                class=""
+              >
+                <path
+                  d="M5.25 10.5L8.75 7L5.25 3.5"
+                  stroke="#828282"
+                  stroke-width="1.16667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li class="flex items-center">
+              <a
+                href="list-book.html"
+                class="text-gray-300 hover:text-primary transition-colors duration-300"
+                >Sách giáo khoa</a
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                class=""
+              >
+                <path
+                  d="M5.25 10.5L8.75 7L5.25 3.5"
+                  stroke="#828282"
+                  stroke-width="1.16667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li class="flex items-center">
+              <span class="text-heading" aria-current="page">Toán 2 Tập 2</span>
+            </li>
+          </ol>
+        </div>
+      </nav>
+
+      <!-- Book Detail Content -->
+      <section class="py-8 md:pt-10 md:py-25 bg-white">
+        <div class="container">
+          <!-- Hero Header Info -->
+          <div class="flex items-center gap-6 mb-6">
+            <!-- Book Cover Thumbnail -->
+            <div class="w-16 sm:w-28 aspect-[52/73] shrink-0">
+              <img
+                src="assets/images/products/vietnamese_1_v1.png"
+                alt="Tiếng Việt 1 Tập Một"
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <!-- Book Title and Metadata -->
+            <div>
+              <h2
+                class="text-text text-3xl sm:text-4xl font-semibold font-montserrat mb-2"
+              >
+                Tiếng Việt 1 Tập Một
+              </h2>
+              <p class="text-gray-300 text-xs sm:text-sm">
+                Năm học: 2025 - 2026 (Theo chương trình GDPT 2018)
+              </p>
+            </div>
+          </div>
+
+          <!-- Tabs control bar -->
+          <div
+            class="flex items-center border-b border-gray-150 mb-8"
+            id="tab-headers"
+          >
+            <!-- Tab Button 1: Video -->
+            <button
+              type="button"
+              data-tab="tab-video"
+              class="tab-btn flex items-center gap-2 py-2 px-3 xl:py-4 xl:px-6 text-lg font-semibold border-b-1 border-primary text-primary outline-none cursor-pointer transition-colors duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M17.625 2.25H6.375C3.715 2.25 2.25 3.715 2.25 6.375V17.625C2.25 20.285 3.715 21.75 6.375 21.75H17.625C20.285 21.75 21.75 20.285 21.75 17.625V6.375C21.75 3.715 20.285 2.25 17.625 2.25ZM20.25 6.375V8.25H15.75V3.75H17.625C19.465 3.75 20.25 4.535 20.25 6.375ZM9.75 8.25V3.75H14.25V8.25H9.75ZM6.375 3.75H8.25V8.25H3.75V6.375C3.75 4.535 4.535 3.75 6.375 3.75ZM17.625 20.25H6.375C4.535 20.25 3.75 19.465 3.75 17.625V9.75H20.25V17.625C20.25 19.465 19.465 20.25 17.625 20.25ZM14.973 13.115L11.825 11.188C11.303 10.868 10.647 10.856 10.114 11.155C9.57301 11.458 9.25098 12.008 9.25098 12.627V16.373C9.25098 16.992 9.57301 17.542 10.114 17.845C10.371 17.989 10.656 18.061 10.941 18.061C11.248 18.061 11.554 17.978 11.825 17.812L14.972 15.886C15.459 15.588 15.75 15.07 15.75 14.5C15.75 13.93 15.459 13.412 14.973 13.115ZM14.189 14.606L11.041 16.533C10.959 16.582 10.891 16.5611 10.847 16.5371C10.803 16.5121 10.75 16.464 10.75 16.373V12.627C10.75 12.537 10.803 12.4879 10.847 12.4629C10.871 12.4489 10.904 12.437 10.942 12.437C10.972 12.437 11.006 12.445 11.042 12.467L14.1899 14.394C14.1899 14.394 14.19 14.394 14.191 14.394C14.23 14.418 14.251 14.454 14.251 14.499C14.251 14.544 14.229 14.582 14.189 14.606Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span>Video</span>
+            </button>
+            <!-- Tab Button 2: Tài liệu -->
+            <button
+              type="button"
+              data-tab="tab-attachments"
+              class="tab-btn flex items-center gap-2 py-2 px-3 xl:py-4 xl:px-6 text-lg font-semibold border-b-1 border-transparent text-gray-300 hover:text-heading outline-none cursor-pointer transition-colors duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M13.75 12C13.75 12.414 13.414 12.75 13 12.75H7C6.586 12.75 6.25 12.414 6.25 12C6.25 11.586 6.586 11.25 7 11.25H13C13.414 11.25 13.75 11.586 13.75 12ZM7 8.75H10C10.414 8.75 10.75 8.414 10.75 8C10.75 7.586 10.414 7.25 10 7.25H7C6.586 7.25 6.25 7.586 6.25 8C6.25 8.414 6.586 8.75 7 8.75ZM13 15.25H7C6.586 15.25 6.25 15.586 6.25 16C6.25 16.414 6.586 16.75 7 16.75H13C13.414 16.75 13.75 16.414 13.75 16C13.75 15.586 13.414 15.25 13 15.25ZM21.75 11.5V19C21.75 20.517 20.517 21.75 19 21.75H6C3.582 21.75 2.25 20.418 2.25 18V6C2.25 3.582 3.582 2.25 6 2.25H14C16.418 2.25 17.75 3.582 17.75 6V9.25H19.5C20.74 9.25 21.75 10.259 21.75 11.5ZM16.551 20.25C16.359 19.875 16.25 19.45 16.25 19V6C16.25 4.423 15.577 3.75 14 3.75H6C4.423 3.75 3.75 4.423 3.75 6V18C3.75 19.577 4.423 20.25 6 20.25H16.551ZM20.25 11.5C20.25 11.086 19.913 10.75 19.5 10.75H17.75V19C17.75 19.689 18.311 20.25 19 20.25C19.689 20.25 20.25 19.689 20.25 19V11.5Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span>Tài liệu</span>
+            </button>
+            <!-- Tab Button 3: Sách số -->
+            <button
+              type="button"
+              data-tab="tab-digital-book"
+              class="tab-btn flex items-center gap-2 py-2 px-3 xl:py-4 xl:px-6 text-lg font-semibold border-b-1 border-transparent text-gray-300 hover:text-heading outline-none cursor-pointer transition-colors duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                />
+              </svg>
+              <span>Sách số</span>
+            </button>
+          </div>
+
+          <!-- Tab Panels Container -->
+          <div id="tab-panels">
+            <!-- Panel 1: Video Playlist (active) -->
+            <div class="tab-panel text-left" id="panel-video">
+              <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+                <!-- Main Player Banner -->
+                <div class="xl:col-span-8">
+                  <a
+                    id="main-video-play-link"
+                    href="assets/video/sunset_cloud_mountain.mp4"
+                    data-fancybox="resource-video"
+                    class="relative block w-full aspect-[812/460] rounded-3xl overflow-hidden bg-gray-100 shadow-md group"
+                  >
+                    <img
+                      src="assets/images/news/new2.png"
+                      alt="Video cover"
+                      id="main-video-cover"
+                      class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+                    />
+                    <!-- Cover overlay -->
+                    <div
+                      class="absolute inset-0 pointer-events-none"
+                      style="background: rgba(0, 0, 0, 0.23)"
+                    ></div>
+                    <!-- Central Play Button Wrapper -->
+                    <div
+                      class="absolute inset-0 flex items-center justify-center pointer-events-none"
+                    >
+                      <div
+                        class="flex w-16 h-16 justify-center items-center rounded-full bg-white shadow-xl hover:scale-110 active:scale-95 transition-transform duration-200"
+                        style="
+                          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+                        "
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="28"
+                          height="28"
+                          viewBox="0 0 28 28"
+                          fill="none"
+                        >
+                          <path
+                            d="M7 3.5L23.3333 14L7 24.5V3.5Z"
+                            stroke="#F26E1D"
+                            stroke-width="2.33333"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Video Sidebar Playlist -->
+                <div class="xl:col-span-4 flex flex-col">
+                  <h3
+                    class="text-gray-300 text-lg font-bold font-montserrat mb-4 text-left"
+                  >
+                    DANH SÁCH VIDEO
+                  </h3>
+                  <!-- Playlist Box Scroll Y -->
+                  <div
+                    class="flex flex-col gap-2 max-h-[460px] overflow-y-auto pr-2 custom-scrollbar"
+                  >
+                    <!-- Video 1 (Active) -->
+                    <button
+                      type="button"
+                      data-video-src="assets/images/news/new2.png"
+                      data-video-url="assets/video/sunset_cloud_mountain.mp4"
+                      class="video-playlist-item w-full flex items-center gap-3 p-3 rounded-2xl bg-[#EEF3FF] border border-primary-xanh/20 outline-none transition-colors duration-200 cursor-pointer"
+                    >
+                      <div
+                        class="relative shrink-0 w-24 aspect-[100/64] rounded-lg overflow-hidden bg-gray-100"
+                      >
+                        <img
+                          src="assets/images/news/new2.png"
+                          alt="Video thumbnail"
+                          class="w-full h-full object-cover"
+                        />
+                        <div
+                          class="playlist-overlay absolute inset-0 flex items-center justify-center"
+                          style="background: rgba(0, 83, 255, 0.4)"
+                        >
+                          <div
+                            class="flex w-7 h-7 justify-center items-center shrink-0 rounded-full bg-primary-xanh"
+                            style="border-radius: 16777200px"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="12"
+                              height="12"
+                              viewBox="0 0 12 12"
+                              fill="none"
+                            >
+                              <path
+                                d="M3 1.5L10 6L3 10.5V1.5Z"
+                                stroke="white"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex-1 min-w-0 flex flex-col gap-1">
+                        <h4
+                          class="text-primary-xanh text-lg font-semibold text-left"
+                        >
+                          Giới thiệu tổng quan - Ôn thi vào lớp 10 Ngữ Văn
+                        </h4>
+                        <div
+                          class="flex items-center gap-1 text-gray-300 text-xs font-semibold"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="12"
+                            height="12"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-3.5 h-3.5"
+                          >
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                          </svg>
+                          <span>4:32</span>
+                        </div>
+                      </div>
+                    </button>
+
+                    <!-- Video 2 -->
+                    <button
+                      type="button"
+                      data-video-src="assets/images/news/new3.png"
+                      data-video-url="assets/video/sunset_cloud_mountain.mp4"
+                      class="video-playlist-item w-full flex items-center gap-3 p-3 rounded-2xl border border-transparent hover:bg-gray-50 text-left outline-none transition-colors duration-200 cursor-pointer"
+                    >
+                      <div
+                        class="relative shrink-0 w-24 aspect-[100/64] rounded-lg overflow-hidden bg-gray-100"
+                      >
+                        <img
+                          src="assets/images/news/new3.png"
+                          alt="Video thumbnail"
+                          class="w-full h-full object-cover"
+                        />
+                        <div
+                          class="playlist-overlay absolute inset-0 flex items-center justify-center"
+                          style="background: rgba(0, 0, 0, 0.2)"
+                        >
+                          <div
+                            class="flex w-7 h-7 justify-center items-center shrink-0 rounded-full bg-white/80"
+                            style="border-radius: 16777200px"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="12"
+                              height="12"
+                              viewBox="0 0 12 12"
+                              fill="none"
+                            >
+                              <path
+                                d="M3 1.5L10 6L3 10.5V1.5Z"
+                                stroke="#828282"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex-1 min-w-0 flex flex-col gap-1">
+                        <h4 class="text-text text-lg font-semibold">
+                          Hướng dẫn sử dụng sách và lộ trình ôn tập
+                        </h4>
+                        <div
+                          class="flex items-center gap-1 text-gray-300 text-xs font-semibold"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="12"
+                            height="12"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-3.5 h-3.5"
+                          >
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                          </svg>
+                          <span>4:32</span>
+                        </div>
+                      </div>
+                    </button>
+
+                    <!-- Video 3 -->
+                    <button
+                      type="button"
+                      data-video-src="assets/images/news/new4.png"
+                      data-video-url="assets/video/sunset_cloud_mountain.mp4"
+                      class="video-playlist-item w-full flex items-center gap-3 p-3 rounded-2xl border border-transparent hover:bg-gray-50 text-left outline-none transition-colors duration-200 cursor-pointer"
+                    >
+                      <div
+                        class="relative shrink-0 w-24 aspect-[100/64] rounded-lg overflow-hidden bg-gray-100"
+                      >
+                        <img
+                          src="assets/images/news/new4.png"
+                          alt="Video thumbnail"
+                          class="w-full h-full object-cover"
+                        />
+                        <div
+                          class="playlist-overlay absolute inset-0 flex items-center justify-center"
+                          style="background: rgba(0, 0, 0, 0.2)"
+                        >
+                          <div
+                            class="flex w-7 h-7 justify-center items-center shrink-0 rounded-full bg-white/80"
+                            style="border-radius: 16777200px"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="12"
+                              height="12"
+                              viewBox="0 0 12 12"
+                              fill="none"
+                            >
+                              <path
+                                d="M3 1.5L10 6L3 10.5V1.5Z"
+                                stroke="#828282"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex-1 min-w-0 flex flex-col gap-1">
+                        <h4 class="text-text text-lg font-semibold">
+                          Phân tích cấu trúc đề thi tuyển sinh 2025
+                        </h4>
+                        <div
+                          class="flex items-center gap-1 text-gray-300 text-xs font-semibold"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="12"
+                            height="12"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-3.5 h-3.5"
+                          >
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                          </svg>
+                          <span>4:32</span>
+                        </div>
+                      </div>
+                    </button>
+                    <!-- Video 3 -->
+                    <button
+                      type="button"
+                      data-video-src="assets/images/news/new4.png"
+                      data-video-url="assets/video/sunset_cloud_mountain.mp4"
+                      class="video-playlist-item w-full flex items-center gap-3 p-3 rounded-2xl border border-transparent hover:bg-gray-50 text-left outline-none transition-colors duration-200 cursor-pointer"
+                    >
+                      <div
+                        class="relative shrink-0 w-24 aspect-[100/64] rounded-lg overflow-hidden bg-gray-100"
+                      >
+                        <img
+                          src="assets/images/news/new4.png"
+                          alt="Video thumbnail"
+                          class="w-full h-full object-cover"
+                        />
+                        <div
+                          class="playlist-overlay absolute inset-0 flex items-center justify-center"
+                          style="background: rgba(0, 0, 0, 0.2)"
+                        >
+                          <div
+                            class="flex w-7 h-7 justify-center items-center shrink-0 rounded-full bg-white/80"
+                            style="border-radius: 16777200px"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="12"
+                              height="12"
+                              viewBox="0 0 12 12"
+                              fill="none"
+                            >
+                              <path
+                                d="M3 1.5L10 6L3 10.5V1.5Z"
+                                stroke="#828282"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex-1 min-w-0 flex flex-col gap-1">
+                        <h4 class="text-text text-lg font-semibold">
+                          Phân tích cấu trúc đề thi tuyển sinh 2025
+                        </h4>
+                        <div
+                          class="flex items-center gap-1 text-gray-300 text-xs font-semibold"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="12"
+                            height="12"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-3.5 h-3.5"
+                          >
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                          </svg>
+                          <span>4:32</span>
+                        </div>
+                      </div>
+                    </button>
+                    <!-- Video 3 -->
+                    <button
+                      type="button"
+                      data-video-src="assets/images/news/new4.png"
+                      data-video-url="assets/video/sunset_cloud_mountain.mp4"
+                      class="video-playlist-item w-full flex items-center gap-3 p-3 rounded-2xl border border-transparent hover:bg-gray-50 text-left outline-none transition-colors duration-200 cursor-pointer"
+                    >
+                      <div
+                        class="relative shrink-0 w-24 aspect-[100/64] rounded-lg overflow-hidden bg-gray-100"
+                      >
+                        <img
+                          src="assets/images/news/new4.png"
+                          alt="Video thumbnail"
+                          class="w-full h-full object-cover"
+                        />
+                        <div
+                          class="playlist-overlay absolute inset-0 flex items-center justify-center"
+                          style="background: rgba(0, 0, 0, 0.2)"
+                        >
+                          <div
+                            class="flex w-7 h-7 justify-center items-center shrink-0 rounded-full bg-white/80"
+                            style="border-radius: 16777200px"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="12"
+                              height="12"
+                              viewBox="0 0 12 12"
+                              fill="none"
+                            >
+                              <path
+                                d="M3 1.5L10 6L3 10.5V1.5Z"
+                                stroke="#828282"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex-1 min-w-0 flex flex-col gap-1">
+                        <h4 class="text-text text-lg font-semibold">
+                          Phân tích cấu trúc đề thi tuyển sinh 2025
+                        </h4>
+                        <div
+                          class="flex items-center gap-1 text-gray-300 text-xs font-semibold"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="12"
+                            height="12"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-3.5 h-3.5"
+                          >
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                          </svg>
+                          <span>4:32</span>
+                        </div>
+                      </div>
+                    </button>
+                    <!-- Video 3 -->
+                    <button
+                      type="button"
+                      data-video-src="assets/images/news/new4.png"
+                      data-video-url="assets/video/sunset_cloud_mountain.mp4"
+                      class="video-playlist-item w-full flex items-center gap-3 p-3 rounded-2xl border border-transparent hover:bg-gray-50 text-left outline-none transition-colors duration-200 cursor-pointer"
+                    >
+                      <div
+                        class="relative shrink-0 w-24 aspect-[100/64] rounded-lg overflow-hidden bg-gray-100"
+                      >
+                        <img
+                          src="assets/images/news/new4.png"
+                          alt="Video thumbnail"
+                          class="w-full h-full object-cover"
+                        />
+                        <div
+                          class="playlist-overlay absolute inset-0 flex items-center justify-center"
+                          style="background: rgba(0, 0, 0, 0.2)"
+                        >
+                          <div
+                            class="flex w-7 h-7 justify-center items-center shrink-0 rounded-full bg-white/80"
+                            style="border-radius: 16777200px"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="12"
+                              height="12"
+                              viewBox="0 0 12 12"
+                              fill="none"
+                            >
+                              <path
+                                d="M3 1.5L10 6L3 10.5V1.5Z"
+                                stroke="#828282"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex-1 min-w-0 flex flex-col gap-1">
+                        <h4 class="text-text text-lg font-semibold">
+                          Phân tích cấu trúc đề thi tuyển sinh 2025
+                        </h4>
+                        <div
+                          class="flex items-center gap-1 text-gray-300 text-xs font-semibold"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="12"
+                            height="12"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-3.5 h-3.5"
+                          >
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                          </svg>
+                          <span>4:32</span>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 2: Tài liệu đính kèm (hidden by default) -->
+            <div class="tab-panel hidden text-left" id="panel-attachments">
+              <div class="flex flex-col gap-4">
+                <!-- Row 1 -->
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 md:p-5 border border-gray-150 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <div class="flex items-center gap-4">
+                    <!-- Icon wrapped in orange square -->
+                    <div
+                      class="flex items-center justify-center w-12 h-12 rounded-2xl bg-[#FFF0E6] shrink-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M12.4997 1.66663H4.99967C4.55765 1.66663 4.13372 1.84222 3.82116 2.15478C3.5086 2.46734 3.33301 2.89127 3.33301 3.33329V16.6666C3.33301 17.1087 3.5086 17.5326 3.82116 17.8451C4.13372 18.1577 4.55765 18.3333 4.99967 18.3333H14.9997C15.4417 18.3333 15.8656 18.1577 16.1782 17.8451C16.4907 17.5326 16.6663 17.1087 16.6663 16.6666V5.83329L12.4997 1.66663Z"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.667 1.66663V4.99996C11.667 5.44199 11.8426 5.86591 12.1551 6.17847C12.4677 6.49103 12.8916 6.66663 13.3337 6.66663H16.667"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.33366 7.5H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.3337 10.8334H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.3337 14.1666H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="flex flex-col text-left">
+                      <h3 class="text-heading text-base md:text-lg font-bold">
+                        Phần 1 - Văn bản và đọc hiểu (Trang 5–67)
+                      </h3>
+                      <p
+                        class="text-xs md:text-sm text-gray-300 mt-1 font-semibold"
+                      >
+                        Chương 1: Lý thuyết + bài tập đọc hiểu • 5.2 MB
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Action Buttons -->
+                  <div
+                    class="flex items-center gap-2.5 sm:gap-3 w-full sm:w-auto justify-end"
+                  >
+                    <a
+                      href="assets/images/products/math_2_v2.png"
+                      data-fancybox="attachment-1"
+                      class="inline-flex items-center gap-1.5 px-4 py-2 border border-gray-600 rounded-full text-heading hover:text-primary hover:border-primary transition-all duration-300 text-sm font-semibold cursor-pointer"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        class="w-4 h-4 shrink-0"
+                      >
+                        <path
+                          d="M1.20248 6.79697C1.15386 6.92793 1.15386 7.072 1.20248 7.20297C1.67597 8.35105 2.47969 9.33269 3.51176 10.0234C4.54383 10.7142 5.75775 11.0829 6.99964 11.0829C8.24153 11.0829 9.45546 10.7142 10.4875 10.0234C11.5196 9.33269 12.3233 8.35105 12.7968 7.20297C12.8454 7.072 12.8454 6.92793 12.7968 6.79697C12.3233 5.64888 11.5196 4.66724 10.4875 3.97649C9.45546 3.28574 8.24153 2.91699 6.99964 2.91699C5.75775 2.91699 4.54383 3.28574 3.51176 3.97649C2.47969 4.66724 1.67597 5.64888 1.20248 6.79697Z"
+                          stroke="#6B6B6B"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="stroke-[#6B6B6B]"
+                        />
+                        <path
+                          d="M7 8.75C7.9665 8.75 8.75 7.9665 8.75 7C8.75 6.0335 7.9665 5.25 7 5.25C6.0335 5.25 5.25 6.0335 5.25 7C5.25 7.9665 6.0335 8.75 7 8.75Z"
+                          stroke="#6B6B6B"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="stroke-[#6B6B6B]"
+                        />
+                      </svg>
+                      <span>Xem</span>
+                    </a>
+                    <a
+                      href="assets/images/products/math_2_v2.png"
+                      download
+                      class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary hover:bg-[#D95F14] text-white rounded-full transition-all duration-300 text-sm font-semibold cursor-pointer"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        class="w-4 h-4 shrink-0"
+                      >
+                        <path
+                          d="M12.25 8.75V11.0833C12.25 11.3928 12.1271 11.6895 11.9083 11.9083C11.6895 12.1271 11.3928 12.25 11.0833 12.25H2.91667C2.60725 12.25 2.3105 12.1271 2.09171 11.9083C1.87292 11.6895 1.75 11.3928 1.75 11.0833V8.75"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M4.08301 5.83337L6.99967 8.75004L9.91634 5.83337"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7 8.75V1.75"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <span>Tải xuống</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 md:p-5 border border-gray-150 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 rounded-2xl bg-[#FFF0E6] shrink-0"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M12.4997 1.66663H4.99967C4.55765 1.66663 4.13372 1.84222 3.82116 2.15478C3.5086 2.46734 3.33301 2.89127 3.33301 3.33329V16.6666C3.33301 17.1087 3.5086 17.5326 3.82116 17.8451C4.13372 18.1577 4.55765 18.3333 4.99967 18.3333H14.9997C15.4417 18.3333 15.8656 18.1577 16.1782 17.8451C16.4907 17.5326 16.6663 17.1087 16.6663 16.6666V5.83329L12.4997 1.66663Z"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.667 1.66663V4.99996C11.667 5.44199 11.8426 5.86591 12.1551 6.17847C12.4677 6.49103 12.8916 6.66663 13.3337 6.66663H16.667"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.33366 7.5H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.3337 10.8334H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.3337 14.1666H6.66699"
+                          stroke="#F26E1D"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="flex flex-col text-left">
+                      <h3 class="text-heading text-base md:text-lg font-bold">
+                        Phần 2 - Thực hành viết và làm văn (Trang 68–110)
+                      </h3>
+                      <p
+                        class="text-xs md:text-sm text-gray-300 mt-1 font-semibold"
+                      >
+                        Chương 2: Dàn ý thuyết minh + đề tham khảo • 4.1 MB
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-2.5 sm:gap-3 w-full sm:w-auto justify-end"
+                  >
+                    <a
+                      href="assets/images/products/math_2_v2.png"
+                      data-fancybox="attachment-2"
+                      class="inline-flex items-center gap-1.5 px-4 py-2 border border-gray-600 rounded-full text-heading hover:text-primary hover:border-primary transition-all duration-300 text-sm font-semibold cursor-pointer"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        class="w-4 h-4 shrink-0"
+                      >
+                        <path
+                          d="M1.20248 6.79697C1.15386 6.92793 1.15386 7.072 1.20248 7.20297C1.67597 8.35105 2.47969 9.33269 3.51176 10.0234C4.54383 10.7142 5.75775 11.0829 6.99964 11.0829C8.24153 11.0829 9.45546 10.7142 10.4875 10.0234C11.5196 9.33269 12.3233 8.35105 12.7968 7.20297C12.8454 7.072 12.8454 6.92793 12.7968 6.79697C12.3233 5.64888 11.5196 4.66724 10.4875 3.97649C9.45546 3.28574 8.24153 2.91699 6.99964 2.91699C5.75775 2.91699 4.54383 3.28574 3.51176 3.97649C2.47969 4.66724 1.67597 5.64888 1.20248 6.79697Z"
+                          stroke="#6B6B6B"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="stroke-[#6B6B6B]"
+                        />
+                        <path
+                          d="M7 8.75C7.9665 8.75 8.75 7.9665 8.75 7C8.75 6.0335 7.9665 5.25 7 5.25C6.0335 5.25 5.25 6.0335 5.25 7C5.25 7.9665 6.0335 8.75 7 8.75Z"
+                          stroke="#6B6B6B"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="stroke-[#6B6B6B]"
+                        />
+                      </svg>
+                      <span>Xem</span>
+                    </a>
+                    <a
+                      href="assets/images/products/math_2_v2.png"
+                      download
+                      class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary hover:bg-[#D95F14] text-white rounded-full transition-all duration-300 text-sm font-semibold cursor-pointer"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        class="w-4 h-4 shrink-0"
+                      >
+                        <path
+                          d="M12.25 8.75V11.0833C12.25 11.3928 12.1271 11.6895 11.9083 11.9083C11.6895 12.1271 11.3928 12.25 11.0833 12.25H2.91667C2.60725 12.25 2.3105 12.1271 2.09171 11.9083C1.87292 11.6895 1.75 11.3928 1.75 11.0833V8.75"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M4.08301 5.83337L6.99967 8.75004L9.91634 5.83337"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7 8.75V1.75"
+                          stroke="white"
+                          stroke-width="1.16667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <span>Tải xuống</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 3: Sách số (hidden by default) -->
+            <div class="tab-panel hidden text-left" id="panel-digital-book">
+              <div
+                class="py-12 border border-dashed border-gray-150 rounded-3xl bg-gray-50 flex items-center justify-center"
+              >
+                <p
+                  class="text-gray-300 font-semibold text-center text-sm md:text-base px-6"
+                >
+                  Tính năng sách số chưa có thiết kế. Vui lòng quay lại sau.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Section (Học liệu số liên quan) -->
+      <section class="py-10 md:pt-12 md:pb-20 bg-white">
+        <div class="container">
+          <div class="flex items-center justify-between mb-6">
+            <h2
+              class="text-heading text-3xl md:text-4xl lg:text-5xl font-semibold font-montserrat"
+            >
+              Học liệu số liên quan
+            </h2>
+            <a
+              href="digital-resources.html"
+              class="flex items-center gap-1.5 text-primary-blue hover:text-primary transition-colors text-sm font-bold"
+            >
+              <span>Xem thêm</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-3.5 h-3.5"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Product Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+          >
+            <!-- Card 1 -->
+            <a
+              href="digital-resources-detail.html"
+              class="block bg-white border border-[#E4E4E4] rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 group"
+            >
+              <div class="aspect-[388/212] w-full overflow-hidden bg-gray-100">
+                <img
+                  src="assets/images/news/new1.png"
+                  alt="Ngữ Văn 7 Tập 1"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-5 md:p-6 flex flex-col gap-3 text-left">
+                <span
+                  class="self-start bg-[#EEF3FF] text-primary-xanh text-xs font-semibold px-3 py-0.5 rounded-full"
+                >
+                  Ngữ văn
+                </span>
+                <h3
+                  class="text-heading text-xl font-semibold group-hover:text-primary-blue transition-colors duration-300 line-clamp-2"
+                >
+                  Ngữ Văn 7 Tập 1
+                </h3>
+                <div class="section-header__more-btn">
+                  <span>Xem chi tiết</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-6 h-6"
+                  >
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a
+              href="digital-resources-detail.html"
+              class="block bg-white border border-[#E4E4E4] rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 group"
+            >
+              <div class="aspect-[388/212] w-full overflow-hidden bg-gray-100">
+                <img
+                  src="assets/images/news/new2.png"
+                  alt="Ngữ Văn 7 Tập 1"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-5 md:p-6 flex flex-col gap-3 text-left">
+                <span
+                  class="self-start bg-[#EEF3FF] text-primary-xanh text-xs font-semibold px-3 py-0.5 rounded-full"
+                >
+                  Ngữ văn
+                </span>
+                <h3
+                  class="text-heading text-xl font-semibold group-hover:text-primary-blue transition-colors duration-300 line-clamp-2"
+                >
+                  Ngữ Văn 7 Tập 1
+                </h3>
+                <div class="section-header__more-btn">
+                  <span>Xem chi tiết</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-6 h-6"
+                  >
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a
+              href="digital-resources-detail.html"
+              class="block bg-white border border-[#E4E4E4] rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 group"
+            >
+              <div class="aspect-[388/212] w-full overflow-hidden bg-gray-100">
+                <img
+                  src="assets/images/news/new3.png"
+                  alt="Ngữ Văn 7 Tập 1"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-5 md:p-6 flex flex-col gap-3 text-left">
+                <span
+                  class="self-start bg-[#EEF3FF] text-primary-xanh text-xs font-semibold px-3 py-0.5 rounded-full"
+                >
+                  Ngữ văn
+                </span>
+                <h3
+                  class="text-heading text-xl font-semibold group-hover:text-primary-blue transition-colors duration-300 line-clamp-2"
+                >
+                  Ngữ Văn 7 Tập 1
+                </h3>
+                <div class="section-header__more-btn">
+                  <span>Xem chi tiết</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-6 h-6"
+                  >
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer
+      class="relative bg-footer-bg py-16 lg:pt-20 lg:pb-12 text-white border-t border-gray-800"
+    >
+      <div class="container">
+        <!-- Footer Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8"
+        >
+          <!-- Column 1: Brand Info -->
+          <div
+            class="md:col-span-2 lg:col-span-3 flex flex-col items-start text-left"
+          >
+            <div class="flex flex-col gap-6 lg:gap-8">
+              <div class="flex items-center">
+                <img
+                  src="assets/images/footer/logo-footer.png"
+                  alt="Nhà xuất bản Giáo dục Hà Nội"
+                  class="footer__logo h-14 w-auto object-contain"
+                />
+              </div>
+
+              <p class="text-base md:text-lg text-footer-text/65">
+                Tầng 4, Toà Diamond Flower, số 48 Lê Văn Lương, P. Yên Hoà, TP.
+                Hà Nội
+              </p>
+
+              <a
+                href="#"
+                class="inline-block text-sm font-bold text-white hover:text-primary transition-colors underline underline-offset-4"
+              >
+                BẢN ĐỒ CHỬ ĐƯỜNG
+              </a>
+
+              <!-- Social Icons -->
+              <div class="footer__socials flex items-center gap-6 md:gap-9">
+                <!-- Facebook -->
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                  <img src="assets/images/footer/facebook.png" alt="" />
+                </a>
+                <!-- Instagram -->
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                  <img src="assets/images/footer/instagram.png" alt="" />
+                </a>
+                <!-- TikTok -->
+                <a href="#" class="footer__social-link" aria-label="TikTok">
+                  <img src="assets/images/footer/tiktok.png" alt="" />
+                </a>
+                <!-- YouTube -->
+                <a href="#" class="footer__social-link" aria-label="YouTube">
+                  <img src="assets/images/footer/youtube.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Contact Info -->
+          <div
+            class="md:col-span-1 lg:col-span-3 flex flex-col items-start text-left"
+          >
+            <div class="flex flex-col gap-4">
+              <span class="footer__title">LIÊN HỆ</span>
+              <div>
+                <a
+                  href="tel:02435121533"
+                  class="block text-2xl md:text-3xl font-semibold text-primary hover:text-primary/90 transition-colors font-montserrat"
+                >
+                  024.35121533 (118)
+                </a>
+                <a
+                  href="tel:0978051672"
+                  class="block text-2xl md:text-3xl font-semibold text-primary hover:text-primary/90 transition-colors font-montserrat"
+                >
+                  0978 051 672
+                </a>
+              </div>
+
+              <span class="block text-base md:text-lg text-footer-text/65">
+                Thứ hai - Thứ sáu: 8.00 - 17.00
+              </span>
+              <a
+                href="mailto:kinhdoanh_heps@gmail.com"
+                class="block text-base md:text-lg font-semibold text-footer-text hover:text-primary transition-colors"
+              >
+                kinhdoanh_heps@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 3: Explore links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">KHÁM PHÁ</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Giới thiệu</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Service links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">DỊCH VỤ</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Trung tâm trợ giúp</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Đổi trả hàng</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Thu hồi sản phẩm</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Hỗ trợ tiếp cận</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Liên hệ với chúng tôi</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Nhận tại cửa hàng</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Category links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">DANH MỤC</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Sách giáo khoa</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Sách tham khảo</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link"
+                  >Tài liệu giáo dục địa phương</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer__link">Học liệu số</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright Bottom -->
+        <div class="pt-8 mt-6 border-t border-white/10 lg:mt-10 text-center">
+          <p
+            class="text-center text-sm md:text-base text-white font-semibold mb-0"
+          >
+            Copyright © 2026 Công ty Cổ phần dịch vụ Xuất bản giáo dục Hà Nội.
+            All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/vendor/fancybox.umd.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Custom Script for Tabs Toggling & Video Playlist Switching -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Initialize Fancybox globally for data-fancybox elements on this page
+        if (typeof Fancybox !== "undefined") {
+          Fancybox.bind("[data-fancybox]");
+        }
+
+        // Tab switching logic
+        const tabBtns = document.querySelectorAll("#tab-headers .tab-btn");
+        const tabPanels = document.querySelectorAll("#tab-panels .tab-panel");
+
+        tabBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const targetId = btn.getAttribute("data-tab");
+
+            // Deactivate all buttons
+            tabBtns.forEach((otherBtn) => {
+              otherBtn.classList.remove("border-primary", "text-primary");
+              otherBtn.classList.add("border-transparent", "text-gray-300");
+            });
+
+            // Activate current button
+            btn.classList.add("border-primary", "text-primary");
+            btn.classList.remove("border-transparent", "text-gray-300");
+
+            // Toggle panels
+            tabPanels.forEach((panel) => {
+              const panelId = panel.getAttribute("id");
+              if (panelId === `panel-${targetId.replace("tab-", "")}`) {
+                panel.classList.remove("hidden");
+              } else {
+                panel.classList.add("hidden");
+              }
+            });
+          });
+        });
+
+        // Playlist video switching logic
+        const playlistItems = document.querySelectorAll(".video-playlist-item");
+        const mainVideoCover = document.getElementById("main-video-cover");
+
+        playlistItems.forEach((item) => {
+          item.addEventListener("click", () => {
+            // Update active state in playlist sidebar
+            playlistItems.forEach((other) => {
+              other.classList.remove("bg-[#EEF3FF]", "border-primary-xanh/20");
+              other.classList.add("border-transparent", "hover:bg-gray-50");
+              const title = other.querySelector("h4");
+              if (title) {
+                title.classList.remove("text-primary-xanh");
+                title.classList.add("text-heading");
+              }
+              const iconWrapper = other.querySelector(
+                ".shrink-0 .absolute div",
+              );
+              if (iconWrapper) {
+                iconWrapper.className =
+                  "flex w-7 h-7 justify-center items-center shrink-0 rounded-full bg-white/80";
+                const path = iconWrapper.querySelector("path");
+                if (path) path.setAttribute("stroke", "#828282");
+              }
+              const overlay = other.querySelector(".playlist-overlay");
+              if (overlay) {
+                overlay.style.background = "rgba(0, 0, 0, 0.20)";
+              }
+            });
+
+            // Activate clicked item
+            item.classList.add("bg-[#EEF3FF]", "border-primary-xanh/20");
+            item.classList.remove("border-transparent", "hover:bg-gray-50");
+            const title = item.querySelector("h4");
+            if (title) {
+              title.classList.add("text-primary-xanh");
+              title.classList.remove("text-heading");
+            }
+            const iconWrapper = item.querySelector(".shrink-0 .absolute div");
+            if (iconWrapper) {
+              iconWrapper.className =
+                "flex w-7 h-7 justify-center items-center shrink-0 rounded-full bg-primary-xanh";
+              const path = iconWrapper.querySelector("path");
+              if (path) path.setAttribute("stroke", "white");
+            }
+            const overlay = item.querySelector(".playlist-overlay");
+            if (overlay) {
+              overlay.style.background = "rgba(0, 83, 255, 0.40)";
+            }
+
+            // Update main player cover image source
+            const newSrc = item.getAttribute("data-video-src");
+            if (newSrc && mainVideoCover) {
+              mainVideoCover.src = newSrc;
+            }
+
+            // Update main video play link url
+            const newVideoUrl = item.getAttribute("data-video-url");
+            const mainVideoPlayLink = document.getElementById(
+              "main-video-play-link",
+            );
+            if (newVideoUrl && mainVideoPlayLink) {
+              mainVideoPlayLink.setAttribute("href", newVideoUrl);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
