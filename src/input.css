@@ -60,7 +60,8 @@
   --color-footer-text: #dcdbe6;
   --color-table: #ececec;
   --color-text-table: #2a2a2a;
-
+  --color-new-desc: #a1a1a1;
+  --color-new-title: #616161;
   /* Font Family */
   --font-sans: "Averta Std CY";
   --font-montserrat: "Montserrat", sans-serif;
