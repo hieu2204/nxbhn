@@ -8,9 +8,9 @@ Fancybox.bind("[data-fancybox='gallery']", {
       },
       items: {
         thumbs: {
-          tpl: `<button data-thumbs-action="toggle" class="f-button" title="Toggle thumbnails"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><path d="M15.9844 21.0078V16.9766H20.0156V21.0078H15.9844ZM15.9844 15.0078V10.9766H20.0156V15.0078H15.9844ZM9.98438 9.00781V4.97656H14.0156V9.00781H9.98438ZM15.9844 4.97656H20.0156V9.00781H15.9844V4.97656ZM9.98438 15.0078V10.9766H14.0156V15.0078H9.98438ZM3.98438 15.0078V10.9766H8.01562V15.0078H3.98438ZM3.98438 21.0078V16.9766H8.01562V21.0078H3.98438ZM9.98438 21.0078V16.9766H14.0156V21.0078H9.98438ZM3.98438 9.00781V4.97656H8.01562V9.00781H3.98438Z" fill="#999999"/></svg></button>`
-        }
-      }
+          tpl: `<button data-thumbs-action="toggle" class="f-button" title="Toggle thumbnails"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><path d="M15.9844 21.0078V16.9766H20.0156V21.0078H15.9844ZM15.9844 15.0078V10.9766H20.0156V15.0078H15.9844ZM9.98438 9.00781V4.97656H14.0156V9.00781H9.98438ZM15.9844 4.97656H20.0156V9.00781H15.9844V4.97656ZM9.98438 15.0078V10.9766H14.0156V15.0078H9.98438ZM3.98438 15.0078V10.9766H8.01562V15.0078H3.98438ZM3.98438 21.0078V16.9766H8.01562V21.0078H3.98438ZM9.98438 21.0078V16.9766H14.0156V21.0078H9.98438ZM3.98438 9.00781V4.97656H8.01562V9.00781H3.98438Z" fill="#999999"/></svg></button>`,
+        },
+      },
     },
     Thumbs: {
       type: "classic",
@@ -290,8 +290,8 @@ function initProductsSlider() {
         1280: {
           slidesPerView: 5,
           spaceBetween: 24,
-        }
-      }
+        },
+      },
     });
   });
 }
@@ -317,8 +317,8 @@ function initRelatedNewsSlider() {
         1024: {
           slidesPerView: 4,
           spaceBetween: 24,
-        }
-      }
+        },
+      },
     });
   });
 }
@@ -339,7 +339,9 @@ function initProductFilterDropdown() {
       dropdowns.forEach((other) => {
         if (other !== dropdown) {
           const otherBtn = other.querySelector(".section-header__dropdown-btn");
-          const otherList = other.querySelector(".section-header__dropdown-list");
+          const otherList = other.querySelector(
+            ".section-header__dropdown-list",
+          );
           if (otherBtn && otherList) {
             otherList.classList.add("hidden");
             otherList.classList.remove("flex");
@@ -375,14 +377,18 @@ function initProductFilterDropdown() {
 }
 
 function initHistoryTimeline() {
-  const wheelItems = document.querySelectorAll(".history-wheel__year-item[data-year]");
+  const wheelItems = document.querySelectorAll(
+    ".history-wheel__year-item[data-year]",
+  );
   const mobileButtons = document.querySelectorAll("[data-mobile-year]");
   const panels = document.querySelectorAll(".history-content-panel");
 
   if (!wheelItems.length && !mobileButtons.length) return;
 
   function setActiveYear(year) {
-    const activeItem = Array.from(wheelItems).find((item) => item.dataset.year === year);
+    const activeItem = Array.from(wheelItems).find(
+      (item) => item.dataset.year === year,
+    );
     if (!activeItem) return;
 
     // 1. Update active states on desktop wheel items
@@ -398,7 +404,12 @@ function initHistoryTimeline() {
       btn.classList.toggle("text-primary", isActive);
       btn.classList.toggle("text-gray-300", !isActive);
       // Scroll active button into view on mobile
-      if (isActive) btn.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      if (isActive)
+        btn.scrollIntoView({
+          behavior: "smooth",
+          inline: "center",
+          block: "nearest",
+        });
     });
 
     // 3. Update active panel for event content
@@ -424,7 +435,12 @@ function initHistoryTimeline() {
   });
 
   // Initialize active year on load
-  setActiveYear("2009");
+  // Lấy năm đầu tiên từ danh sách phần tử thực tế trong HTML
+  const firstYear =
+    wheelItems[0]?.dataset.year || mobileButtons[0]?.dataset.mobileYear;
+  if (firstYear) {
+    setActiveYear(firstYear);
+  }
 }
 
 function initGoalsToggle() {
@@ -458,7 +474,9 @@ function initDynamicGalleryOverlay() {
   const thumbnailsRow = document.getElementById("gallery-thumbnails");
   if (!hiddenContainer || !thumbnailsRow) return;
 
-  const hiddenCount = hiddenContainer.querySelectorAll('a[data-fancybox="gallery"]').length;
+  const hiddenCount = hiddenContainer.querySelectorAll(
+    'a[data-fancybox="gallery"]',
+  ).length;
   if (thumbnailsRow.children.length < 5) return;
 
   const fifthThumb = thumbnailsRow.children[4];
@@ -485,7 +503,9 @@ function initDynamicGalleryOverlay() {
 
 function initProductGallery() {
   const mainCoverLink = document.getElementById("main-cover-link");
-  const mainCoverImg = mainCoverLink ? mainCoverLink.querySelector("img") : null;
+  const mainCoverImg = mainCoverLink
+    ? mainCoverLink.querySelector("img")
+    : null;
   const thumbnailsRow = document.getElementById("gallery-thumbnails");
   if (!thumbnailsRow) return;
 
@@ -507,7 +527,9 @@ function initProductGallery() {
       e.stopPropagation();
 
       const imgSrc = anchor.getAttribute("href");
-      const imgAlt = anchor.querySelector("img") ? anchor.querySelector("img").getAttribute("alt") : "";
+      const imgAlt = anchor.querySelector("img")
+        ? anchor.querySelector("img").getAttribute("alt")
+        : "";
 
       // Update main cover src, href, and alt
       if (mainCoverLink && mainCoverImg) {
@@ -534,7 +556,9 @@ function initProductGallery() {
       if (activeThumb) {
         activeThumb.click();
       } else {
-        const firstThumb = thumbnailsRow.querySelector("a[data-fancybox=\"gallery\"]");
+        const firstThumb = thumbnailsRow.querySelector(
+          'a[data-fancybox="gallery"]',
+        );
         if (firstThumb) firstThumb.click();
       }
     });
