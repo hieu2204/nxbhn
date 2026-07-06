@@ -867,6 +867,33 @@ function initShareholder() {
   });
 }
 
+function initResourceCategoriesSlider() {
+  const swiperContainers = document.querySelectorAll(".resource-categories-swiper");
+  if (!swiperContainers.length) return;
+
+  swiperContainers.forEach((container) => {
+    new Swiper(container, {
+      slidesPerView: 1.15,
+      spaceBetween: 16,
+      grabCursor: true,
+      breakpoints: {
+        640: {
+          slidesPerView: 1.5,
+          spaceBetween: 16,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 32,
+        },
+      },
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initTabs();
   initSearchPopup();
@@ -874,6 +901,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeroSlider();
   initProductsSlider();
   initRelatedNewsSlider();
+  initResourceCategoriesSlider();
   initProductFilterDropdown();
   initHistoryTimeline();
   initGoalsToggle();

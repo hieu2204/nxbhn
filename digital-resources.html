@@ -751,113 +751,227 @@
       <!-- Digital Resources Category Cards & Filters -->
       <section class="pt-8 md:pt-16 bg-white">
         <div class="container">
-          <!-- Two Side-by-Side Cards -->
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-8 md:mb-12"
-          >
-            <!-- Card 1: Sách giáo khoa -->
-            <div class="resource-card group">
-              <div
-                class="flex flex-col justify-between flex-1 pb-10 text-left pr-0 2xl:pr-14"
-              >
-                <div>
-                  <h2
-                    class="text-heading text-2xl lg:text-3xl font-bold font-montserrat mb-3"
+          <!-- Swiper Container for Category Cards -->
+          <div class="swiper resource-categories-swiper mb-8 md:mb-12 overflow-visible">
+            <div class="swiper-wrapper">
+              <!-- Card 1: Sách giáo khoa -->
+              <div class="swiper-slide h-auto">
+                <div class="resource-card group h-full">
+                  <div
+                    class="flex flex-col justify-between flex-1 pb-10 text-left pr-0 2xl:pr-14"
                   >
-                    Sách giáo khoa
-                  </h2>
-                  <p
-                    class="text-gray-400 text-sm md:text-base leading-relaxed mb-6"
+                    <div>
+                      <h2
+                        class="text-heading text-2xl lg:text-3xl font-bold font-montserrat mb-3"
+                      >
+                        Sách giáo khoa
+                      </h2>
+                      <p
+                        class="text-gray-400 text-sm md:text-base leading-relaxed mb-6"
+                      >
+                        Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo
+                        dục hiện đại.
+                      </p>
+                    </div>
+                    <div>
+                      <a
+                        href="list-book.html?category=sgk"
+                        class="inline-flex items-center gap-1.5 text-primary-blue hover:text-primary font-bold text-sm md:text-base transition-colors duration-300"
+                      >
+                        <span>Xem thêm</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="w-4 h-4"
+                        >
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Book Image 3D -->
+                  <div
+                    class="self-end shrink-0 flex items-end justify-end pointer-events-none select-none h-36 md:h-48 lg:h-56 w-auto"
                   >
-                    Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo
-                    dục hiện đại.
-                  </p>
-                </div>
-                <div>
-                  <a
-                    href="list-book.html?category=sgk"
-                    class="inline-flex items-center gap-1.5 text-primary-blue hover:text-primary font-bold text-sm md:text-base transition-colors duration-300"
-                  >
-                    <span>Xem thêm</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="w-4 h-4"
-                    >
-                      <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                  </a>
+                    <img
+                      src="assets/images/products/vietnamese_1.png"
+                      alt="Sách giáo khoa Tiếng Việt 1"
+                      class="h-full object-cover object-bottom block w-full scale-[1.15] origin-bottom-right transition-transform duration-500 group-hover:scale-[1.22]"
+                    />
+                  </div>
                 </div>
               </div>
-              <!-- Book Image 3D -->
-              <div
-                class="self-end shrink-0 flex items-end justify-end pointer-events-none select-none h-36 md:h-48 lg:h-56 w-auto"
-              >
-                <img
-                  src="assets/images/products/vietnamese_1.png"
-                  alt="Sách giáo khoa Tiếng Việt 1"
-                  class="h-full object-cover object-bottom block w-full scale-[1.15] origin-bottom-right transition-transform duration-500 group-hover:scale-[1.22]"
-                />
-              </div>
-            </div>
 
-            <!-- Card 2: Sách tham khảo -->
-            <div class="resource-card group">
-              <div
-                class="flex flex-col justify-between flex-1 pb-10 text-left pr-0 2xl:pr-14"
-              >
-                <div>
-                  <h2
-                    class="text-heading text-2xl lg:text-3xl font-bold font-montserrat mb-3"
+              <!-- Card 2: Sách tham khảo -->
+              <div class="swiper-slide h-auto">
+                <div class="resource-card group h-full">
+                  <div
+                    class="flex flex-col justify-between flex-1 pb-10 text-left pr-0 2xl:pr-14"
                   >
-                    Sách tham khảo
-                  </h2>
-                  <p
-                    class="text-gray-400 text-sm md:text-base leading-relaxed mb-6"
+                    <div>
+                      <h2
+                        class="text-heading text-2xl lg:text-3xl font-bold font-montserrat mb-3"
+                      >
+                        Sách tham khảo
+                      </h2>
+                      <p
+                        class="text-gray-400 text-sm md:text-base leading-relaxed mb-6"
+                      >
+                        Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo
+                        dục hiện đại.
+                      </p>
+                    </div>
+                    <div>
+                      <a
+                        href="list-book.html?category=stk"
+                        class="inline-flex items-center gap-1.5 text-primary-blue hover:text-primary font-bold text-sm md:text-base transition-colors duration-300"
+                      >
+                        <span>Xem thêm</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="w-4 h-4"
+                        >
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Book Image 3D -->
+                  <div
+                    class="self-end shrink-0 flex items-end justify-end pointer-events-none select-none h-36 md:h-48 lg:h-56 w-auto"
                   >
-                    Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo
-                    dục hiện đại.
-                  </p>
-                </div>
-                <div>
-                  <a
-                    href="list-book.html?category=stk"
-                    class="inline-flex items-center gap-1.5 text-primary-blue hover:text-primary font-bold text-sm md:text-base transition-colors duration-300"
-                  >
-                    <span>Xem thêm</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="w-4 h-4"
-                    >
-                      <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                  </a>
+                    <img
+                      src="assets/images/products/literature_7_v1.png"
+                      alt="Sách tham khảo Ngữ văn 8"
+                      class="h-full object-cover object-bottom block w-full scale-[1.15] origin-bottom-right transition-transform duration-500 group-hover:scale-[1.22]"
+                    />
+                  </div>
                 </div>
               </div>
-              <!-- Book Image 3D -->
-              <div
-                class="self-end shrink-0 flex items-end justify-end pointer-events-none select-none h-36 md:h-48 lg:h-56 w-auto"
-              >
-                <img
-                  src="assets/images/products/literature_7_v1.png"
-                  alt="Sách tham khảo Ngữ văn 8"
-                  class="h-full object-cover object-bottom block w-full scale-[1.15] origin-bottom-right transition-transform duration-500 group-hover:scale-[1.22]"
-                />
+
+              <!-- Card 3: Học liệu giáo dục -->
+              <div class="swiper-slide h-auto">
+                <div class="resource-card group h-full">
+                  <div
+                    class="flex flex-col justify-between flex-1 pb-10 text-left pr-0 2xl:pr-14"
+                  >
+                    <div>
+                      <h2
+                        class="text-heading text-2xl lg:text-3xl font-bold font-montserrat mb-3"
+                      >
+                        Học liệu giáo dục
+                      </h2>
+                      <p
+                        class="text-gray-400 text-sm md:text-base leading-relaxed mb-6"
+                      >
+                        Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo
+                        dục hiện đại.
+                      </p>
+                    </div>
+                    <div>
+                      <a
+                        href="list-book.html?category=hlgd"
+                        class="inline-flex items-center gap-1.5 text-primary-blue hover:text-primary font-bold text-sm md:text-base transition-colors duration-300"
+                      >
+                        <span>Xem thêm</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="w-4 h-4"
+                        >
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Book Image 3D -->
+                  <div
+                    class="self-end shrink-0 flex items-end justify-end pointer-events-none select-none h-36 md:h-48 lg:h-56 w-auto"
+                  >
+                    <img
+                      src="assets/images/products/math_1.png"
+                      alt="Học liệu giáo dục Toán 1"
+                      class="h-full object-cover object-bottom block w-full scale-[1.15] origin-bottom-right transition-transform duration-500 group-hover:scale-[1.22]"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4: Học liệu khác -->
+              <div class="swiper-slide h-auto">
+                <div class="resource-card group h-full">
+                  <div
+                    class="flex flex-col justify-between flex-1 pb-10 text-left pr-0 2xl:pr-14"
+                  >
+                    <div>
+                      <h2
+                        class="text-heading text-2xl lg:text-3xl font-bold font-montserrat mb-3"
+                      >
+                        Học liệu khác
+                      </h2>
+                      <p
+                        class="text-gray-400 text-sm md:text-base leading-relaxed mb-6"
+                      >
+                        Hệ sinh thái học liệu số là nền tảng quan trọng trong giáo
+                        dục hiện đại.
+                      </p>
+                    </div>
+                    <div>
+                      <a
+                        href="list-book.html?category=hlk"
+                        class="inline-flex items-center gap-1.5 text-primary-blue hover:text-primary font-bold text-sm md:text-base transition-colors duration-300"
+                      >
+                        <span>Xem thêm</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="w-4 h-4"
+                        >
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Book Image 3D -->
+                  <div
+                    class="self-end shrink-0 flex items-end justify-end pointer-events-none select-none h-36 md:h-48 lg:h-56 w-auto"
+                  >
+                    <img
+                      src="assets/images/products/science_4.png"
+                      alt="Học liệu điện tử Khoa học 4"
+                      class="h-full object-cover object-bottom block w-full scale-[1.15] origin-bottom-right transition-transform duration-500 group-hover:scale-[1.22]"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
