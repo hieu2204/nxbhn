@@ -350,7 +350,7 @@ function initProductFilterDropdown() {
         }
       });
 
-      const isHidden = list.classList.contains("hidden");
+      const isHidden = list.classList.contains("hidden") || !list.classList.contains("flex");
       if (isHidden) {
         list.classList.remove("hidden");
         list.classList.add("flex");
@@ -565,6 +565,308 @@ function initProductGallery() {
   }
 }
 
+function initLibraryTabsAndGallery() {
+  // 1. Dynamically hide images in grid when there are more than 3 images
+  const albumGrids = document.querySelectorAll("#panel-images .grid");
+  if (albumGrids.length > 0) {
+    albumGrids.forEach((grid) => {
+      const links = grid.querySelectorAll("a[data-fancybox]");
+      links.forEach((link, index) => {
+        if (index >= 3) {
+          link.classList.add("hidden");
+          link.style.display = "none"; // Force hide to override Tailwind's block utility class
+        }
+      });
+    });
+  }
+
+  // 2. Initialize Fancybox globally for data-fancybox elements on this page
+  if (typeof Fancybox !== "undefined") {
+    Fancybox.bind("[data-fancybox]");
+  }
+
+  // 3. Click handler for See More buttons to trigger Fancybox popup for that album
+  const seeMoreBtns = document.querySelectorAll("[data-fancybox-trigger]");
+  seeMoreBtns.forEach(trigger => {
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetGallery = trigger.getAttribute("data-fancybox-trigger");
+      const firstImg = document.querySelector(`[data-fancybox="${targetGallery}"]`);
+      if (firstImg) {
+        firstImg.click();
+      }
+    });
+  });
+
+  // 4. Tab switching logic for Library page
+  const tabBtns = document.querySelectorAll(".library-tab-btn");
+  const tabPanels = document.querySelectorAll(".library-tab-panel");
+
+  if (tabBtns.length > 0) {
+    tabBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const targetTab = btn.getAttribute("data-tab");
+
+        // Deactivate all buttons
+        tabBtns.forEach((otherBtn) => {
+          otherBtn.className = "library-tab-btn px-6 py-2.5 rounded-full font-bold text-sm bg-white text-gray-300 border border-gray-150 hover:text-primary-blue hover:border-primary-blue cursor-pointer transition-all duration-300 outline-none select-none";
+        });
+
+        // Activate current button
+        btn.className = "library-tab-btn px-6 py-2.5 rounded-full font-bold text-sm bg-primary-blue text-white shadow-sm cursor-pointer transition-all duration-300 outline-none select-none";
+
+        // Toggle panels
+        tabPanels.forEach((panel) => {
+          const panelId = panel.getAttribute("id");
+          if (panelId === `panel-${targetTab.replace("tab-", "")}`) {
+            panel.classList.remove("hidden");
+          } else {
+            panel.classList.add("hidden");
+          }
+        });
+      });
+    });
+  }
+
+  // 5. Playlist video switching logic
+  const playlistItems = document.querySelectorAll(".video-playlist-item");
+  const mainVideoCover = document.getElementById("main-video-cover");
+
+  if (playlistItems.length > 0) {
+    playlistItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        // Update active state in playlist sidebar
+        playlistItems.forEach((other) => {
+          other.classList.remove("bg-[#EEF3FF]", "border-primary-xanh/20");
+          other.classList.add("border-transparent", "hover:bg-gray-50");
+          const title = other.querySelector("h4");
+          if (title) {
+            title.classList.remove("text-primary-xanh");
+            title.classList.add("text-heading");
+          }
+          const iconWrapper = other.querySelector(
+            ".shrink-0 .absolute div",
+          );
+          if (iconWrapper) {
+            iconWrapper.className =
+              "flex w-7 h-7 justify-center items-center shrink-0 rounded-full bg-white/80";
+            const path = iconWrapper.querySelector("path");
+            if (path) path.setAttribute("stroke", "#828282");
+          }
+          const overlay = other.querySelector(".playlist-overlay");
+          if (overlay) {
+            overlay.style.background = "rgba(0, 0, 0, 0.20)";
+          }
+        });
+
+        // Activate clicked item
+        item.classList.add("bg-[#EEF3FF]", "border-primary-xanh/20");
+        item.classList.remove("border-transparent", "hover:bg-gray-50");
+        const title = item.querySelector("h4");
+        if (title) {
+          title.classList.add("text-primary-xanh");
+          title.classList.remove("text-heading");
+        }
+        const iconWrapper = item.querySelector(".shrink-0 .absolute div");
+        if (iconWrapper) {
+          iconWrapper.className =
+            "flex w-7 h-7 justify-center items-center shrink-0 rounded-full bg-primary-xanh";
+          const path = iconWrapper.querySelector("path");
+          if (path) path.setAttribute("stroke", "white");
+        }
+        const overlay = item.querySelector(".playlist-overlay");
+        if (overlay) {
+          overlay.style.background = "rgba(0, 83, 255, 0.40)";
+        }
+
+        // Update main player cover image source
+        const newSrc = item.getAttribute("data-video-src");
+        if (newSrc && mainVideoCover) {
+          mainVideoCover.src = newSrc;
+        }
+
+        // Update main video play link url
+        const newVideoUrl = item.getAttribute("data-video-url");
+        const mainVideoPlayLink = document.getElementById(
+          "main-video-play-link",
+        );
+        if (newVideoUrl && mainVideoPlayLink) {
+          mainVideoPlayLink.setAttribute("href", newVideoUrl);
+        }
+      });
+    });
+  }
+}
+
+function initDigitalResourcesTabsAndGallery() {
+  // 1. Initialize Fancybox globally for data-fancybox elements on this page
+  if (typeof Fancybox !== "undefined") {
+    Fancybox.bind("[data-fancybox]");
+  }
+
+  // 2. Tab switching logic for Digital Resources Detail page
+  const tabBtns = document.querySelectorAll("#tab-headers .tab-btn");
+  const tabPanels = document.querySelectorAll("#tab-panels .tab-panel");
+
+  if (tabBtns.length > 0) {
+    tabBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const targetId = btn.getAttribute("data-tab");
+
+        // Deactivate all buttons
+        tabBtns.forEach((otherBtn) => {
+          otherBtn.classList.remove("border-primary", "text-primary");
+          otherBtn.classList.add("border-transparent", "text-gray-300");
+        });
+
+        // Activate current button
+        btn.classList.add("border-primary", "text-primary");
+        btn.classList.remove("border-transparent", "text-gray-300");
+
+        // Toggle panels
+        tabPanels.forEach((panel) => {
+          const panelId = panel.getAttribute("id");
+          if (panelId === `panel-${targetId.replace("tab-", "")}`) {
+            panel.classList.remove("hidden");
+          } else {
+            panel.classList.add("hidden");
+          }
+        });
+      });
+    });
+  }
+
+  // 3. Playlist video switching logic
+  const playlistItems = document.querySelectorAll(".video-playlist-item");
+  const mainVideoCover = document.getElementById("main-video-cover");
+
+  if (playlistItems.length > 0) {
+    playlistItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        // Update active state in playlist sidebar
+        playlistItems.forEach((other) => {
+          other.classList.remove("bg-[#EEF3FF]", "border-primary-xanh/20");
+          other.classList.add("border-transparent", "hover:bg-gray-50");
+          const title = other.querySelector("h4");
+          if (title) {
+            title.classList.remove("text-primary-xanh");
+            title.classList.add("text-heading");
+          }
+          const iconWrapper = other.querySelector(
+            ".shrink-0 .absolute div",
+          );
+          if (iconWrapper) {
+            iconWrapper.className =
+              "flex w-7 h-7 justify-center items-center shrink-0 rounded-full bg-white/80";
+            const path = iconWrapper.querySelector("path");
+            if (path) path.setAttribute("stroke", "#828282");
+          }
+          const overlay = other.querySelector(".playlist-overlay");
+          if (overlay) {
+            overlay.style.background = "rgba(0, 0, 0, 0.20)";
+          }
+        });
+
+        // Activate clicked item
+        item.classList.add("bg-[#EEF3FF]", "border-primary-xanh/20");
+        item.classList.remove("border-transparent", "hover:bg-gray-50");
+        const title = item.querySelector("h4");
+        if (title) {
+          title.classList.add("text-primary-xanh");
+          title.classList.remove("text-heading");
+        }
+        const iconWrapper = item.querySelector(".shrink-0 .absolute div");
+        if (iconWrapper) {
+          iconWrapper.className =
+            "flex w-7 h-7 justify-center items-center shrink-0 rounded-full bg-primary-xanh";
+          const path = iconWrapper.querySelector("path");
+          if (path) path.setAttribute("stroke", "white");
+        }
+        const overlay = item.querySelector(".playlist-overlay");
+        if (overlay) {
+          overlay.style.background = "rgba(0, 83, 255, 0.40)";
+        }
+
+        // Update main player cover image source
+        const newSrc = item.getAttribute("data-video-src");
+        if (newSrc && mainVideoCover) {
+          mainVideoCover.src = newSrc;
+        }
+
+        // Update main video play link url
+        const newVideoUrl = item.getAttribute("data-video-url");
+        const mainVideoPlayLink = document.getElementById(
+          "main-video-play-link",
+        );
+        if (newVideoUrl && mainVideoPlayLink) {
+          mainVideoPlayLink.setAttribute("href", newVideoUrl);
+        }
+      });
+    });
+  }
+}
+
+function initShareholder() {
+  // Tab switching logic for Shareholder page
+  const tabBtns = document.querySelectorAll(".shareholder-tab-btn");
+  const tabPanels = document.querySelectorAll(".shareholder-tab-panel");
+
+  if (tabBtns.length && tabPanels.length) {
+    tabBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const targetTab = btn.getAttribute("data-tab");
+
+        // Deactivate all buttons
+        tabBtns.forEach((otherBtn) => {
+          otherBtn.classList.remove("border-primary-xanh", "bg-primary-xanh/20", "text-[#3F3D48]");
+          otherBtn.classList.add("border-transparent", "text-heading", "hover:bg-primary-xanh/10", "hover:text-[#3F3D48]");
+        });
+
+        // Activate current button
+        btn.classList.add("border-primary-xanh", "bg-primary-xanh/20", "text-[#3F3D48]");
+        btn.classList.remove("border-transparent", "text-heading", "hover:bg-primary-xanh/10", "hover:text-[#3F3D48]");
+
+        // Toggle panels
+        tabPanels.forEach((panel) => {
+          const panelId = panel.getAttribute("id");
+          if (panelId === `panel-${targetTab.replace("tab-", "")}`) {
+            panel.classList.remove("hidden");
+          } else {
+            panel.classList.add("hidden");
+          }
+        });
+      });
+    });
+  }
+
+  // Dropdown selection functionality
+  const dropdowns = document.querySelectorAll(".section-header__dropdown");
+  dropdowns.forEach((dropdown) => {
+    const btn = dropdown.querySelector(".section-header__dropdown-btn");
+    if (!btn) return;
+    const span = btn.querySelector("span");
+    const items = dropdown.querySelectorAll(".section-header__dropdown-item");
+
+    items.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (span) {
+          span.textContent = item.textContent;
+        }
+        const list = dropdown.querySelector(".section-header__dropdown-list");
+        if (list) {
+          list.classList.add("hidden");
+          list.classList.remove("flex");
+        }
+        const svg = btn.querySelector("svg");
+        if (svg) {
+          svg.classList.remove("rotate-180");
+        }
+      });
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initTabs();
   initSearchPopup();
@@ -577,4 +879,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initGoalsToggle();
   initDynamicGalleryOverlay();
   initProductGallery();
+  initLibraryTabsAndGallery();
+  initDigitalResourcesTabsAndGallery();
+  initShareholder();
 });
