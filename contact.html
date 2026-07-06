@@ -1,0 +1,1126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên hệ</title>
+    <!-- Vendor -->
+    <link rel="stylesheet" href="assets/css/vendor/fancybox.css" />
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="bg-primary-blue bg-header h-16 sticky top-0 z-[999]">
+      <div class="container h-full">
+        <div class="flex justify-between items-center h-full">
+          <a href="/" class="flex items-center">
+            <img
+              src="assets/images/header/logo-header.png"
+              alt="Logo Nhà xuất bản Hà Nội"
+              class="h-12 w-auto object-contain"
+            />
+          </a>
+          <nav class="hidden xl:block h-full">
+            <ul class="nav-list h-full">
+              <li class="h-full flex items-center">
+                <a href="" class="nav-link">Trang chủ</a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Giới thiệu</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Sản phẩm</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="" class="dropdown-link">Sách giáo khoa</a>
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link">Sách tham khảo</a>
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link"
+                      >Tài liệu giáo dục địa phương</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="dropdown-link">Học liệu số</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Cổ đông</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link nav-link--active">
+                  <span>Tin tức</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="h-full flex items-center">
+                <a href="" class="nav-link">Liên hệ</a>
+              </li>
+            </ul>
+          </nav>
+          <div
+            class="hidden xl:flex items-center justify-between py-1.5 border-b border-white/40 w-48 md:w-56 bg-transparent"
+          >
+            <input
+              id="search-trigger-input"
+              type="text"
+              placeholder="Tìm kiếm"
+              readonly
+              class="w-full bg-transparent text-white placeholder-white/60 text-sm outline-none cursor-pointer"
+            />
+            <button
+              id="search-trigger-btn"
+              class="flex items-center justify-center text-white/60 hover:text-white transition-colors duration-300 cursor-pointer"
+              aria-label="Tìm kiếm"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22 22L20 20"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <button
+            id="menu-toggle"
+            class="xl:hidden p-1 text-white hover:text-primary transition-colors cursor-pointer"
+            aria-label="Mở Menu"
+          >
+            <svg
+              width="32px"
+              height="32px"
+              viewBox="0 0 24 24"
+              fill="white"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M4 6H20M4 12H20M4 18H20"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Drawer (Slide-out from Left) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[1000] xl:hidden">
+      <!-- Backdrop overlay -->
+      <div
+        id="mobile-menu-backdrop"
+        class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-0"
+      ></div>
+
+      <!-- Drawer Content -->
+      <div
+        id="mobile-menu-content"
+        class="relative w-[300px] max-w-[85vw] h-full bg-primary-blue shadow-2xl flex flex-col p-6 transition-transform duration-300 -translate-x-full overflow-y-auto"
+      >
+        <!-- Close Button & Logo Row -->
+        <div class="flex justify-between items-center mb-8">
+          <a href="/" class="flex items-center">
+            <img
+              src="assets/images/header/logo-header.png"
+              alt="Logo Nhà xuất bản Hà Nội"
+              class="h-10 w-auto object-contain"
+            />
+          </a>
+          <button
+            id="mobile-menu-close"
+            class="text-white hover:text-primary transition-colors duration-200 cursor-pointer"
+            aria-label="Đóng Menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-6 h-6"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- 1. Search Box ("searh xong rồi mới nav") -->
+        <div
+          id="mobile-search-trigger"
+          class="relative flex items-center py-2 border-b border-white/30 mb-8 cursor-pointer"
+        >
+          <input
+            type="text"
+            placeholder="Tìm kiếm..."
+            readonly
+            class="w-full bg-transparent text-white placeholder-white/50 text-sm outline-none cursor-pointer"
+          />
+          <button
+            class="absolute right-0 text-white/50 hover:text-white transition-colors duration-200 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-5 h-5"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- 2. Nav links stacking vertically ("flex-col không nằm ngang nữa") -->
+        <nav class="flex-1">
+          <ul class="flex flex-col gap-6">
+            <li>
+              <a
+                href=""
+                class="block text-white hover:text-primary text-lg font-bold transition-colors"
+                >Trang chủ</a
+              >
+            </li>
+
+            <!-- Giới thiệu -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer transition-colors"
+              >
+                <span>Giới thiệu</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tầm nhìn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Sứ mệnh</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Sản phẩm -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Sản phẩm</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Sách giáo khoa</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Sách tham khảo</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tài liệu giáo dục địa phương</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Học liệu số</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Cổ đông -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Cổ đông</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Báo cáo tài chính</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Nghị quyết đại hội</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Tin tức -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-primary text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Tin tức</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tin tức sự kiện</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Hoạt động công ty</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href=""
+                class="block text-white text-lg font-bold hover:text-primary transition-colors"
+                >Liên hệ</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Search Popup Modal -->
+    <div
+      id="search-popup"
+      class="hidden fixed inset-0 z-50 flex justify-center items-start p-4 pt-[20vh]"
+    >
+      <!-- Backdrop with blur and white overlay as requested -->
+      <div
+        id="search-popup-backdrop"
+        class="absolute inset-0 backdrop-blur-md bg-white/30 transition-opacity duration-300 opacity-0"
+      ></div>
+
+      <!-- Modal Content Box -->
+      <div
+        id="search-popup-content"
+        class="relative w-full max-w-[700px] rounded-2xl bg-white shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300"
+      >
+        <div class="flex justify-between items-center py-4 px-5">
+          <div class="flex items-center gap-3 flex-1 mr-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="#828282"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 21L16.7 16.7"
+                stroke="#828282"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <input
+              id="search-popup-input"
+              type="text"
+              class="w-full text-lg placeholder:text-gray-400 outline-none text-heading bg-transparent"
+              placeholder="Tìm kiếm sách, học liệu số, tin tức..."
+            />
+          </div>
+          <button
+            id="search-popup-close"
+            class="px-5 py-1.5 rounded-full border border-solid border-gray-500 hover:border-gray-500 text-sm text-gray-300 hover:text-gray-800 hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
+          >
+            Đóng
+          </button>
+        </div>
+
+        <hr class="border-t border-gray-100" />
+
+        <div class="py-5 px-5">
+          <p class="mb-4 text-sm font-bold text-gray-200">TÌM KIẾM PHỔ BIẾN</p>
+          <div class="flex flex-wrap gap-3">
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Ngữ văn 7</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Sách giáo khoa lớp 8</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Học liệu số toán</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Tài liệu giáo dục địa phương</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Ôn thi lớp 10</span>
+            </button>
+          </div>
+        </div>
+
+        <hr class="border-t border-gray-100" />
+
+        <div class="bg-gray-50 py-3 px-5">
+          <div class="flex items-center gap-6 text-gray-200">
+            <div class="flex items-center">
+              <span
+                class="mr-1.5 px-1.5 py-0.5 rounded bg-gray-500 text-xs font-semibold text-gray-200"
+                >ESC</span
+              >
+              <span class="text-xs">để đóng</span>
+            </div>
+            <div class="flex items-center">
+              <span
+                class="mr-1.5 px-1.5 py-0.5 rounded bg-gray-500 text-xs font-semibold text-gray-200"
+                >Enter</span
+              >
+              <span class="text-xs">để tìm kiếm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section
+        class="relative aspect-[375/180] sm:aspect-[4/1.5] md:aspect-[1920/332] w-full flex items-center bg-cover bg-center bg-no-repeat overflow-hidden py-6 md:py-0"
+        style="
+          background-image: url(&quot;assets/images/breadcumb/bc-about.png&quot;);
+        "
+      >
+        <!-- Overlay background with blur -->
+        <div
+          class="absolute inset-0 pointer-events-none"
+          style="
+            background-image: linear-gradient(
+              180deg,
+              rgba(66, 90, 133, 0) 0%,
+              rgba(66, 90, 133, 0.8) 100%
+            );
+            backdrop-filter: blur(2px);
+          "
+        ></div>
+        <div class="container w-full h-full relative z-10">
+          <div class="breadcrumb">
+            <nav aria-label="Breadcrumb">
+              <ol class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                  <a href="index.html" class="breadcrumb__link">Trang chủ</a>
+                </li>
+                <li class="breadcrumb__separator">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                  >
+                    <path
+                      d="M5.25 10.5L8.75 7L5.25 3.5"
+                      stroke="white"
+                      stroke-width="1.16667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </li>
+                <li class="breadcrumb__item">
+                  <span
+                    class="breadcrumb__link breadcrumb__link--active"
+                    aria-current="page"
+                    >Liên hệ</span
+                  >
+                </li>
+              </ol>
+            </nav>
+            <h1 class="breadcrumb__title">Liên hệ</h1>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="py-16 md:py-24 bg-white">
+        <div class="container">
+          <!-- Top Row: Info & Map -->
+          <div
+            class="flex flex-col lg:flex-row justify-between items-stretch gap-8 lg:gap-12 2xl:gap-16 mb-10 xl:mb-25"
+          >
+            <!-- Left: Contact Details -->
+            <div
+              class="w-full lg:max-w-md 2xl:w-[424px] 2xl:shrink-0 flex flex-col justify-between py-2 text-left"
+            >
+              <div class="flex flex-col gap-6">
+                <!-- Trụ sở -->
+                <div>
+                  <span class="text-[#1A1A1A]/60 md:text-lg uppercase block"
+                    >Trụ sở</span
+                  >
+                  <p class="text-[#1A1A1A] text-lg md:text-xl">
+                    Tầng 4, Toà Diamond Flower, số 48 Lê Văn Lương, P. Yên Hoà,
+                    TP. Hà Nội
+                  </p>
+                </div>
+
+                <!-- Hotline -->
+                <div>
+                  <span class="text-[#1a1a1a]/60 md:text-lg uppercase block"
+                    >Hotline</span
+                  >
+                  <p class="text-[#1a1a1a] text-lg md:text-xl">
+                    <a
+                      href="tel:02435121533"
+                      class="hover:text-primary transition-colors block"
+                      >024.35121533 (118)</a
+                    >
+                    <a
+                      href="tel:0978051672"
+                      class="hover:text-primary transition-colors block"
+                      >0978 051 672</a
+                    >
+                  </p>
+                </div>
+
+                <!-- Giờ làm việc -->
+                <div>
+                  <span class="text-[#1a1a1a]/60 md:text-lg uppercase block"
+                    >Giờ làm việc</span
+                  >
+                  <p class="text-[#1a1a1a] text-lg md:text-xl">
+                    Thứ hai - Thứ sáu: 8.00 - 17.00
+                  </p>
+                </div>
+
+                <!-- Email -->
+                <div>
+                  <span class="text-[#1a1a1a]/60 md:text-lg uppercase block"
+                    >Email</span
+                  >
+                  <p class="text-[#1a1a1a] text-lg md:text-xl">
+                    <a
+                      href="mailto:kinhdoanh_heps@gmail.com"
+                      class="hover:text-primary transition-colors"
+                      >kinhdoanh_heps@gmail.com</a
+                    >
+                  </p>
+                </div>
+
+                <!-- Divider line -->
+                <hr class="border-t border-gray-150 my-2" />
+
+                <!-- Social media -->
+                <div>
+                  <span
+                    class="text-[#333] text-sm md:text-base font-semibold block mb-4"
+                    >Theo dõi chúng tôi</span
+                  >
+                  <div class="flex items-center gap-3">
+                    <a
+                      href="#"
+                      class="hover:opacity-85 hover:scale-105 transition-all duration-300"
+                      aria-label="Facebook"
+                    >
+                      <img
+                        src="assets/images/contact/facebook.png"
+                        alt="Facebook"
+                        class="w-8 h-8 object-contain"
+                      />
+                    </a>
+                    <a
+                      href="#"
+                      class="hover:opacity-85 hover:scale-105 transition-all duration-300"
+                      aria-label="Youtube"
+                    >
+                      <img
+                        src="assets/images/contact/youtube.png"
+                        alt="Youtube"
+                        class="w-8 h-8 object-contain"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Google Map -->
+            <div
+              class="w-full lg:flex-1 aspect-[848/457] max-w-[848px] 2xl:w-[848px] 2xl:h-[457px] 2xl:shrink-0 rounded-[8px] overflow-hidden border border-gray-150 relative"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.677359187422!2d105.80112617587191!3d21.005566488573542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad964441328b%3A0x55d99271bdda1425!2sDiamond%20Flower%20Tower!5e0!3m2!1svi!2s!4v1783309278008!5m2!1svi!2s"
+                class="absolute inset-0 w-full h-full border-0 rounded-[8px]"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Bottom Row: Form Box -->
+          <div
+            class="bg-white border border-[#EBEBEB] overflow-hidden shadow-sm text-left"
+          >
+            <!-- Orange top line -->
+            <div class="h-[3px] bg-primary w-full"></div>
+
+            <div class="p-6 md:p-10 lg:p-12">
+              <h3
+                class="font-montserrat text-heading text-2xl md:text-3xl font-semibold mb-3"
+              >
+                Liên hệ với chúng tôi
+              </h3>
+              <p class="text-[#828282] text-sm md:text-base mb-8">
+                Đội ngũ của chúng tôi sẵn sàng hỗ trợ bạn giải đáp mọi thắc mắc
+                liên quan đến dịch vụ mà bạn quan tâm.
+              </p>
+
+              <form id="contact-form" class="flex flex-col gap-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5">
+                  <!-- Họ và tên -->
+                  <div class="flex flex-col gap-1.5">
+                    <label for="fullname" class="text-heading text-sm font-bold"
+                      >Họ và tên</label
+                    >
+                    <input
+                      type="text"
+                      id="fullname"
+                      required
+                      placeholder="Nhập họ và tên"
+                      class="w-full bg-[#F2F3F5] border border-[#E4E7EC] rounded-xl px-4 py-3.5 text-heading placeholder-gray-300 outline-none focus:border-primary-blue focus:bg-white transition-all duration-200"
+                    />
+                  </div>
+
+                  <!-- Email -->
+                  <div class="flex flex-col gap-1.5">
+                    <label for="email" class="text-heading text-sm font-bold"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      required
+                      placeholder="Nhập email của bạn"
+                      class="w-full bg-[#F2F3F5] border border-[#E4E7EC] rounded-xl px-4 py-3.5 text-heading placeholder-gray-300 outline-none focus:border-primary-blue focus:bg-white transition-all duration-200"
+                    />
+                  </div>
+
+                  <!-- Số điện thoại -->
+                  <div class="flex flex-col gap-1.5">
+                    <label for="phone" class="text-heading text-sm font-bold"
+                      >Số điện thoại <span class="text-primary">*</span></label
+                    >
+                    <input
+                      type="tel"
+                      id="phone"
+                      required
+                      placeholder="Nhập số điện thoại của bạn"
+                      class="w-full bg-[#F2F3F5] border border-[#E4E7EC] rounded-xl px-4 py-3.5 text-heading placeholder-gray-300 outline-none focus:border-primary-blue focus:bg-white transition-all duration-200"
+                    />
+                  </div>
+
+                  <!-- Nội dung -->
+                  <div class="flex flex-col gap-1.5">
+                    <label for="message" class="text-heading text-sm font-bold"
+                      >Nội dung <span class="text-primary">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="message"
+                      required
+                      placeholder="Nhập nội dung bạn muốn gửi"
+                      class="w-full bg-[#F2F3F5] border border-[#E4E7EC] rounded-xl px-4 py-3.5 text-heading placeholder-gray-300 outline-none focus:border-primary-blue focus:bg-white transition-all duration-200"
+                    />
+                  </div>
+                </div>
+
+                <div class="mt-4">
+                  <button
+                    type="submit"
+                    class="inline-flex items-center gap-2 px-8 py-3.5 border border-primary-blue text-primary-blue rounded-full font-bold hover:bg-primary-blue hover:text-white transition-all duration-300 cursor-pointer text-sm md:text-base"
+                  >
+                    <span>Gửi thông tin</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="w-4 h-4 transition-transform duration-300"
+                    >
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer
+      class="relative bg-footer-bg py-16 lg:pt-20 lg:pb-12 text-white border-t border-gray-800"
+    >
+      <div class="container">
+        <!-- Footer Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8"
+        >
+          <!-- Column 1: Brand Info -->
+          <div
+            class="md:col-span-2 lg:col-span-3 flex flex-col items-start text-left"
+          >
+            <div class="flex flex-col gap-6 lg:gap-8">
+              <div class="flex items-center">
+                <img
+                  src="assets/images/footer/logo-footer.png"
+                  alt="Nhà xuất bản Giáo dục Hà Nội"
+                  class="footer__logo h-14 w-auto object-contain"
+                />
+              </div>
+
+              <p class="text-base md:text-lg text-footer-text/65">
+                Tầng 4, Toà Diamond Flower, số 48 Lê Văn Lương, P. Yên Hoà, TP.
+                Hà Nội
+              </p>
+
+              <a
+                href="#"
+                class="inline-block text-sm font-bold text-white hover:text-primary transition-colors underline underline-offset-4"
+              >
+                BẢN ĐỒ CHỬ ĐƯỜNG
+              </a>
+
+              <!-- Social Icons -->
+              <div class="footer__socials flex items-center gap-6 md:gap-9">
+                <!-- Facebook -->
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                  <img src="assets/images/footer/facebook.png" alt="" />
+                </a>
+                <!-- Instagram -->
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                  <img src="assets/images/footer/instagram.png" alt="" />
+                </a>
+                <!-- TikTok -->
+                <a href="#" class="footer__social-link" aria-label="TikTok">
+                  <img src="assets/images/footer/tiktok.png" alt="" />
+                </a>
+                <!-- YouTube -->
+                <a href="#" class="footer__social-link" aria-label="YouTube">
+                  <img src="assets/images/footer/youtube.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Contact Info -->
+          <div
+            class="md:col-span-1 lg:col-span-3 flex flex-col items-start text-left"
+          >
+            <div class="flex flex-col gap-4">
+              <span class="footer__title">LIÊN HỆ</span>
+              <div>
+                <a
+                  href="tel:02435121533"
+                  class="block text-2xl md:text-3xl font-semibold text-primary hover:text-primary/90 transition-colors font-montserrat"
+                >
+                  024.35121533 (118)
+                </a>
+                <a
+                  href="tel:0978051672"
+                  class="block text-2xl md:text-3xl font-semibold text-primary hover:text-primary/90 transition-colors font-montserrat"
+                >
+                  0978 051 672
+                </a>
+              </div>
+
+              <span class="block text-base md:text-lg text-footer-text/65">
+                Thứ hai - Thứ sáu: 8.00 - 17.00
+              </span>
+              <a
+                href="mailto:kinhdoanh_heps@gmail.com"
+                class="block text-base md:text-lg font-semibold text-footer-text hover:text-primary transition-colors"
+              >
+                kinhdoanh_heps@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 3: Explore links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">KHÁM PHÁ</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Giới thiệu</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Service links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">DỊCH VỤ</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Trung tâm trợ giúp</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Đổi trả hàng</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Thu hồi sản phẩm</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Hỗ trợ tiếp cận</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Liên hệ với chúng tôi</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Nhận tại cửa hàng</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Category links -->
+          <div
+            class="md:col-span-1 lg:col-span-2 flex flex-col items-start text-left"
+          >
+            <span class="footer__title mb-4 text-white">DANH MỤC</span>
+            <ul class="footer__list">
+              <li>
+                <a href="#" class="footer__link">Sách giáo khoa</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Sách tham khảo</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link"
+                  >Tài liệu giáo dục địa phương</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer__link">Học liệu số</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright Bottom -->
+        <div class="pt-8 mt-6 border-t border-white/10 lg:mt-10 text-center">
+          <p
+            class="text-center text-sm md:text-base text-white font-semibold mb-0"
+          >
+            Copyright © 2026 Công ty Cổ phần dịch vụ Xuất bản giáo dục Hà Nội.
+            All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/vendor/fancybox.umd.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
