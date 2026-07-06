@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Không tìm thấy trang</title>
+    <!-- Vendor -->
+    <link rel="stylesheet" href="assets/css/vendor/fancybox.css" />
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="bg-primary-blue bg-header h-16 sticky top-0 z-[999]">
+      <div class="container h-full">
+        <div class="flex justify-between items-center h-full">
+          <a href="index.html" class="flex items-center">
+            <img
+              src="assets/images/header/logo-header.png"
+              alt="Logo Nhà xuất bản Hà Nội"
+              class="h-12 w-auto object-contain"
+            />
+          </a>
+          <nav class="hidden xl:block h-full">
+            <ul class="nav-list h-full">
+              <li class="h-full flex items-center">
+                <a href="index.html" class="nav-link">Trang chủ</a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="about.html" class="nav-link">
+                  <span>Giới thiệu</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="" class="nav-link">
+                  <span>Sản phẩm</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="list-book.html?category=sgk" class="dropdown-link"
+                      >Sách giáo khoa</a
+                    >
+                  </li>
+                  <li>
+                    <a href="list-book.html?category=stk" class="dropdown-link"
+                      >Sách tham khảo</a
+                    >
+                  </li>
+                  <li>
+                    <a href="list-book.html?category=gdđp" class="dropdown-link"
+                      >Tài liệu giáo dục địa phương</a
+                    >
+                  </li>
+                  <li>
+                    <a href="digital-resources.html" class="dropdown-link"
+                      >Học liệu số</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="shareholder.html" class="nav-link">
+                  <span>Cổ đông</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="relative group h-full flex items-center">
+                <a href="news.html" class="nav-link">
+                  <span>Tin tức</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
+              </li>
+              <li class="h-full flex items-center">
+                <a href="contact.html" class="nav-link">Liên hệ</a>
+              </li>
+            </ul>
+          </nav>
+          <div
+            class="hidden xl:flex items-center justify-between py-1.5 border-b border-white/40 w-48 md:w-56 bg-transparent"
+          >
+            <input
+              id="search-trigger-input"
+              type="text"
+              placeholder="Tìm kiếm"
+              readonly
+              class="w-full bg-transparent text-white placeholder-white/60 text-sm outline-none cursor-pointer"
+            />
+            <button
+              id="search-trigger-btn"
+              class="flex items-center justify-center text-white/60 hover:text-white transition-colors duration-300 cursor-pointer"
+              aria-label="Tìm kiếm"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22 22L20 20"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <button
+            id="menu-toggle"
+            class="xl:hidden p-1 text-white hover:text-primary transition-colors cursor-pointer"
+            aria-label="Mở Menu"
+          >
+            <svg
+              width="32px"
+              height="32px"
+              viewBox="0 0 24 24"
+              fill="white"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M4 6H20M4 12H20M4 18H20"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Drawer (Slide-out from Left) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[1000] xl:hidden">
+      <!-- Backdrop overlay -->
+      <div
+        id="mobile-menu-backdrop"
+        class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-0"
+      ></div>
+
+      <!-- Drawer Content -->
+      <div
+        id="mobile-menu-content"
+        class="relative w-[300px] max-w-[85vw] h-full bg-primary-blue shadow-2xl flex flex-col p-6 transition-transform duration-300 -translate-x-full overflow-y-auto"
+      >
+        <!-- Close Button & Logo Row -->
+        <div class="flex justify-between items-center mb-8">
+          <a href="index.html" class="flex items-center">
+            <img
+              src="assets/images/header/logo-header.png"
+              alt="Logo Nhà xuất bản Hà Nội"
+              class="h-10 w-auto object-contain"
+            />
+          </a>
+          <button
+            id="mobile-menu-close"
+            class="text-white hover:text-primary transition-colors duration-200 cursor-pointer"
+            aria-label="Đóng Menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-6 h-6"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Search Box -->
+        <div
+          id="mobile-search-trigger"
+          class="relative flex items-center py-2 border-b border-white/30 mb-8 cursor-pointer"
+        >
+          <input
+            type="text"
+            placeholder="Tìm kiếm..."
+            readonly
+            class="w-full bg-transparent text-white placeholder-white/50 text-sm outline-none cursor-pointer"
+          />
+          <button
+            class="absolute right-0 text-white/50 hover:text-white transition-colors duration-200 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-5 h-5"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Nav links stacking vertically -->
+        <nav class="flex-1">
+          <ul class="flex flex-col gap-6">
+            <li>
+              <a
+                href="index.html"
+                class="block text-white hover:text-primary text-lg font-bold transition-colors"
+                >Trang chủ</a
+              >
+            </li>
+
+            <!-- Giới thiệu -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Giới thiệu</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href="about.html"
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tầm nhìn & Sứ mệnh</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Sản phẩm -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Sản phẩm</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href="list-book.html?category=sgk"
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Sách giáo khoa</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="list-book.html?category=stk"
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Sách tham khảo</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="list-book.html?category=gdđp"
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tài liệu giáo dục địa phương</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="digital-resources.html"
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Học liệu số</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Cổ đông -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Cổ đông</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href="shareholder.html"
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Thông tin cổ đông</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Tin tức -->
+            <li class="mobile-dropdown-parent">
+              <div
+                class="flex justify-between items-center text-white text-lg font-bold cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>Tin tức</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4 transition-transform duration-200"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <ul
+                class="hidden pl-4 mt-2 flex-col gap-3 border-l border-white/10"
+              >
+                <li>
+                  <a
+                    href="news.html"
+                    class="block text-white/80 hover:text-primary text-sm font-semibold"
+                    >Tin tức sự kiện</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href="contact.html"
+                class="block text-white text-lg font-bold hover:text-primary transition-colors"
+                >Liên hệ</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Search Popup Modal -->
+    <div
+      id="search-popup"
+      class="hidden fixed inset-0 z-50 flex justify-center items-start p-4 pt-[20vh]"
+    >
+      <!-- Backdrop with blur and white overlay -->
+      <div
+        id="search-popup-backdrop"
+        class="absolute inset-0 backdrop-blur-md bg-white/30 transition-opacity duration-300 opacity-0"
+      ></div>
+
+      <!-- Modal Content Box -->
+      <div
+        id="search-popup-content"
+        class="relative w-full max-w-[700px] rounded-2xl bg-white shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300"
+      >
+        <div class="flex justify-between items-center py-4 px-5">
+          <div class="flex items-center gap-3 flex-1 mr-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="#828282"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 21L16.7 16.7"
+                stroke="#828282"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <input
+              id="search-popup-input"
+              type="text"
+              class="w-full text-lg placeholder:text-gray-400 outline-none text-heading bg-transparent"
+              placeholder="Tìm kiếm sách, học liệu số, tin tức..."
+            />
+          </div>
+          <button
+            id="search-popup-close"
+            class="px-5 py-1.5 rounded-full border border-solid border-gray-600 hover:border-gray-600 text-sm text-gray-300 hover:text-gray-800 hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
+          >
+            Đóng
+          </button>
+        </div>
+
+        <hr class="border-t border-gray-100" />
+
+        <div class="py-5 px-5">
+          <p class="mb-4 text-sm font-bold text-gray-200">TÌM KIẾM PHỔ BIẾN</p>
+          <div class="flex flex-wrap gap-3">
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Ngữ văn 7</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Sách giáo khoa lớp 8</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Học liệu số toán</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Tài liệu giáo dục địa phương</span>
+            </button>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.5001 10.5L8.3501 8.35001"
+                  stroke="#828282"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="text-sm">Ôn thi lớp 10</span>
+            </button>
+          </div>
+        </div>
+
+        <hr class="border-t border-gray-100" />
+
+        <div class="bg-gray-50 py-3 px-5">
+          <div class="flex items-center gap-6 text-gray-200">
+            <div class="flex items-center">
+              <span
+                class="mr-1.5 px-1.5 py-0.5 rounded bg-gray-500 text-xs font-semibold text-gray-200"
+                >ESC</span
+              >
+              <span class="text-xs">để đóng</span>
+            </div>
+            <div class="flex items-center">
+              <span
+                class="mr-1.5 px-1.5 py-0.5 rounded bg-gray-500 text-xs font-semibold text-gray-200"
+                >Enter</span
+              >
+              <span class="text-xs">để tìm kiếm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main
+      class="min-h-[70vh] flex items-center justify-center bg-[#F9FBFF] py-16 md:py-24 relative overflow-hidden"
+    >
+      <!-- Decorative background blur blobs for rich aesthetics -->
+      <div
+        class="absolute w-[300px] h-[300px] bg-primary-blue/5 rounded-full blur-3xl -top-10 -left-10 pointer-events-none"
+      ></div>
+      <div
+        class="absolute w-[400px] h-[400px] bg-primary-xanh/5 rounded-full blur-3xl -bottom-20 -right-20 pointer-events-none"
+      ></div>
+
+      <div class="container relative z-10">
+        <div
+          class="max-w-[640px] mx-auto text-center flex flex-col items-center gap-6 md:gap-8 px-4"
+        >
+          <!-- Big 404 text -->
+          <div>
+            <h1
+              class="text-heading text-8xl md:text-[140px] font-extrabold tracking-tight bg-gradient-to-r from-primary-blue to-[#3E73E5] bg-clip-text text-transparent leading-none select-none"
+            >
+              404
+            </h1>
+            <h2
+              class="text-heading text-xl md:text-2xl font-bold font-montserrat mt-4"
+            >
+              Không tìm thấy trang yêu cầu
+            </h2>
+          </div>
+
+          <!-- Description -->
+          <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+            Đường dẫn bạn đang truy cập không tồn tại, đã bị thay đổi địa chỉ
+            hoặc tạm thời không hoạt động. Vui lòng kiểm tra lại URL hoặc tìm
+            kiếm thông tin khác bên dưới.
+          </p>
+
+          <!-- Inline Search Bar on 404 page -->
+          <div class="w-full relative flex items-center max-w-md">
+            <input
+              type="text"
+              placeholder="Tìm kiếm sách, học liệu, tin tức..."
+              class="w-full bg-white border border-gray-600 rounded-full pl-5 pr-11 py-3 text-sm font-semibold text-heading placeholder-gray-300 outline-none focus:border-primary-blue hover:border-primary-blue transition-colors duration-200 shadow-sm"
+              onkeypress="
+                if (event.key === 'Enter') {
+                  window.location.href =
+                    'search.html?q=' + encodeURIComponent(this.value);
+                }
+              "
+            />
+            <button
+              class="absolute right-0 flex items-center justify-center pr-5 text-heading hover:text-primary-blue transition-colors duration-200 cursor-pointer"
+              onclick="
+                const val = this.previousElementSibling.value;
+                if (val) {
+                  window.location.href =
+                    'search.html?q=' + encodeURIComponent(val);
+                }
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 16 16"
+                fill="none"
+                class="w-4.5 h-4.5"
+              >
+                <path
+                  d="M14.3534 13.6467L11.7927 11.086C12.6487 10.0707 13.1667 8.762 13.1667 7.33333C13.1667 4.11667 10.55 1.5 7.33333 1.5C4.11667 1.5 1.5 4.11667 1.5 7.33333C1.5 10.55 4.11667 13.1667 7.33333 13.1667C8.762 13.1667 10.0707 12.6487 11.086 11.7927L13.6466 14.3533C13.744 14.4507 13.872 14.5 14 14.5C14.128 14.5 14.256 14.4513 14.3534 14.3533C14.5487 14.1587 14.5487 13.842 14.3534 13.6467ZM2.5 7.33333C2.5 4.668 4.668 2.5 7.33333 2.5C9.99867 2.5 12.1667 4.668 12.1667 7.33333C12.1667 9.99867 9.99867 12.1667 7.33333 12.1667C4.668 12.1667 2.5 9.99867 2.5 7.33333Z"
+                  fill="currentColor"
+                  fill-opacity="0.8"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-col sm:flex-row items-center gap-4">
+            <a
+              href="index.html"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary-blue hover:bg-[#1E4EBE] text-white text-sm font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-4.5 h-4.5"
+              >
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+              <span>Về Trang chủ</span>
+            </a>
+
+            <a
+              href="javascript:history.back()"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white hover:bg-gray-50 border border-gray-600 hover:border-gray-700 text-heading text-sm font-semibold rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-4.5 h-4.5"
+              >
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+              <span>Quay lại trang trước</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-footer-bg py-16 lg:pt-20 lg:pb-12 text-white border-t border-gray-800"
+    >
+      <div class="container">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12"
+        >
+          <!-- Column 1: Info -->
+          <div class="flex flex-col gap-6 text-left">
+            <a href="index.html" class="inline-block">
+              <img
+                src="assets/images/footer/logo-footer.png"
+                alt="Logo Nhà xuất bản Hà Nội"
+                class="h-16 w-auto object-contain"
+              />
+            </a>
+            <div
+              class="flex flex-col gap-3 text-footer-text/60 text-sm md:text-base leading-relaxed"
+            >
+              <p>Địa chỉ: Số 4 Tống Duy Tân, Hàng Bông, Hoàn Kiếm, Hà Nội</p>
+              <p>Điện thoại: 024 382 529 16</p>
+              <p>Email: nxbhn@hn.vnn.vn</p>
+            </div>
+            <!-- Social Icons -->
+            <div class="flex items-center gap-3">
+              <a href="#" class="footer__social-link" aria-label="Facebook">
+                <img src="assets/images/footer/facebook.png" alt="Facebook" />
+              </a>
+              <a href="#" class="footer__social-link" aria-label="Instagram">
+                <img src="assets/images/footer/instagram.png" alt="Instagram" />
+              </a>
+              <a href="#" class="footer__social-link" aria-label="Tiktok">
+                <img src="assets/images/footer/tiktok.png" alt="Tiktok" />
+              </a>
+              <a href="#" class="footer__social-link" aria-label="Youtube">
+                <img src="assets/images/footer/youtube.png" alt="Youtube" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="flex flex-col gap-6 text-left">
+            <h4 class="footer__title">VỀ CHÚNG TÔI</h4>
+            <ul class="footer__list">
+              <li>
+                <a href="about.html" class="footer__link">Giới thiệu</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Lịch sử phát triển</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Sơ đồ tổ chức</a>
+              </li>
+              <li>
+                <a href="shareholder.html" class="footer__link"
+                  >Thông tin cổ đông</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Products -->
+          <div class="flex flex-col gap-6 text-left">
+            <h4 class="footer__title">SẢN PHẨM</h4>
+            <ul class="footer__list">
+              <li>
+                <a href="list-book.html?category=sgk" class="footer__link"
+                  >Sách giáo khoa</a
+                >
+              </li>
+              <li>
+                <a href="list-book.html?category=stk" class="footer__link"
+                  >Sách tham khảo</a
+                >
+              </li>
+              <li>
+                <a href="list-book.html?category=gdđp" class="footer__link"
+                  >Giáo dục địa phương</a
+                >
+              </li>
+              <li>
+                <a href="digital-resources.html" class="footer__link"
+                  >Học liệu số</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Support -->
+          <div class="flex flex-col gap-6 text-left">
+            <h4 class="footer__title">HỖ TRỢ</h4>
+            <ul class="footer__list">
+              <li>
+                <a href="contact.html" class="footer__link">Liên hệ công tác</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Hỗ trợ kỹ thuật</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Chính sách bảo mật</a>
+              </li>
+              <li>
+                <a href="digital-resources.html" class="footer__link"
+                  >Học liệu số</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright Bottom -->
+        <div class="pt-8 mt-6 border-t border-white/10 lg:mt-10 text-center">
+          <p
+            class="text-center text-sm md:text-base text-white font-semibold mb-0"
+          >
+            Copyright © 2026 Công ty Cổ phần dịch vụ Xuất bản giáo dục Hà Nội.
+            All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/vendor/fancybox.umd.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
