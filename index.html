@@ -723,7 +723,7 @@
           </div>
           <!-- Dynamic Swiper Pagination -->
           <div
-            class="absolute bottom-8 left-0 right-0 z-10 pointer-events-none"
+            class="absolute bottom-8 lg:bottom-24 left-0 right-0 z-10 pointer-events-none"
           >
             <div class="container">
               <div class="swiper-pagination pointer-events-auto"></div>
@@ -1025,6 +1025,8 @@
                 <div class="text-center">
                   <strong
                     class="block text-3xl sm:text-4xl lg:text-5xl font-bold text-text"
+                    data-countup
+                    data-target="150"
                     >150</strong
                   >
                   <p class="text-sm sm:text-base lg:text-lg text-heading">
@@ -1043,6 +1045,10 @@
                 <div class="text-center">
                   <strong
                     class="block text-3xl sm:text-4xl lg:text-5xl font-bold text-text"
+                    data-countup
+                    data-target="30000"
+                    data-suffix="+"
+                    data-separator="."
                     >30.000+</strong
                   >
                   <p class="text-sm sm:text-base lg:text-lg text-heading">
@@ -1061,6 +1067,10 @@
                 <div class="text-center">
                   <strong
                     class="block text-3xl sm:text-4xl lg:text-5xl font-bold text-text"
+                    data-countup
+                    data-target="600"
+                    data-suffix="+"
+                    data-separator="."
                     >600+</strong
                   >
                   <p class="text-sm sm:text-base lg:text-lg text-heading">
@@ -2328,6 +2338,7 @@
     </footer>
     <script src="assets/js/vendor/fancybox.umd.js"></script>
     <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script src="assets/js/vendor/countUp.umd.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

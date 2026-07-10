@@ -894,6 +894,43 @@ function initResourceCategoriesSlider() {
   });
 }
 
+function initCountUp() {
+  const elements = document.querySelectorAll("[data-countup]");
+  if (!elements.length || typeof countUp === "undefined") return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const el = entry.target;
+        const targetVal = parseFloat(el.getAttribute("data-target"));
+        const suffix = el.getAttribute("data-suffix") || "";
+        const separator = el.getAttribute("data-separator") || ",";
+
+        if (entry.isIntersecting) {
+          const instance = new countUp.CountUp(el, targetVal, {
+            startVal: 0,
+            duration: 2,
+            separator: separator,
+            suffix: suffix,
+          });
+
+          if (!instance.error) {
+            instance.start();
+          } else {
+            console.error(instance.error);
+          }
+        } else {
+          // Reset về 0 khi cuộn ra ngoài màn hình để sẵn sàng đếm lại lần sau
+          el.textContent = "0" + suffix;
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  elements.forEach((el) => observer.observe(el));
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initTabs();
   initSearchPopup();
@@ -910,4 +947,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initLibraryTabsAndGallery();
   initDigitalResourcesTabsAndGallery();
   initShareholder();
+  initCountUp();
 });
